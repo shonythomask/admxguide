@@ -1,0 +1,25 @@
+{
+  "appId": "office",
+  "displayName": "Microsoft Office",
+  "vendor": "Microsoft",
+  "lastUpdated": "2025-12-14T12:23:40.270754+00:00",
+  "policyCount": 2396,
+  "configurationScopes": {
+    "User": 2296,
+    "Machine": 100
+  },
+  "products": {
+    "access16": 65,
+    "excel16": 172,
+    "lync16": 26,
+    "office16": 924,
+    "onent16": 87,
+    "outlk16": 405,
+    "ppt16": 143,
+    "proj16": 140,
+    "pub16": 41,
+    "teams16": 2,
+    "visio16": 98,
+    "word16": 293
+  }
+}

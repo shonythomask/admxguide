@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #0078d4;
+  color: #ffffff;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header select,
+header input {
+  border-radius: 4px;
+  border: none;
+  padding: 6px 8px;
+}
+
+
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+aside {
+  width: 320px;
+  border-right: 1px solid #ddd;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+main {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.category {
+  cursor: pointer;
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+.category:hover {
+  text-decoration: underline;
+}
+
+.policy {
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+}
+/* =========================
+   Group Policy–style Tree
+   ========================= */
+
+.tree-node {
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 4px;
+  font-size: 14px;
+}
+
+.tree-node:hover {
+  background: #eef;
+}
+
+.tree-node.selected {
+  background: #cce;
+  font-weight: bold;
+}
+
+.tree-children {
+  margin-left: 16px;
+  display: none;
+}
+
+.tree-node.expanded + .tree-children {
+  display: block;
+}
+
+.tree-toggle {
+  display: inline-block;
+  width: 12px;
+}
+/* =========================
+   3-Pane Layout (GPMC Style)
+   ========================= */
+
+.container {
+  display: flex;
+  height: calc(100vh - 80px); /* accounts for header */
+}
+
+.pane {
+  overflow: auto;
+  padding: 8px;
+  border-right: 1px solid #ccc;
+}
+
+.pane.left {
+  width: 25%;
+}
+
+.pane.middle {
+  width: 35%;
+}
+
+.pane.right {
+  width: 40%;
+  border-right: none;
+}
+
+.pane.right h2 {
+  margin-top: 0;
+}
+/* =========================
+   Sticky Footer Disclaimer
+   ========================= */
+
+#footerBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #eaf3fc;
+  color: #555;
+  font-size: 12px;
+  padding: 6px 16px;
+  border-top: 1px solid #cce0ff;
+  z-index: 1000;
+}
+
+/* Make sure content is not hidden behind footer */
+.container {
+  padding-bottom: 30px;
+}

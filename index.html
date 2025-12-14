@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Microsoft 365 Apps ADMX Guide</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Microsoft 365 Apps ADMX Guide</h1>
+
+  <select id="appSelector"></select>
+
+  <input id="search" placeholder="Search policies..." />
+
+  <select id="productFilter">
+    <option value="">All Products</option>
+  </select>
+</header>
+
+<div class="container">
+  <!-- Left Pane: Category Tree -->
+  <aside id="categoryTree" class="pane left"></aside>
+
+  <!-- Middle Pane: Policy List -->
+  <main id="policyList" class="pane middle">
+    <p>Select a category to view policies.</p>
+  </main>
+
+  <!-- Right Pane: Policy Details -->
+  <section id="policyDetails" class="pane right">
+    <p>Select a policy to see details.</p>
+  </section>
+</div>
+
+
+<script src="app.js"></script>
+
+<footer id="footerBar">
+  Microsoft, Microsoft 365, Windows, and related names are trademarks of Microsoft Corporation.
+  This site is an independent, unofficial reference for ADMX/ADML policies and is not affiliated
+  with or endorsed by Microsoft.
+</footer>
+
+
+</body>
+</html>
