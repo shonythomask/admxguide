@@ -1,0 +1,300 @@
+/* ==================================================
+   GLOBAL
+   ================================================== */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #000;
+}
+
+/* ==================================================
+   TOP HEADER BAR
+   ================================================== */
+
+.top-bar {
+  background-color: #0078d4;
+  color: #ffffff;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-bar h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.top-bar input,
+.top-bar select {
+  border-radius: 4px;
+  border: none;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+/* ==================================================
+   HOME PAGE HEADER OVERRIDE
+   ================================================== */
+
+.home-page .top-bar {
+  padding: 24px 20px;
+}
+
+.home-page .top-bar h1 {
+  font-size: 26px;
+}
+
+/* ==================================================
+   3-PANE LAYOUT (GPMC STYLE)
+   ================================================== */
+
+.container {
+  display: flex;
+  height: calc(100vh - 80px);
+  padding-bottom: 30px; /* footer space */
+}
+
+.pane {
+  overflow: auto;
+  padding: 8px;
+  border-right: 1px solid #ccc;
+}
+
+.pane.left {
+  flex: 1;
+}
+
+.pane.middle {
+  flex: 1.4;
+}
+
+.pane.right {
+  flex: 1.6;
+  border-right: none;
+}
+
+.pane.right h2 {
+  margin-top: 0;
+}
+
+/* ==================================================
+   GROUP POLICY CATEGORY TREE
+   ================================================== */
+
+.tree-node {
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 4px;
+  font-size: 14px;
+}
+
+.tree-node:hover {
+  background: #eef;
+}
+
+.tree-node.selected {
+  background: #cce;
+  font-weight: bold;
+}
+
+.tree-toggle {
+  display: inline-block;
+  width: 12px;
+  color: #0078d4;
+  font-weight: bold;
+}
+
+.tree-children {
+  margin-left: 16px;
+  display: none;
+}
+
+.tree-node.expanded + .tree-children {
+  display: block;
+}
+
+/* ==================================================
+   POLICY LIST (MIDDLE PANE)
+   ================================================== */
+
+.policy {
+  border-bottom: 1px solid #eee;
+  padding: 8px 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.policy:hover {
+  background: #f6f9fc;
+}
+
+/* ==================================================
+   POLICY DETAILS PANE
+   ================================================== */
+
+.policy-pane {
+  position: relative;
+  padding-bottom: 60px; /* space for copy button */
+}
+
+.policy-pane h2 {
+  margin-top: 0;
+}
+
+/* ==================================================
+   COPY MENU (FINAL, SINGLE IMPLEMENTATION)
+   ================================================== */
+
+.copy-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.copy-btn {
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.copy-menu {
+  display: none; /* hidden by default */
+  position: absolute;
+  bottom: 36px;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 9999;
+  min-width: 220px;
+}
+
+.copy-menu.show {
+  display: block;
+}
+
+.copy-menu div {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.copy-menu div:hover {
+  background-color: #eaf3fc;
+}
+
+/* ==================================================
+   HOME PAGE – APP SELECTION
+   ================================================== */
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 40px;
+}
+
+.app-tile {
+  display: block;
+  padding: 32px;
+  background: #0078d4;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.app-tile:hover {
+  background: #005fa3;
+}
+
+/* ==================================================
+   HOME LINK (BACK TO HOME)
+   ================================================== */
+
+.home-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.home-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ==================================================
+   ABOUT / INFO SECTIONS
+   ================================================== */
+
+.about {
+  padding: 20px 40px 10px 40px;
+  max-width: 900px;
+}
+
+.about h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.about p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-tile {
+  margin: 30px auto 10px auto;
+  max-width: 900px;
+  background: #f4f8fc;
+  padding: 24px 32px;
+  border-radius: 10px;
+  border: 1px solid #d6e6f8;
+}
+
+.about-tile h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.about-tile p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ==================================================
+   STICKY FOOTER DISCLAIMER
+   ================================================== */
+
+#footerBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #eaf3fc;
+  color: #555;
+  font-size: 12px;
+  padding: 6px 16px;
+  border-top: 1px solid #cce0ff;
+  z-index: 1000;
+}

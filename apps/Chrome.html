@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Google Chrome ADMX Guide</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<script>
+  const APP_ID = "Chrome";
+</script>
+
+<header class="top-bar">
+  <div class="header-left">
+    <a href="../index.html" class="home-link" title="Home">
+      🏠 <span>Home</span>
+    </a>
+    <h1>Google Chrome ADMX Guide</h1>
+  </div>
+
+  <div class="header-right">
+    <input id="search" placeholder="Search policies..." />
+  </div>
+</header>
+
+
+<div class="container">
+  <!-- Left Pane: Category Tree -->
+  <aside id="categoryTree" class="pane left"></aside>
+
+  <!-- Middle Pane: Policy List -->
+  <main id="policyList" class="pane middle">
+    <p>Select a category to view policies.</p>
+  </main>
+
+  <!-- Right Pane: Policy Details -->
+  <section id="policyDetails" class="pane right">
+    <p>Select a policy to see details.</p>
+  </section>
+</div>
+
+<footer id="footerBar">
+  Disclaimer: This website is an independent reference project and is not affiliated with, endorsed by, or sponsored by Google LLC.
+  Google Chrome and all related names, logos, and trademarks are the property of Google LLC.
+  All policy definitions and configuration information provided on this site are for educational and informational purposes only and are derived from publicly available administrative template files.
+  Administrators should always validate configurations in their own environments before deploying to production.
+</footer>
+
+<script src="../app.js"></script>
+</body>
+</html>
