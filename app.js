@@ -12,7 +12,16 @@ let policyCategorySet = new Set();
 // DEEP LINK HELPERS
 // ==================================================
 function getPolicyIdFromHash() {
+  const queryPolicyId = new URLSearchParams(window.location.search).get("policy");
+  if (queryPolicyId) return queryPolicyId;
   return window.location.hash ? window.location.hash.substring(1) : null;
+}
+
+function setPolicyInUrl(policyId) {
+  const url = new URL(window.location.href);
+  url.searchParams.set("policy", policyId);
+  url.hash = "";
+  window.history.replaceState({}, "", url);
 }
 
 // ==================================================
@@ -167,7 +176,7 @@ function renderPolicyList() {
     d.className = "policy";
     d.innerHTML = `<strong>${p.displayName}</strong><br/><small>${p.product || ""}</small>`;
     d.onclick = () => {
-      window.location.hash = p.policyId;
+      setPolicyInUrl(p.policyId);
       showPolicyDetails(p);
     };
     el.appendChild(d);
@@ -250,7 +259,7 @@ function toggleCopyMenu(e) {
 function copyText(type, value) {
   let text = value;
   if (type === "url") {
-    text = `${location.origin}${location.pathname}#${value}`;
+    text = `${location.origin}${location.pathname}?policy=${encodeURIComponent(value)}`;
   }
   navigator.clipboard.writeText(text).then(() => showCopyStatus("Copied!"));
   closeCopyMenu();
@@ -306,3 +315,4 @@ function expandCategoryPath(path) {
 }
 
 window.addEventListener("hashchange", handleDeepLink);
+window.addEventListener("popstate", handleDeepLink);
