@@ -616,45 +616,6 @@
     <loc>https://admxguide.com/apps/office.html?policy=L_PolicyGalDownloadInitialDelay</loc>
   </url>
   <url>
-    <loc>https://admxguide.com/apps/office.html?policy=L_PolicyConfigurationMode_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/office.html?policy=L_PolicyEnableSIPHighSecurityMode_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/office.html?policy=L_PolicySipCompression_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/office.html?policy=L_PolicyPreventRun_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/office.html?policy=L_PolicySavePassword_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/office.html?policy=L_PolicyDisableNTCredentials_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/office.html?policy=L_PolicyDisableHttpConnect_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/office.html?policy=L_PolicyDisableServerCheck_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/office.html?policy=L_PolicyConfiguredServerCheckValues_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/office.html?policy=L_PolicyEnableBitsForGalDownload_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/office.html?policy=L_PolicyDisableAutomaticSendTracing_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/office.html?policy=L_PolicyTrustModelData_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/office.html?policy=L_PolicyGalDownloadInitialDelay_1</loc>
-  </url>
-  <url>
     <loc>https://admxguide.com/apps/office.html?policy=L_RestrictActiveXInstall</loc>
   </url>
   <url>
@@ -11329,18 +11290,6 @@
     <loc>https://admxguide.com/apps/mozilla.html?policy=SearchEngines_1</loc>
   </url>
   <url>
-    <loc>https://admxguide.com/apps/mozilla.html?policy=SearchEngines_2</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/mozilla.html?policy=SearchEngines_3</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/mozilla.html?policy=SearchEngines_4</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/mozilla.html?policy=SearchEngines_5</loc>
-  </url>
-  <url>
     <loc>https://admxguide.com/apps/mozilla.html?policy=SearchEngines_Default</loc>
   </url>
   <url>
@@ -12085,9 +12034,6 @@
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_EnableEmptyInitialProgramLaunchRestriction</loc>
   </url>
   <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_EnableEmptyInitialProgramLaunchRestriction_1</loc>
-  </url>
-  <url>
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_EnableDesktopLock_ForAllStandardUsers</loc>
   </url>
   <url>
@@ -12104,9 +12050,6 @@
   </url>
   <url>
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_BlockDirectICAFileLaunches</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_BlockDirectICAFileLaunches_1</loc>
   </url>
   <url>
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_EnableNPS</loc>
@@ -12196,46 +12139,7 @@
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_AutoUpdateVersionControlPolicy</loc>
   </url>
   <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_EngineErrMsg_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_EnableICAClient_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_SSLLockdown_1</loc>
-  </url>
-  <url>
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_ConfigureClientSelectiveTrust_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_ClientAutoReconnect_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_ProxyLockdown_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_AltProxyLockdown_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_ProxySocks_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_ProxyAuthentication_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_Smartcard_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_KerberosLockdown_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_DisablePersistentCookies_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_LocalCredentialsLockdown_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_WITicket_1</loc>
   </url>
   <url>
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_SmartcardRemovalAction_x86</loc>
@@ -12244,67 +12148,7 @@
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_SmartcardRemovalAction_AMD64</loc>
   </url>
   <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_EnableDriveMapping_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_EnablePrinterMapping_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_LocalPort_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_ImageCapture_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_AudioInput_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_Clipboard_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_DragDrop_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_USB_PNP_Devices_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_PointOfSales_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_Audio_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_Graphics_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_Display_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_LocalAppAccess_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_Keyboard_Hotkeys_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_Keyboard_Settings_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_IME_Settings_1</loc>
-  </url>
-  <url>
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_ToggleFullScreen</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_PublishedApplications_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_SleepInhibit_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_HostRenderedAudio_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_ICAFileSettings_1</loc>
   </url>
   <url>
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_AllowLegacySessionSharing</loc>
@@ -12317,9 +12161,6 @@
   </url>
   <url>
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_ManageCsiNotifications</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_MSISettings_1</loc>
   </url>
   <url>
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_PoPSurvey</loc>
@@ -12344,15 +12185,6 @@
   </url>
   <url>
     <loc>https://admxguide.com/apps/citrix.html?policy=HideSimpleDevices_Policy</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=ExistingDevices_Policy_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=NewDevices_Policy_1</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=HideSimpleDevices_Policy_1</loc>
   </url>
   <url>
     <loc>https://admxguide.com/apps/citrix.html?policy=RemoveOnLock</loc>
@@ -12413,9 +12245,6 @@
   </url>
   <url>
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_CEBAvailableOutsideCWA</loc>
-  </url>
-  <url>
-    <loc>https://admxguide.com/apps/citrix.html?policy=Policy_CEBAvailableOutsideCWA_1</loc>
   </url>
   <url>
     <loc>https://admxguide.com/apps/citrix.html?policy=Policy_ScreenCaptureNotification</loc>
