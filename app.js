@@ -128,7 +128,7 @@ function applyFilters() {
   const selectedProduct = document.getElementById("productFilter")?.value;
 
   filteredPolicies = policies.filter(p => {
-    if (!q && selectedCategoryPath) {
+    if (selectedCategoryPath) {
       const key = selectedCategoryPath.join("||");
       if (!policyCategorySet.has(key)) return false;
       if (p.categoryPath.join("||") !== key) return false;
