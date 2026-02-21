@@ -1,77 +1,74 @@
 /* ==================================================
-   GLOBAL
+   GLOBAL TYPOGRAPHY (SEO + READABILITY OPTIMIZED)
    ================================================== */
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #ffffff;
-  color: #000;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f8fafc;
+  color: #1a1a1a;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #1f2937;
+  letter-spacing: 0.2px;
+}
+
+p {
+  font-size: 15px;
+  color: #333;
 }
 
 /* ==================================================
-   TOP HEADER BAR
+   TOP HEADER BAR (Premium Enterprise Tone)
    ================================================== */
 
 .top-bar {
-  background-color: #0078d4;
+  background: linear-gradient(90deg, #0f4c81, #005fa3);
   color: #ffffff;
-  padding: 10px 16px;
+  padding: 14px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.header-left,
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .top-bar h1 {
   font-size: 18px;
   margin: 0;
+  font-weight: 600;
 }
 
 .top-bar input,
 .top-bar select {
   border-radius: 4px;
-  border: none;
+  border: 1px solid #ccc;
   padding: 6px 8px;
   font-size: 13px;
 }
 
 /* ==================================================
-   HOME PAGE HEADER OVERRIDE
-   ================================================== */
-
-.home-page .top-bar {
-  padding: 24px 20px;
-}
-
-.home-page .top-bar h1 {
-  font-size: 26px;
-}
-
-/* ==================================================
-   3-PANE LAYOUT (GPMC STYLE)
+   3-PANE LAYOUT (Professional Depth)
    ================================================== */
 
 .container {
   display: flex;
-  height: calc(100vh - 80px);
-  padding-bottom: 30px; /* footer space */
+  height: calc(100vh - 60px);
 }
 
 .pane {
   overflow: auto;
-  padding: 8px;
-  border-right: 1px solid #ccc;
+  padding: 16px;
+  border-right: 1px solid #e5e7eb;
+  background: #ffffff;
 }
 
 .pane.left {
   flex: 1;
+  background: #f9fafb;
 }
 
 .pane.middle {
@@ -81,41 +78,48 @@ body {
 .pane.right {
   flex: 1.6;
   border-right: none;
+  background: #ffffff;
 }
 
 .pane.right h2 {
   margin-top: 0;
+  font-size: 20px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 6px;
+  margin-bottom: 14px;
 }
 
 /* ==================================================
-   GROUP POLICY CATEGORY TREE
+   CATEGORY TREE (Refined)
    ================================================== */
 
 .tree-node {
   cursor: pointer;
   user-select: none;
-  padding: 2px 4px;
+  padding: 4px 8px;
   font-size: 14px;
+  border-radius: 4px;
+  transition: background 0.15s ease;
 }
 
 .tree-node:hover {
-  background: #eef;
+  background: #eaf2ff;
 }
 
 .tree-node.selected {
-  background: #cce;
-  font-weight: bold;
+  background: #dbeafe;
+  font-weight: 600;
 }
 
 .tree-toggle {
   display: inline-block;
-  width: 12px;
-  color: #0078d4;
+  width: 14px;
+  color: #2563eb;
   font-weight: bold;
 }
 
 .tree-children {
-  margin-left: 16px;
+  margin-left: 18px;
   display: none;
 }
 
@@ -124,60 +128,103 @@ body {
 }
 
 /* ==================================================
-   POLICY LIST (MIDDLE PANE)
+   POLICY LIST (Cleaner Scan Layout)
    ================================================== */
 
 .policy {
-  border-bottom: 1px solid #eee;
-  padding: 8px 6px;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 10px 8px;
   cursor: pointer;
   font-size: 14px;
+  border-radius: 6px;
+  transition: background 0.15s ease, transform 0.05s ease;
 }
 
 .policy:hover {
-  background: #f6f9fc;
+  background: #f3f8ff;
+  transform: translateX(2px);
 }
 
 /* ==================================================
-   POLICY DETAILS PANE
+   POLICY DETAILS (SEO + Readability Focused)
    ================================================== */
 
 .policy-pane {
   position: relative;
-  padding-bottom: 60px; /* space for copy button */
+  padding-bottom: 80px;
 }
 
-.policy-pane h2 {
-  margin-top: 0;
+.policy-pane p {
+  margin-bottom: 14px;
+}
+
+.policy-pane strong {
+  color: #111827;
+}
+
+.policy-pane h3 {
+  margin-top: 20px;
+  font-size: 16px;
+  border-left: 4px solid #2563eb;
+  padding-left: 8px;
+}
+
+/* Registry section visual enhancement */
+.policy-pane h3 + p {
+  background: #f4f7fb;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-family: Consolas, monospace;
+  font-size: 13px;
 }
 
 /* ==================================================
-   COPY MENU (FINAL, SINGLE IMPLEMENTATION)
+   COPY BUTTON (Premium Feel)
    ================================================== */
 
 .copy-container {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.copy-wrapper {
+  position: relative;
 }
 
 .copy-btn {
   cursor: pointer;
-  padding: 6px 10px;
+  padding: 7px 14px;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
   font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  transition: all 0.2s ease;
 }
 
+.copy-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+/* ==================================================
+   COPY MENU
+   ================================================== */
+
 .copy-menu {
-  display: none; /* hidden by default */
+  display: none;
   position: absolute;
-  bottom: 36px;
+  bottom: 40px;
   right: 0;
   background: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  min-width: 230px;
   z-index: 9999;
-  min-width: 220px;
 }
 
 .copy-menu.show {
@@ -185,105 +232,72 @@ body {
 }
 
 .copy-menu div {
-  padding: 8px 12px;
+  padding: 10px 14px;
   cursor: pointer;
   font-size: 14px;
-  white-space: nowrap;
 }
 
 .copy-menu div:hover {
-  background-color: #eaf3fc;
+  background: #eff6ff;
 }
 
 /* ==================================================
-   HOME PAGE – APP SELECTION
+   COPY STATUS
+   ================================================== */
+
+.copy-status {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+/* ==================================================
+   HOME PAGE (Modern Card Layout)
    ================================================== */
 
 .app-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  padding: 40px;
+  gap: 28px;
+  padding: 50px;
 }
 
 .app-tile {
   display: block;
-  padding: 32px;
-  background: #0078d4;
+  padding: 34px;
+  background: linear-gradient(135deg, #0f4c81, #2563eb);
   color: #ffffff;
   text-align: center;
   font-size: 18px;
-  border-radius: 8px;
+  border-radius: 12px;
   text-decoration: none;
-  transition: 0.2s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .app-tile:hover {
-  background: #005fa3;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
 /* ==================================================
-   HOME LINK (BACK TO HOME)
+   ABOUT SECTION (Trust Building)
    ================================================== */
 
-.home-link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  color: #ffffff;
-  text-decoration: none;
-  opacity: 0.85;
-}
-
-.home-link:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-/* ==================================================
-   ABOUT / INFO SECTIONS
-   ================================================== */
-
-.about {
-  padding: 20px 40px 10px 40px;
-  max-width: 900px;
-}
-
-.about h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-.about p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #333;
-}
-
+.about,
 .about-tile {
-  margin: 30px auto 10px auto;
+  margin: 40px auto;
   max-width: 900px;
-  background: #f4f8fc;
-  padding: 24px 32px;
-  border-radius: 10px;
-  border: 1px solid #d6e6f8;
-}
-
-.about-tile h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-.about-tile p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #333;
+  padding: 28px 36px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
 /* ==================================================
-   STICKY FOOTER DISCLAIMER
+   FOOTER
    ================================================== */
 
 #footerBar {
@@ -291,10 +305,191 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #eaf3fc;
-  color: #555;
+  background-color: #f1f5f9;
+  color: #666;
   font-size: 12px;
-  padding: 6px 16px;
-  border-top: 1px solid #cce0ff;
+  padding: 8px 18px;
+  border-top: 1px solid #e5e7eb;
   z-index: 1000;
+}
+/* ==================================================
+   BREADCRUMB (SEO + Enterprise)
+   ================================================== */
+
+.breadcrumb {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #6b7280;
+}
+
+.breadcrumb-item {
+  cursor: pointer;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.breadcrumb-item:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  margin: 0 6px;
+  color: #9ca3af;
+}
+/* ==================================================
+   POSSIBLE VALUES BLOCK
+   ================================================== */
+
+.possible-values {
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.possible-values h4 {
+  margin-top: 0;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.possible-values ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.possible-values li {
+  font-family: Consolas, monospace;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+/* Expand / Collapse */
+.tree-node.expanded + .tree-children {
+  display: block;
+}
+
+.tree-children {
+  margin-left: 18px;
+  display: none;
+}
+
+/* Selected Highlight */
+.tree-node.selected {
+  background: #dbeafe;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* Toggle styling */
+.tree-toggle {
+  display: inline-block;
+  width: 16px;
+  cursor: pointer;
+  color: #2563eb;
+  font-weight: bold;
+}
+/* Search Container */
+.search-container {
+  position: relative;
+}
+
+#search {
+  padding: 6px 28px 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.clear-search {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  display: none;
+}
+
+.clear-search:hover {
+  color: #000;
+}
+
+/* Result Count */
+.result-count {
+  padding: 6px 16px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Highlight */
+.highlight {
+  background-color: #fff3b0;
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+.copy-menu {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 180px;
+}
+
+.copy-menu div {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.copy-menu div:hover {
+  background: #f5f5f5;
+}
+
+.hidden {
+  display: none;
+}
+
+.copy-container {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+
+.policy-pane {
+  position: relative;
+}
+.copy-container {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 1000;
+}
+
+.copy-menu {
+  position: absolute;
+  bottom: 36px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  min-width: 200px;
+  font-size: 14px;
+  z-index: 2000;
+}
+
+.copy-menu div {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.copy-menu div:hover {
+  background: #f5f5f5;
+}
+
+.policy-pane {
+  position: relative;
 }
