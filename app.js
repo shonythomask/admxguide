@@ -1,71 +1,65 @@
-const DATA_PATH = `../Data/${APP_ID}`;
+/* =====================================================
+   ADMX GUIDE – ENTERPRISE FRONTEND (FINAL STABLE)
+   - Expandable Tree
+   - Global Search
+   - Registry Rendering
+   - Deep Linking
+   - Enterprise Copy Dropdown
+   ===================================================== */
 
-// ==================================================
-// GLOBAL STATE
-// ==================================================
+if (typeof APP_ID === "undefined") {
+  throw new Error("APP_ID missing.");
+}
+
+const DATA_PATH = `${window.location.origin}/Data/${APP_ID}`;
+
 let policies = [];
-let filteredPolicies = [];
 let selectedCategoryPath = null;
-let policyCategorySet = new Set();
+let currentPolicy = null;
+let debounceTimer = null;
 
-// ==================================================
-// DEEP LINK HELPERS
-// ==================================================
-function getPolicyIdFromHash() {
-  const queryPolicyId = new URLSearchParams(window.location.search).get("policy");
-  if (queryPolicyId) return queryPolicyId;
-  return window.location.hash ? window.location.hash.substring(1) : null;
-}
-
-function setPolicyInUrl(policyId) {
-  const url = new URL(window.location.href);
-  url.searchParams.set("policy", policyId);
-  url.hash = "";
-  window.history.replaceState({}, "", url);
-}
-
-// ==================================================
-// LOAD POLICIES
-// ==================================================
+// ================= LOAD POLICIES =================
 fetch(`${DATA_PATH}/policies.json`)
-  .then(r => r.json())
-  .then(d => {
-    policies = d.policies;
-
-    policyCategorySet.clear();
-    policies.forEach(p => {
-      policyCategorySet.add(p.categoryPath.join("||"));
-    });
-
-    buildProductFilter();
+  .then(res => {
+    if (!res.ok) throw new Error("Failed to load policies.json");
+    return res.json();
+  })
+  .then(data => {
+    policies = data.policies || [];
     buildCategoryTree();
     renderPolicyList();
-    handleDeepLink();
+    handleInitialRoute();
+  })
+  .catch(err => console.error("Policy load error:", err));
+
+
+// ================= SEARCH =================
+document.addEventListener("DOMContentLoaded", () => {
+
+  const input = document.getElementById("search");
+  const clearBtn = document.getElementById("clearSearch");
+
+  if (!input) return;
+
+  input.addEventListener("input", () => {
+    if (clearBtn)
+      clearBtn.style.display = input.value ? "block" : "none";
+
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(renderPolicyList, 200);
   });
 
-// ==================================================
-// PRODUCT FILTER (Office only)
-// ==================================================
-function buildProductFilter() {
-  const sel = document.getElementById("productFilter");
-  if (!sel) return;
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      input.value = "";
+      clearBtn.style.display = "none";
+      renderPolicyList();
+    });
+  }
+});
 
-  const products = new Set(policies.map(p => p.product).filter(Boolean));
-  sel.innerHTML = `<option value="">All Products</option>`;
 
-  [...products].sort().forEach(p => {
-    const o = document.createElement("option");
-    o.value = p;
-    o.textContent = p;
-    sel.appendChild(o);
-  });
-
-  sel.onchange = applyFilters;
-}
-
-// ==================================================
-// CATEGORY TREE (GPMC STYLE)
-// ==================================================
+// ================= TREE =================
 function buildCategoryTree() {
   const tree = {};
 
@@ -78,13 +72,18 @@ function buildCategoryTree() {
   });
 
   const container = document.getElementById("categoryTree");
+  if (!container) return;
+
   container.innerHTML = "";
-  renderTreeNode(tree, container, []);
+  renderTree(tree, container, []);
 }
 
-function renderTreeNode(node, parent, path) {
+function renderTree(node, parent, path) {
+
   Object.keys(node).sort().forEach(key => {
+
     const fullPath = [...path, key];
+
     const row = document.createElement("div");
     row.className = "tree-node";
     row.dataset.path = fullPath.join("||");
@@ -98,19 +97,26 @@ function renderTreeNode(node, parent, path) {
     toggle.onclick = e => {
       e.stopPropagation();
       if (!hasChildren) return;
-      const expanded = row.classList.toggle("expanded");
-      toggle.textContent = expanded ? "-" : "+";
+
+      row.classList.toggle("expanded");
+      toggle.textContent =
+        row.classList.contains("expanded") ? "−" : "+";
     };
 
     const label = document.createElement("span");
     label.textContent = " " + key;
+
     label.onclick = e => {
       e.stopPropagation();
+
       document.querySelectorAll(".tree-node.selected")
         .forEach(n => n.classList.remove("selected"));
+
       row.classList.add("selected");
+
       selectedCategoryPath = fullPath;
-      applyFilters();
+      expandCategoryPath(fullPath);
+      renderPolicyList();
     };
 
     row.append(toggle, label);
@@ -120,199 +126,275 @@ function renderTreeNode(node, parent, path) {
     children.className = "tree-children";
     parent.appendChild(children);
 
-    renderTreeNode(node[key], children, fullPath);
+    renderTree(node[key], children, fullPath);
   });
-}
-
-// ==================================================
-// SEARCH
-// ==================================================
-document.getElementById("search").oninput = applyFilters;
-
-// ==================================================
-// FILTER PIPELINE
-// ==================================================
-function applyFilters() {
-  const q = document.getElementById("search").value.toLowerCase();
-  const selectedProduct = document.getElementById("productFilter")?.value;
-
-  filteredPolicies = policies.filter(p => {
-    if (selectedCategoryPath) {
-      const key = selectedCategoryPath.join("||");
-      if (!policyCategorySet.has(key)) return false;
-      if (p.categoryPath.join("||") !== key) return false;
-    }
-
-    if (selectedProduct && p.product !== selectedProduct) return false;
-    if (q && !p.displayName.toLowerCase().includes(q)) return false;
-
-    return true;
-  });
-
-  renderPolicyList();
-}
-
-// ==================================================
-// POLICY LIST (MIDDLE PANE)
-// ==================================================
-function renderPolicyList() {
-  const el = document.getElementById("policyList");
-  el.innerHTML = "";
-
-  const hasSearch = document.getElementById("search").value;
-
-  if (!selectedCategoryPath && !hasSearch) {
-    el.innerHTML = "<p>Select a category to view policies.</p>";
-    return;
-  }
-
-  if (filteredPolicies.length === 0) {
-    el.innerHTML = "<p>No matching policies.</p>";
-    return;
-  }
-
-  filteredPolicies.forEach(p => {
-    const d = document.createElement("div");
-    d.className = "policy";
-    d.innerHTML = `<strong>${p.displayName}</strong><br/><small>${p.product || ""}</small>`;
-    d.onclick = () => {
-      setPolicyInUrl(p.policyId);
-      showPolicyDetails(p);
-    };
-    el.appendChild(d);
-  });
-}
-
-// ==================================================
-// POLICY DETAILS (RIGHT PANE)
-// ==================================================
-function showPolicyDetails(p) {
-  let html = `
-    <div class="policy-pane">
-      <h2>${p.displayName}</h2>
-
-      <p><strong>Description:</strong><br>
-        ${p.description || "N/A"}</p>
-
-      <p><strong>Scope:</strong>
-        ${p.policyClass === "User" ? "User Configuration" : "Computer Configuration"}</p>
-
-      <p><strong>Category Path:</strong><br>
-        ${p.categoryPath.join(" > ")}</p>
-  `;
-
-  if (p.registry) {
-    html += `
-      <h3>Registry</h3>
-      <p><strong>Hive:</strong> ${p.registry.hive}</p>
-      <p><strong>Key:</strong><br>${p.registry.key}</p>
-    `;
-
-    if (p.registry.valueName !== undefined) {
-      html += `
-        <p><strong>Value Name:</strong> ${p.registry.valueName || "(Default)"}</p>
-        <ul>
-          <li><strong>Enabled:</strong> ${p.registry.enabledValue}</li>
-          <li><strong>Disabled:</strong> ${p.registry.disabledValue}</li>
-        </ul>
-      `;
-    }
-
-    if (p.registry.perApp) {
-      html += `<h4>Per-Application Values</h4><ul>`;
-      Object.entries(p.registry.perApp).forEach(([app, v]) => {
-        html += `<li><strong>${app}</strong> → Enabled: ${v.enabled}, Disabled: ${v.disabled}</li>`;
-      });
-      html += `</ul>`;
-    }
-  } else {
-    html += `<p><strong>Registry:</strong> N/A</p>`;
-  }
-
-  html += `
-      <div class="copy-container">
-        <button class="copy-btn" onclick="toggleCopyMenu(event)">Copy ▾</button>
-        <div id="copyMenu" class="copy-menu">
-          <div onclick="copyText('url','${p.policyId}')">Copy URL</div>
-          <div onclick="copyText('name','${p.displayName}')">Copy Policy Name</div>
-          <div onclick="copyText('category','${p.categoryPath.join(" > ")}')">Copy Category Path</div>
-          ${p.registry ? `<div onclick="copyText('registry','${p.registry.hive}\\${p.registry.key}')">Copy Registry Key</div>` : ""}
-          <div onclick="copySummary()">Copy Summary</div>
-        </div>
-      </div>
-
-      <div id="copyStatus"></div>
-    </div>
-  `;
-
-  document.getElementById("policyDetails").innerHTML = html;
-}
-
-// ==================================================
-// COPY MENU
-// ==================================================
-function toggleCopyMenu(e) {
-  e.stopPropagation();
-  document.getElementById("copyMenu")?.classList.toggle("show");
-}
-
-function copyText(type, value) {
-  let text = value;
-  if (type === "url") {
-    text = `${location.origin}${location.pathname}?policy=${encodeURIComponent(value)}`;
-  }
-  navigator.clipboard.writeText(text).then(() => showCopyStatus("Copied!"));
-  closeCopyMenu();
-}
-
-function copySummary() {
-  const text = document.getElementById("policyDetails").innerText;
-  navigator.clipboard.writeText(text).then(() => showCopyStatus("Summary copied!"));
-  closeCopyMenu();
-}
-
-function showCopyStatus(msg) {
-  const el = document.getElementById("copyStatus");
-  if (!el) return;
-  el.textContent = msg;
-  setTimeout(() => el.textContent = "", 2000);
-}
-
-function closeCopyMenu() {
-  document.getElementById("copyMenu")?.classList.remove("show");
-}
-
-document.addEventListener("click", closeCopyMenu);
-
-// ==================================================
-// DEEP LINK HANDLING
-// ==================================================
-function handleDeepLink() {
-  const id = getPolicyIdFromHash();
-  if (!id) return;
-
-  const p = policies.find(x => x.policyId === id);
-  if (!p) return;
-
-  selectedCategoryPath = p.categoryPath;
-  expandCategoryPath(p.categoryPath);
-  applyFilters();
-  showPolicyDetails(p);
 }
 
 function expandCategoryPath(path) {
   let current = [];
+
   path.forEach(seg => {
     current.push(seg);
-    const key = current.join("||");
-    const node = document.querySelector(`.tree-node[data-path="${key}"]`);
+
+    const node = document.querySelector(
+      `.tree-node[data-path="${current.join("||")}"]`
+    );
+
     if (node) {
       node.classList.add("expanded");
-      const t = node.querySelector(".tree-toggle");
-      if (t) t.textContent = "-";
+      const toggle = node.querySelector(".tree-toggle");
+      if (toggle) toggle.textContent = "−";
     }
   });
 }
 
-window.addEventListener("hashchange", handleDeepLink);
-window.addEventListener("popstate", handleDeepLink);
+
+// ================= POLICY LIST =================
+function renderPolicyList() {
+
+  const el = document.getElementById("policyList");
+  const resultCount = document.getElementById("resultCount");
+
+  if (!el) return;
+
+  el.innerHTML = "";
+
+  const query =
+    document.getElementById("search")?.value?.trim().toLowerCase();
+
+  let filtered = [];
+
+  // -------- GLOBAL SEARCH --------
+  if (query) {
+
+    filtered = policies.filter(p =>
+      p.displayName?.toLowerCase().includes(query) ||
+      p.description?.toLowerCase().includes(query) ||
+      p.registry?.key?.toLowerCase().includes(query) ||
+      p.registry?.values?.some(v =>
+        v.valueName?.toLowerCase().includes(query)
+      ) ||
+      p.registry?.values?.some(v =>
+        v.possibleValues?.some(val =>
+          val.toLowerCase().includes(query)
+        )
+      )
+    );
+
+  } else {
+
+    if (!selectedCategoryPath) {
+      el.innerHTML = "<p>Select a category or use search.</p>";
+      if (resultCount) resultCount.textContent = "";
+      return;
+    }
+
+    filtered = policies.filter(p =>
+      p.categoryPath
+        .slice(0, selectedCategoryPath.length)
+        .join("||") === selectedCategoryPath.join("||")
+    );
+  }
+
+  if (!filtered.length) {
+    el.innerHTML = "<p>No matching policies found.</p>";
+    if (resultCount) resultCount.textContent = "0 results";
+    return;
+  }
+
+  if (resultCount)
+    resultCount.textContent =
+      `${filtered.length} result${filtered.length > 1 ? "s" : ""}`;
+
+  filtered.forEach(p => {
+
+    const d = document.createElement("div");
+    d.className = "policy";
+    d.innerHTML = `<strong>${p.displayName}</strong>`;
+
+    d.onclick = () => {
+      history.pushState({}, "", `./${p.policyId}.html`);
+      showPolicyDetails(p);
+    };
+
+    el.appendChild(d);
+  });
+}
+
+
+// ================= POLICY DETAILS =================
+function showPolicyDetails(p) {
+
+  currentPolicy = p;
+  document.title = `${p.displayName} | ADMX Guide`;
+
+  let html = `
+    <div class="policy-pane">
+
+      <div class="breadcrumb">
+        ${p.categoryPath.join(" › ")}
+      </div>
+
+      <h2>${p.displayName}</h2>
+
+      <div><strong>Scope:</strong> ${p.policyClass}</div>
+
+      <div class="policy-description">
+        ${p.description || ""}
+      </div>
+  `;
+
+  if (p.registry) {
+
+    html += `
+      <div class="registry-block">
+        <h3>Registry Details</h3>
+        <div><strong>Hive:</strong> ${p.registry.hive || "-"}</div>
+        <div><strong>Key:</strong> ${p.registry.key || "-"}</div>
+    `;
+
+    if (p.registry.values?.length) {
+      p.registry.values.forEach(v => {
+
+        html += `
+          <div class="registry-value">
+            <div><strong>Value Name:</strong> ${v.valueName || "-"}</div>
+            <div><strong>Type:</strong> ${v.valueType || "-"}</div>
+        `;
+
+        if (v.possibleValues?.length) {
+          html += "<ul>";
+          v.possibleValues.forEach(pv => {
+            html += `<li>${pv}</li>`;
+          });
+          html += "</ul>";
+        }
+
+        html += "</div>";
+      });
+    }
+
+    html += "</div>";
+  }
+
+  html += `
+      <div id="copyStatus" class="copy-status"></div>
+
+      <div class="copy-container">
+        <button id="copyToggle" class="copy-btn">Copy ▾</button>
+
+        <div id="copyMenu" class="copy-menu">
+          <div data-copy="url">Copy URL</div>
+          <div data-copy="name">Copy Policy Name</div>
+          <div data-copy="category">Copy Category Path</div>
+          <div data-copy="registry">Copy Registry Key</div>
+          <div data-copy="summary">Copy Summary</div>
+        </div>
+      </div>
+
+    </div>
+  `;
+
+  const container = document.getElementById("policyDetails");
+  container.innerHTML = html;
+
+  initializeCopyMenu();
+}
+
+
+// ================= COPY MENU =================
+function initializeCopyMenu() {
+
+  const toggleBtn = document.getElementById("copyToggle");
+  const menu = document.getElementById("copyMenu");
+
+  if (!toggleBtn || !menu) return;
+
+  menu.style.display = "none";
+
+  toggleBtn.onclick = (e) => {
+    e.stopPropagation();
+    menu.style.display =
+      menu.style.display === "block" ? "none" : "block";
+  };
+
+  menu.querySelectorAll("div").forEach(item => {
+    item.onclick = (e) => {
+      e.stopPropagation();
+      copyOption(item.dataset.copy);
+      menu.style.display = "none";
+    };
+  });
+
+  document.addEventListener("click", () => {
+    menu.style.display = "none";
+  });
+}
+
+function copyOption(type) {
+
+  if (!currentPolicy) return;
+
+  let text = "";
+
+  switch (type) {
+
+    case "url":
+      text = window.location.href;
+      break;
+
+    case "name":
+      text = currentPolicy.displayName;
+      break;
+
+    case "category":
+      text = currentPolicy.categoryPath.join(" › ");
+      break;
+
+    case "registry":
+      text =
+        `${currentPolicy.registry?.hive}\\${currentPolicy.registry?.key}`;
+      break;
+
+    case "summary":
+      text =
+`Policy: ${currentPolicy.displayName}
+Scope: ${currentPolicy.policyClass}
+Category: ${currentPolicy.categoryPath.join(" › ")}
+Registry: ${currentPolicy.registry?.hive}\\${currentPolicy.registry?.key}
+
+Description:
+${currentPolicy.description}`;
+      break;
+  }
+
+  navigator.clipboard.writeText(text).then(() => {
+    const status = document.getElementById("copyStatus");
+    if (status) {
+      status.textContent = "Copied!";
+      setTimeout(() => status.textContent = "", 2000);
+    }
+  });
+}
+
+
+// ================= ROUTING =================
+function handleInitialRoute() {
+
+  const match =
+    window.location.pathname.match(/\/([^\/]+)\.html$/);
+
+  if (!match) return;
+
+  const policy =
+    policies.find(p => p.policyId === match[1]);
+
+  if (policy) {
+    selectedCategoryPath = policy.categoryPath;
+    expandCategoryPath(policy.categoryPath);
+    renderPolicyList();
+    showPolicyDetails(policy);
+  }
+}
+
+window.addEventListener("popstate", handleInitialRoute);
