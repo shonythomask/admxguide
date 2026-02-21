@@ -27,7 +27,7 @@ p {
    ================================================== */
 
 .top-bar {
-  background: linear-gradient(90deg, #0f4c81, #005fa3);
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
   color: #ffffff;
   padding: 14px 20px;
   display: flex;
@@ -40,6 +40,7 @@ p {
   font-size: 18px;
   margin: 0;
   font-weight: 600;
+  color: #ffffff;
 }
 
 .top-bar input,
