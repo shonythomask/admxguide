@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Control where developer tools can be used | ADMX Guide</title>
+
+<meta name="description" content="Control where developer tools can be used ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Control where developer tools can be used</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Control where developer tools can be used.
+
+If you set this policy to 'DeveloperToolsDisallowedForForceInstalledExtensions' (the default), users can access the developer tools and the JavaScript console in general, but not in the context of extensions installed by enterprise policy.
+
+If you set this policy to 'DeveloperToolsAllowed', users can access the developer tools and the JavaScript console in all contexts, including extensions installed by enterprise policy.
+
+If you set this policy to 'DeveloperToolsDisallowed', users can't access the developer tools or inspect website elements. Keyboard shortcuts and menu or context menu entries that open the developer tools or the JavaScript Console are disabled.
+
+As of Microsoft Edge version 99, this setting also controls entry points for the 'View page source' feature. If you set this policy to 'DeveloperToolsDisallowed', users cannot access source viewing via keyboard shortcut or the context menu. To fully block source viewing, you must also add 'view-source:*' to the 'URLBlocklist' (Block access to a list of URLs) policy.
+
+As of Microsoft Edge version 119, this setting also controls whether developer mode for Isolated Web Apps can be activated and used.
+
+As of Microsoft Edge version 128, this setting will not control developer mode on extensions page if 'ExtensionDeveloperModeSettings' (Control the availability of developer mode on extensions page) policy is set.
+
+Policy options mapping:
+
+* DeveloperToolsDisallowedForForceInstalledExtensions (0) = Block the developer tools on extensions installed by enterprise policy, allow in other contexts
+
+* DeveloperToolsAllowed (1) = Allow using the developer tools
+
+* DeveloperToolsDisallowed (2) = Don't allow using the developer tools
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

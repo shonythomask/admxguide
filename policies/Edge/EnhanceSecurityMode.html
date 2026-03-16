@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enhance the security state in Microsoft Edge | ADMX Guide</title>
+
+<meta name="description" content="Enhance the security state in Microsoft Edge ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enhance the security state in Microsoft Edge</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy lets you enhance the security state in Microsoft Edge.
+
+If you set this policy to 'StandardMode', the enhanced mode will be turned off and Microsoft Edge will fallback to its standard security mode.
+
+If you set this policy to 'BalancedMode', the security state will be in balanced mode.
+
+If you set this policy to 'StrictMode', the security state will be in strict mode.
+
+If you set this policy to 'BasicMode', the security state will be in basic mode.
+
+Note: Sites that use WebAssembly (WASM) are not supported on 32-bit systems when 'EnhanceSecurityMode' (Enhance the security state in Microsoft Edge) is enabled. If you require access to a site that uses WASM, consider adding it to your exception list as described in https://go.microsoft.com/fwlink/?linkid=2183321.
+
+Starting in Microsoft Edge 113, 'BasicMode' is deprecated and is treated the same as 'BalancedMode'. It won't work in Microsoft Edge version 116.
+
+For detailed information about Enhanced Security Mode, see https://go.microsoft.com/fwlink/?linkid=2185895
+
+Policy options mapping:
+
+* StandardMode (0) = Standard mode
+
+* BalancedMode (1) = Balanced mode
+
+* StrictMode (2) = Strict mode
+
+* BasicMode (3) = (Deprecated) Basic mode
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

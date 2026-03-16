@@ -1,5 +1,5 @@
 /* ==================================================
-   GLOBAL TYPOGRAPHY (SEO + READABILITY OPTIMIZED)
+   GLOBAL TYPOGRAPHY
    ================================================== */
 
 body {
@@ -22,76 +22,166 @@ p {
   color: #333;
 }
 
+
 /* ==================================================
-   TOP HEADER BAR (Premium Enterprise Tone)
+   HEADER BAR
    ================================================== */
 
 .top-bar {
-  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  background: linear-gradient(90deg, #0f4c81, #005fa3);
   color: #ffffff;
-  padding: 14px 20px;
+  padding: 14px 26px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.top-bar h1 {
+.logo {
   font-size: 18px;
-  margin: 0;
   font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.main-nav {
+  display: flex;
+  gap: 22px;
+}
+
+.main-nav a {
+  color: #e6edf6;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
   color: #ffffff;
 }
 
-.top-bar input,
-.top-bar select {
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  padding: 6px 8px;
-  font-size: 13px;
+.page-title {
+  display: flex;
+  flex-direction: column;
 }
 
+.page-subtitle {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  margin-top: 3px;
+}
+
+
 /* ==================================================
-   3-PANE LAYOUT (Professional Depth)
+   MAIN LAYOUT
    ================================================== */
 
 .container {
   display: flex;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
 }
 
 .pane {
-  overflow: auto;
   padding: 16px;
-  border-right: 1px solid #e5e7eb;
   background: #ffffff;
 }
 
 .pane.left {
   flex: 1;
   background: #f9fafb;
+  overflow-y: auto;
+  position: relative;
 }
 
 .pane.middle {
   flex: 1.4;
+  border-left: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
 }
 
 .pane.right {
   flex: 1.6;
-  border-right: none;
-  background: #ffffff;
+  max-width: 900px;
 }
 
-.pane.right h2 {
-  margin-top: 0;
-  font-size: 20px;
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 6px;
-  margin-bottom: 14px;
-}
 
 /* ==================================================
-   CATEGORY TREE (Refined)
+   LEFT PANE HEADER (SEARCH + CONTROLS)
+   ================================================== */
+
+.left-pane-header {
+
+  position: sticky;
+  top: 0;
+
+  background: #ffffff;
+
+  padding: 12px;
+
+  border-bottom: 1px solid #ddd;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+
+  z-index: 10;
+
+}
+
+.left-pane-header input {
+
+  width: 100%;
+  padding: 9px 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  font-size: 14px;
+
+  outline: none;
+
+  margin-bottom: 10px;
+
+}
+
+.left-pane-header input:focus {
+
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.15);
+
+}
+
+
+/* ==================================================
+   TREE CONTROL BUTTONS
+   ================================================== */
+
+.tree-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.tree-controls button {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.tree-controls button:hover {
+  background: #eef2ff;
+}
+
+
+/* ==================================================
+   CATEGORY TREE
    ================================================== */
 
 .tree-node {
@@ -100,7 +190,6 @@ p {
   padding: 4px 8px;
   font-size: 14px;
   border-radius: 4px;
-  transition: background 0.15s ease;
 }
 
 .tree-node:hover {
@@ -128,26 +217,32 @@ p {
   display: block;
 }
 
+
 /* ==================================================
-   POLICY LIST (Cleaner Scan Layout)
+   POLICY LIST
    ================================================== */
 
 .policy {
-  border-bottom: 1px solid #f0f0f0;
-  padding: 10px 8px;
+  border-bottom: 1px solid #eef2f7;
+  padding: 12px 10px;
   cursor: pointer;
   font-size: 14px;
   border-radius: 6px;
-  transition: background 0.15s ease, transform 0.05s ease;
+  transition: background 0.15s ease;
+}
+
+.policy strong {
+  font-weight: 600;
+  color: #111827;
 }
 
 .policy:hover {
-  background: #f3f8ff;
-  transform: translateX(2px);
+  background: #eef5ff;
 }
 
+
 /* ==================================================
-   POLICY DETAILS (SEO + Readability Focused)
+   POLICY DETAILS
    ================================================== */
 
 .policy-pane {
@@ -155,12 +250,18 @@ p {
   padding-bottom: 80px;
 }
 
-.policy-pane p {
-  margin-bottom: 14px;
+.policy-pane h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  border-left: 4px solid #2563eb;
+  padding-left: 10px;
 }
 
-.policy-pane strong {
-  color: #111827;
+.policy-description {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .policy-pane h3 {
@@ -170,27 +271,49 @@ p {
   padding-left: 8px;
 }
 
-/* Registry section visual enhancement */
-.policy-pane h3 + p {
+
+/* ==================================================
+   REGISTRY BLOCK
+   ================================================== */
+
+.registry-block {
   background: #f4f7fb;
-  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 18px;
+}
+
+.registry-value {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 10px;
   border-radius: 6px;
+  margin-top: 10px;
   font-family: Consolas, monospace;
   font-size: 13px;
 }
 
+
 /* ==================================================
-   COPY BUTTON (Premium Feel)
+   BREADCRUMB
+   ================================================== */
+
+.breadcrumb {
+  font-size: 13px;
+  margin-bottom: 12px;
+  color: #6b7280;
+}
+
+
+/* ==================================================
+   COPY BUTTON
    ================================================== */
 
 .copy-container {
   position: absolute;
   bottom: 20px;
   right: 20px;
-}
-
-.copy-wrapper {
-  position: relative;
 }
 
 .copy-btn {
@@ -203,13 +326,12 @@ p {
   font-size: 13px;
   font-weight: 500;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
-  transition: all 0.2s ease;
 }
 
 .copy-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
 }
+
 
 /* ==================================================
    COPY MENU
@@ -218,33 +340,25 @@ p {
 .copy-menu {
   display: none;
   position: absolute;
-  bottom: 40px;
+  bottom: 36px;
   right: 0;
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  min-width: 230px;
-  z-index: 9999;
-}
-
-.copy-menu.show {
-  display: block;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  min-width: 200px;
+  font-size: 14px;
+  z-index: 2000;
 }
 
 .copy-menu div {
-  padding: 10px 14px;
+  padding: 8px 12px;
   cursor: pointer;
-  font-size: 14px;
 }
 
 .copy-menu div:hover {
-  background: #eff6ff;
+  background: #f5f5f5;
 }
-
-/* ==================================================
-   COPY STATUS
-   ================================================== */
 
 .copy-status {
   margin-top: 12px;
@@ -253,8 +367,9 @@ p {
   font-weight: 500;
 }
 
+
 /* ==================================================
-   HOME PAGE (Modern Card Layout)
+   HOME PAGE GRID
    ================================================== */
 
 .app-grid {
@@ -282,8 +397,9 @@ p {
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
+
 /* ==================================================
-   ABOUT SECTION (Trust Building)
+   ABOUT SECTION
    ================================================== */
 
 .about,
@@ -296,6 +412,26 @@ p {
   border: 1px solid #e5e7eb;
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
+
+
+/* ==================================================
+   SEO CONTENT BLOCK
+   ================================================== */
+
+.seo-content {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.seo-content h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
 
 /* ==================================================
    FOOTER
@@ -311,186 +447,298 @@ p {
   font-size: 12px;
   padding: 8px 18px;
   border-top: 1px solid #e5e7eb;
-  z-index: 1000;
 }
 /* ==================================================
-   BREADCRUMB (SEO + Enterprise)
+   LEFT PANE TOOLBAR (STICKY SEARCH + CONTROLS)
    ================================================== */
 
-.breadcrumb {
-  font-size: 13px;
+.left-pane-toolbar {
+
+  position: sticky;
+  top: 0;
+
+  background: #f9fafb;
+
+  padding: 12px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  z-index: 100;
+  
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+
+}
+
+/* search field */
+
+.left-pane-toolbar input {
+
+  width: 100%;
+  padding: 10px 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  font-size: 14px;
+
+}
+
+.left-pane-toolbar input:focus {
+
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.15);
+  outline: none;
+
+}
+
+/* buttons */
+
+.tree-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.tree-controls button {
+
+  font-size: 12px;
+
+  padding: 6px 10px;
+
+  border-radius: 4px;
+
+  border: 1px solid #d1d5db;
+
+  background: #f9fafb;
+
+  cursor: pointer;
+
+}
+
+.tree-controls button:hover {
+  background: #eef2ff;
+}
+/* ==========================================
+   LEFT PANE STICKY TOOLBAR
+   ========================================== */
+
+.left-pane-toolbar {
+
+  position: sticky;
+  top: 0;
+
+  background: #f9fafb;
+
+  padding: 12px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  z-index: 50;
+
+}
+
+/* search input */
+
+.left-pane-toolbar input {
+
+  width: 100%;
+
+  padding: 10px 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  font-size: 14px;
+
   margin-bottom: 10px;
-  color: #6b7280;
+
 }
 
-.breadcrumb-item {
-  cursor: pointer;
-  color: #2563eb;
+.left-pane-toolbar input:focus {
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.15);
+
+  outline: none;
+
+}
+/* ==========================================
+   HEADER NAVIGATION
+   ========================================== */
+
+.main-nav {
+
+  margin-top: 8px;
+
+  display: flex;
+  gap: 20px;
+
+}
+
+.main-nav a {
+
+  color: #e6edf6;
+  text-decoration: none;
+  font-size: 14px;
   font-weight: 500;
+
 }
 
-.breadcrumb-item:hover {
-  text-decoration: underline;
+.main-nav a:hover {
+
+  color: #ffffff;
+
 }
 
-.breadcrumb-separator {
-  margin: 0 6px;
-  color: #9ca3af;
-}
-/* ==================================================
-   POSSIBLE VALUES BLOCK
-   ================================================== */
 
-.possible-values {
-  margin-top: 16px;
-  padding: 12px 14px;
+/* ==========================================
+   HEADER TOOLS
+   ========================================== */
+
+.header-tools {
+
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.header-tools input {
+
+  width: 280px;
+
+  padding: 8px 10px;
+
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+
+  font-size: 13px;
+
+}
+
+.header-tools button {
+
+  font-size: 12px;
+
+  padding: 6px 10px;
+
+  border-radius: 4px;
+
+  border: 1px solid #cbd5e1;
+
   background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-}
 
-.possible-values h4 {
-  margin-top: 0;
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-.possible-values ul {
-  margin: 0;
-  padding-left: 18px;
-}
-
-.possible-values li {
-  font-family: Consolas, monospace;
-  font-size: 13px;
-  margin-bottom: 4px;
-}
-/* Expand / Collapse */
-.tree-node.expanded + .tree-children {
-  display: block;
-}
-
-.tree-children {
-  margin-left: 18px;
-  display: none;
-}
-
-/* Selected Highlight */
-.tree-node.selected {
-  background: #dbeafe;
-  font-weight: 600;
-  border-radius: 4px;
-}
-
-/* Toggle styling */
-.tree-toggle {
-  display: inline-block;
-  width: 16px;
   cursor: pointer;
-  color: #2563eb;
-  font-weight: bold;
-}
-/* Search Container */
-.search-container {
-  position: relative;
+
 }
 
-#search {
-  padding: 6px 28px 6px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
+.header-tools button:hover {
 
-.clear-search {
-  position: absolute;
-  right: 8px;
-  top: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  color: #666;
-  display: none;
-}
+  background: #eef2ff;
 
-.clear-search:hover {
-  color: #000;
 }
+/* ==========================================
+   HEADER LAYOUT
+   ========================================== */
 
-/* Result Count */
-.result-count {
-  padding: 6px 16px;
-  font-size: 13px;
-  color: #555;
-}
+.top-bar {
 
-/* Highlight */
-.highlight {
-  background-color: #fff3b0;
-  padding: 1px 3px;
-  border-radius: 3px;
-}
-.copy-menu {
-  position: absolute;
-  bottom: 40px;
-  right: 0;
-  background: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-radius: 6px;
-  font-size: 14px;
-  min-width: 180px;
-}
+  background: linear-gradient(90deg, #0f4c81, #005fa3);
+  color: #ffffff;
 
-.copy-menu div {
-  padding: 8px 12px;
-  cursor: pointer;
-}
+  padding: 14px 26px;
 
-.copy-menu div:hover {
-  background: #f5f5f5;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 
-.hidden {
-  display: none;
-}
-
-.copy-container {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-}
-
-.policy-pane {
-  position: relative;
-}
-.copy-container {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
+  position: sticky;
+  top: 0;
   z-index: 1000;
+
 }
 
-.copy-menu {
-  position: absolute;
-  bottom: 36px;
-  right: 0;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  min-width: 200px;
+
+/* right side of header */
+
+.header-right {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+
+}
+
+
+/* navigation */
+
+.main-nav {
+
+  display: flex;
+  gap: 22px;
+
+}
+
+.main-nav a {
+
+  color: #e6edf6;
+  text-decoration: none;
   font-size: 14px;
-  z-index: 2000;
+  font-weight: 500;
+
 }
 
-.copy-menu div {
-  padding: 8px 12px;
+.main-nav a:hover {
+
+  color: #ffffff;
+
+}
+
+
+/* tools row */
+
+.header-tools {
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.header-tools input {
+
+  width: 260px;
+
+  padding: 7px 10px;
+
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+
+  font-size: 13px;
+
+}
+
+.header-tools button {
+
+  font-size: 12px;
+
+  padding: 6px 10px;
+
+  border-radius: 4px;
+
+  border: 1px solid #cbd5e1;
+
+  background: #ffffff;
+
   cursor: pointer;
+
 }
 
-.copy-menu div:hover {
-  background: #f5f5f5;
-}
+.header-tools button:hover {
 
-.policy-pane {
-  position: relative;
+  background: #eef2ff;
+
 }

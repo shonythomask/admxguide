@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Don't use Application Guard with Office. | ADMX Guide</title>
+
+<meta name="description" content="Don't use Application Guard with Office. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Don't use Application Guard with Office.</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Security Settings > Trust Center > Application Guard</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\security\applicationguard</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to control whether Office apps use Application Guard to isolate untrusted documents.
+
+If you enable this policy setting, Office apps won't use Application Guard to isolate untrusted documents even if the device is configured to use Application Guard. Instead, Office will use Protected View to isolate untrusted documents.
+
+Note: You should consider enabling this policy setting if you want to stop Office apps from using Application Guard without impacting the use of Application Guard with other applications.
+
+If you disable or don't configure this policy settings, Office apps will use Application Guard to isolate untrusted documents. The device must be configured to use Application Guard and the user must be licensed to use Application Guard.</p>
+
+</div>
+
+</body>
+</html>

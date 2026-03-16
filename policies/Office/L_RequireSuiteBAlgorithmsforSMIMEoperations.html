@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Require SuiteB algorithms for S/MIME operations | ADMX Guide</title>
+
+<meta name="description" content="Require SuiteB algorithms for S/MIME operations ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Require SuiteB algorithms for S/MIME operations</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Outlook 2016 > Security > Cryptography</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\outlook\security</p>
+
+<h3>Description</h3>
+
+<p>This policy setting determines whether Outlook is required to use NSA Suite B algorithms for S/MIME operations. Outlook implements Suite B, a set of cryptographic algorithms for symmetric encryption, hashing, digital signatures, and key exchange announced in 2005 by the National Security Agency (NSA), a division of the United States Department of Defense. The Suite B protocols can be used to meet U.S. government standards for handling both classified and unclassified information. 
+
+If you enable this policy setting, Outlook uses only Suite B algorithms for S/MIME operations. The Suite B algorithms are as follows: 
+
+- Symmetric encryption. Advanced Encryption Standard (AES) with key sizes of 128 and 256 bits. 
+
+- Message digest. Secure Hash Algorithm (SHA-256 and SHA-384). 
+
+- Key agreement. Elliptic-Curve Menezes-Qu-Vanstone (ECMQV); Elliptic Curve Diffie-Hellman (ECDH). 
+
+- Digital Signatures. Elliptic-Curve Digital Signature Algorithm (ECDSA). 
+
+If you disable or do not configure this policy setting, Outlook can use any available algorithm for S/MIME operations, such as encryption, signing, and so on. 
+
+Note - For more information about Suite B, see "Fact Sheet NSA Suite B Cryptography"  http://www.nsa.gov/ia/industry/crypto_suite_b.cfm.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Determine the availability of variations | ADMX Guide</title>
+
+<meta name="description" content="Determine the availability of variations ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Determine the availability of variations</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Configuring this policy allows to specify which variations are allowed to be applied in Google Chrome.
+
+Variations provide a means for offering modifications to Google Chrome without shipping a new version of the browser by selectively enabling or disabling already existing features. See https://support.google.com/chrome/a?p=Manage_the_Chrome_variations_framework for more information.
+
+Setting the VariationsEnabled (value 0), or leaving the policy not set allows all variations to be applied to the browser.
+
+Setting the CriticalFixesOnly (value 1), allows only variations considered critical security or stability fixes to be applied to Google Chrome.
+
+Setting the VariationsDisabled (value 2), prevent all variations from being applied to the browser. Please note that this mode can potentially prevent the Google Chrome developers from providing critical security fixes in a timely manner and is thus not recommended.</p>
+
+</div>
+
+</body>
+</html>

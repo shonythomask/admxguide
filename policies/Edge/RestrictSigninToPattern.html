@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Restrict which accounts can be used to sign in to Microsoft Edge | ADMX Guide</title>
+
+<meta name="description" content="Restrict which accounts can be used to sign in to Microsoft Edge ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Restrict which accounts can be used to sign in to Microsoft Edge</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Determines which accounts can be used to sign in to the Microsoft Edge account that's chosen during the Sync opt-in flow.
+
+You can configure this policy to match multiple accounts using a Perl style regular expression for the pattern. If a user tries to sign in to the browser with an account whose username doesn't match this pattern, they are blocked and will get the appropriate error message. Note that pattern matches are case sensitive. For more information about the regular expression rules that are used, refer to https://go.microsoft.com/fwlink/p/?linkid=2133903.
+
+If you don't configure this policy or leave it blank, users can use any account to sign in to Microsoft Edge.
+
+Note that signed-in profiles with a username that doesn't match this pattern will be signed out after this policy is enabled.
+
+Example value: .*@contoso.com</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DataURL Whitespace Preservation for all media types | ADMX Guide</title>
+
+<meta name="description" content="DataURL Whitespace Preservation for all media types ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>DataURL Whitespace Preservation for all media types</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Network settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy provides a temporary opt-out for changes to how Chrome handles whitepsace in data URLS.
+Previously, whitespace would be kept only if the top level media type was text or contained the media type string xml.
+Now, whitespace will be preserved in all data URLs, regardless of media type.
+
+If this policy is left unset or is set to True, the new behavior is enabled.
+
+When this policy is set to False, the old behavior is enabled.</p>
+
+</div>
+
+</body>
+</html>

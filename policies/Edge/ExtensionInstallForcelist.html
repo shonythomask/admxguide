@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Control which extensions are installed silently | ADMX Guide</title>
+
+<meta name="description" content="Control which extensions are installed silently ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Control which extensions are installed silently</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Extensions</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Set this policy to specify a list of apps and extensions that install silently, without user interaction. Users can't uninstall or turn off this setting. Permissions are granted implicitly, including the enterprise.deviceAttributes and enterprise.platformKeys extension APIs. Note: These 2 APIs aren't available to apps and extensions that aren't force-installed.
+
+If you don't set this policy, no apps or extensions are autoinstalled and users can uninstall any app in Microsoft Edge.
+
+This policy supercedes 'ExtensionInstallBlocklist' (Control which extensions cannot be installed) policy. If a previously force-installed app or extension is removed from this list, Microsoft Edge automatically uninstalls it.
+
+For Windows instances not joined to a Microsoft Active Directory domain, forced installation is limited to apps and extensions listed in the Microsoft Edge Add-ons website.
+
+On macOS instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be force installed if the instance is managed via MDM, or joined to a domain via MCX.
+
+The source code of any extension can be altered by users with developer tools, potentially rendering the extension unfunctional. If this is a concern, configure the 'DeveloperToolsAvailability' (Control where developer tools can be used) policy.
+
+Each list item of the policy is a string that contains an extension ID and, optionally, and an optional "update" URL separated by a semicolon (;). The extension ID is the 32-letter string found, for example, on edge://extensions when in Developer mode. If specified, the "update" URL should point to an Update Manifest XML document ( https://go.microsoft.com/fwlink/?linkid=2095043 ). The update URL should use one of the following schemes: http, https or file. By default, the Microsoft Edge Add-ons website's update URL is used. The "update" URL set in this policy is only used for the initial installation; subsequent updates of the extension use the update URL in the extension's manifest. The update url for subsequent updates can be overridden using the ExtensionSettings policy, see https://learn.microsoft.com/deployedge/microsoft-edge-manage-extensions-ref-guide.
+
+Note: This policy doesn't apply to InPrivate mode. Read about hosting extensions at [Publish and update extensions in the Microsoft Edge Add-ons website](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+
+Example value:
+
+gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx
+abcdefghijklmnopabcdefghijklmnop</p>
+
+</div>
+
+</body>
+</html>

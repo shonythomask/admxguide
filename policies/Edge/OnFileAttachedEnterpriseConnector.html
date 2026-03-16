@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configuration policy for files attached for Microsoft Edge for Business Data Loss Prevention Connectors | ADMX Guide</title>
+
+<meta name="description" content="Configuration policy for files attached for Microsoft Edge for Business Data Loss Prevention Connectors ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configuration policy for files attached for Microsoft Edge for Business Data Loss Prevention Connectors</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>List of Microsoft Edge for Business Data Loss Prevention Connectors services settings to be applied when a file is attached to Microsoft Edge.
+
+Connector Fields
+
+1. url_list,
+tags,
+enable,
+disable
+These fields determine whether the connector sends data for analysis when content is entered on a specific page, and which tags to include in the analysis request.
+A tag associated with an enable pattern is included in the request if the page URL matches the pattern—unless a corresponding disable pattern also matches.
+Analysis is triggered if at least one tag is included in the request.
+
+2. service_provider
+Identifies the analysis service provider the configuration applies to.
+
+3. block_until_verdict
+If set to 1, Microsoft Edge waits for a response from the analysis service before giving the page access to the data.
+Any other integer value allows the page to access the data immediately.
+
+4. default_action
+If set to block, Microsoft Edge denies page access to the data if an error occurs while contacting the analysis service.
+Any other value permits the page to access the data.
+
+This policy requires additional setup to take effect. For configuration guidance, see https://go.microsoft.com/fwlink/?linkid=2320413.
+
+Example value:
+
+[
+  {
+    "block_until_verdict": 0,
+    "default_action": "allow",
+    "disable": [
+      {
+        "tags": [
+          "malware"
+        ],
+        "url_list": [
+          "*.us.com"
+        ]
+      }
+    ],
+    "enable": [
+      {
+        "tags": [
+          "malware"
+        ],
+        "url_list": [
+          "*"
+        ]
+      },
+      {
+        "tags": [
+          "dlp"
+        ],
+        "url_list": [
+          "*.them.com",
+          "*.others.com"
+        ]
+      }
+    ],
+    "service_provider": "local_system_agent"
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

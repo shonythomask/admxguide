@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Automatically import another browser's data and settings at first run | ADMX Guide</title>
+
+<meta name="description" content="Automatically import another browser's data and settings at first run ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Automatically import another browser's data and settings at first run</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>If you enable this policy, all supported datatypes and settings from the specified browser will be silently and automatically imported at first run. During the First Run Experience, the import section will also be skipped.
+
+The browser data from Microsoft Edge Legacy will always be silently migrated at the first run, irrespective of the value of this policy.
+
+If this policy is set to 'FromDefaultBrowser', then the datatypes corresponding to the default browser on the managed device will be imported.
+
+If the browser specified as the value of this policy is not present in the managed device, Microsoft Edge will simply skip the import without any notification to the user.
+
+If you set this policy to 'DisabledAutoImport', the import section of the first-run experience is skipped entirely and Microsoft Edge doesn't import browser data and settings automatically.
+
+If this policy is set to the value of 'FromInternetExplorer', the following datatypes will be imported from Internet Explorer:
+1. Favorites or bookmarks
+2. Saved passwords
+3. Search engines
+4. Browsing history
+5. Home page
+
+If this policy is set to the value of 'FromGoogleChrome', the following datatypes will be imported from Google Chrome:
+1. Favorites
+2. Saved passwords
+3. Addresses and more
+4. Payment info
+5. Browsing history
+6. Settings
+7. Pinned and Open tabs
+8. Extensions
+9. Cookies
+
+Note: For more details on what is imported from Google Chrome, please see https://go.microsoft.com/fwlink/?linkid=2120835
+
+If this policy is set to the value of 'FromSafari', user data is no longer imported into Microsoft Edge. This is due to the way Full Disk Access works on Mac.
+On macOS Mojave and above, it's no longer possible to have automated and unattended import of Safari data into Microsoft Edge.
+
+Starting with Microsoft Edge version 83, if this policy is set to the value of 'FromMozillaFirefox', the following datatypes will be imported from Mozilla Firefox:
+1. Favorites or bookmarks
+2. Saved passwords
+3. Addresses and more
+4. Browsing History
+
+If you want to restrict specific datatypes from getting imported on the managed devices, you can use this policy with other policies such as 'ImportAutofillFormData' (Allow importing of autofill form data), 'ImportBrowserSettings' (Allow importing of browser settings), 'ImportFavorites' (Allow importing of favorites), and etc.
+
+Policy options mapping:
+
+* FromDefaultBrowser (0) = Automatically imports all supported datatypes and settings from the default browser
+
+* FromInternetExplorer (1) = Automatically imports all supported datatypes and settings from Internet Explorer
+
+* FromGoogleChrome (2) = Automatically imports all supported datatypes and settings from Google Chrome
+
+* FromSafari (3) = Automatically imports all supported datatypes and settings from Safari
+
+* DisabledAutoImport (4) = Disables automatic import, and the import section of the first-run experience is skipped
+
+* FromMozillaFirefox (5) = Automatically imports all supported datatypes and settings from Mozilla Firefox
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

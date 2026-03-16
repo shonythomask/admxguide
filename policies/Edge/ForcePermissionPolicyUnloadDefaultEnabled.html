@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Controls whether unload event handlers can be disabled. | ADMX Guide</title>
+
+<meta name="description" content="Controls whether unload event handlers can be disabled. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Controls whether unload event handlers can be disabled.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge WebView2</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge\WebView2</p>
+
+<h3>Description</h3>
+
+<p>unload event handlers are being deprecated. Whether they fire depends on the unload Permissions-Policy.
+Currently, they are allowed by policy by default. In the future they will gradually move to being disallowed by default and sites must explicitly enable them using Permissions-Policy headers.
+This enterprise policy can be used to opt out of this gradual deprecation by forcing the default to stay enabled.
+
+Pages might depend on unload event handlers to save data or signal the end of a user session to the server.
+This is not recommended because it's unreliable and impacts performance by blocking use of BackForwardCache.
+Recommended alternatives exist, but the unload event has been used for a long time. Some applications might still rely on them.
+
+If you disable this policy or don't configure it, unload event handlers will gradually be deprecated in-line with the deprecation rollout and sites which don't set Permissions-Policy header will stop firing `unload` events.
+
+If you enable this policy then unload event handlers will continue to work by default.</p>
+
+</div>
+
+</body>
+</html>

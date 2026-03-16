@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Run Programs | ADMX Guide</title>
+
+<meta name="description" content="Run Programs ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Run Programs</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft PowerPoint 2016 > PowerPoint Options > Security</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\powerpoint\security</p>
+
+<h3>Description</h3>
+
+<p>This policy setting controls the prompting and activation behavior for the "Run Programs" option for action buttons in PowerPoint.
+
+If you enable this policy setting, you can choose from three options to control how the "Run Programs" option functions:
+
+- Disable (don't run any programs). If users click an action button with the "Run Programs" action assigned to it, nothing will happen. This option enforces the default configuration in PowerPoint.
+
+- Enable (prompt user before running). If users click an action button with the "Run Programs" action assigned to it, PowerPoint will prompt them to continue before running the program.
+
+- Enable all (run without prompting). If users click an action button with the "Run Programs" action assigned to it. PowerPoint will run the program automatically, without prompting.
+
+If you disable or do not configure this policy setting, if users click an action with the "Run Programs" action assigned to it, nothing will happen. This behavior is the same as Enabled -- Disable (don't run any programs).</p>
+
+</div>
+
+</body>
+</html>

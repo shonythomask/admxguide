@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Specify wait time to evaluate sensitive content | ADMX Guide</title>
+
+<meta name="description" content="Specify wait time to evaluate sensitive content ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Specify wait time to evaluate sensitive content</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Outlook 2016 > Outlook Options > Mail > Compose Messages</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\outlook\options\mail</p>
+
+<h3>Description</h3>
+
+<p>This policy setting is used to define the waiting time for evaluating sensitive content in emails before a user can send them. Customize whether immediate email sending is allowed, sending is permitted after a specific wait time, or complete evaluation is required before sending. Regardless of the setting, the service will continue the evaluation in the background and take appropriate action based on the results, such as blocking delivery if necessary.
+
+If you disable or do not configure this policy setting, emails will be sent right away without waiting for the final evaluation of the configured policies.
+
+If you enable this policy setting, you can set a specific wait time, measured in seconds (in the range of 0-9999), before the "Send Anyway" button appears in the waiting dialog. This allows users to send the mail even before the policy evaluation is complete. 
+
+Please note that setting the wait time above 9999 indicates that users are not allowed to send the mail without evaluation. In such cases, the "Send Anyway" button will never be shown.</p>
+
+</div>
+
+</body>
+</html>

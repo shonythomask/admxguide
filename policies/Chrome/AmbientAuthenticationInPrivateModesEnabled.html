@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enable Ambient Authentication for profile types. | ADMX Guide</title>
+
+<meta name="description" content="Enable Ambient Authentication for profile types. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enable Ambient Authentication for profile types.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Configuring this policy will allow/disallow ambient authentication for Incognito and Guest profiles in Google Chrome.
+
+Ambient Authentication is http authentication with default credentials if explicit credentials are not provided via NTLM/Kerberos/Negotiate challenge/response schemes.
+
+Setting the RegularOnly (value 0), allows ambient authentication for Regular sessions only. Incognito and Guest sessions wouldn't be allowed to ambiently authenticate.
+
+Setting the IncognitoAndRegular (value 1), allows ambient authentication for Incognito and Regular sessions. Guest sessions wouldn't be allowed to ambiently authenticate.
+
+Setting the GuestAndRegular (value 2), allows ambient authentication for Guest and Regular sessions. Incognito sessions wouldn't be allowed to ambiently authenticate.
+
+Setting the  All (value 3), allows ambient authentication for all sessions.
+
+Note that, ambient authentication is always allowed on regular profiles.
+
+In Google Chrome version 81 and later, if the policy is left not set, ambient authentication will be enabled in regular sessions only.</p>
+
+</div>
+
+</body>
+</html>

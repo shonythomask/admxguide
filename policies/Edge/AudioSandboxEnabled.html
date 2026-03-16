@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow the audio sandbox to run | ADMX Guide</title>
+
+<meta name="description" content="Allow the audio sandbox to run ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow the audio sandbox to run</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy controls the audio process sandbox.
+
+If you enable this policy, the audio process will run sandboxed.
+
+If you disable this policy, the audio process will run unsandboxed and the WebRTC audio-processing module will run in the renderer process.
+This leaves users open to security risks related to running the audio subsystem unsandboxed.
+
+If you don't configure this policy, the default configuration for the audio sandbox will be used, which might differ based on the platform.
+
+This policy is intended to give enterprises flexibility to disable the audio sandbox if they use security software setups that interfere with the sandbox.</p>
+
+</div>
+
+</body>
+</html>

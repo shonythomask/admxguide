@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Add file extensions to block as Level 2 | ADMX Guide</title>
+
+<meta name="description" content="Add file extensions to block as Level 2 ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Add file extensions to block as Level 2</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Outlook 2016 > Security > Security Form Settings > Attachment Security</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\outlook\security</p>
+
+<h3>Description</h3>
+
+<p>This policy setting controls which types of attachments (determined by file extension) must be saved to disk before users can open them.  Files with specific extensions can be categorized as Level 1 (users cannot view the file) or Level 2 (users can open the file after saving it to disk). Users can freely open files of types that are not categorized as Level 1 or Level 2. 
+
+If you enable this policy setting, you can specify a list of attachment file types to classify as Level 2, which forces users to actively decide to download the attachment to view it. 
+
+If you disable or do not configure this policy setting, Outlook does not classify any file type extensions as Level 2. 
+
+Important: This policy setting only applies if the "Outlook Security Mode" policy setting under "Microsoft Outlook 2016\Security\Security Form Settings" is configured to "Use Outlook Security Group Policy."</p>
+
+</div>
+
+</body>
+</html>

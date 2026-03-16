@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enable Standardized Browser Zoom Behavior | ADMX Guide</title>
+
+<meta name="description" content="Enable Standardized Browser Zoom Behavior ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enable Standardized Browser Zoom Behavior</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy enables conformance to the newly-adopted specification of CSS zoom.
+
+When this policy is Enabled or unset, the CSS "zoom" property will adhere to the specification:
+
+https://drafts.csswg.org/css-viewport/#zoom-property
+
+When Disabled, the CSS "zoom" property will fall back to its legacy pre-standardized behavior.
+
+This policy is a temporary reprieve to allow time to migrate web content to the new behavior. There is also an origin trial ("DisableStandardizedBrowserZoom") that corresponds to the behavior when this policy is Disabled. This policy will be removed and the "Enabled" behavior made permanent in milestone 134.</p>
+
+</div>
+
+</body>
+</html>

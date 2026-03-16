@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Force synchronization of browser data and do not show the sync consent prompt | ADMX Guide</title>
+
+<meta name="description" content="Force synchronization of browser data and do not show the sync consent prompt ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Force synchronization of browser data and do not show the sync consent prompt</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Forces data synchronization in Microsoft Edge. This policy also prevents the user from turning sync off.
+
+If you don't configure this policy, users will be able to turn sync on or off. If you enable this policy, users will not be able to turn sync off.
+
+For this policy to work as intended,
+'BrowserSignin' (Browser sign-in settings) policy must not be configured, or must be set to enabled. If 'BrowserSignin' is set to disabled, then 'ForceSync' (Force synchronization of browser data and do not show the sync consent prompt) will not take affect.
+
+'SyncDisabled' (Disable synchronization of data using Microsoft sync services) must not be configured or must be set to False. If this is set to True, 'ForceSync' will not take affect. If you wish to ensure specific datatypes sync or do not sync, use the 'ForceSyncTypes' (Configure the list of types that are included for synchronization) policy and 'SyncTypesListDisabled' (Configure the list of types that are excluded from synchronization) policy.
+
+0 = Do not automatically start sync and show the sync consent (default)
+1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt</p>
+
+</div>
+
+</body>
+</html>

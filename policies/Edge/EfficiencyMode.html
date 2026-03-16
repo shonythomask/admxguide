@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure when efficiency mode should become active | ADMX Guide</title>
+
+<meta name="description" content="Configure when efficiency mode should become active ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure when efficiency mode should become active</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Performance</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy setting lets you configure when efficiency mode becomes active. By default, efficiency mode is set to 'BalancedSavings'. On devices with no battery, efficiency mode is disabled by default and does not become active. Please note that Windows Energy Saver settings can influence when efficiency mode becomes active on all devices.
+
+Individual sites may be blocked from participating in efficiency mode by configuring the policy 'SleepingTabsBlockedForUrls' (Block sleeping tabs on specific sites).
+
+Set this policy to 'AlwaysActive' and efficiency mode is always active.
+
+Set this policy to 'NeverActive' and efficiency mode never becomes active.
+
+Set this policy to 'ActiveWhenUnplugged' and efficiency mode becomes active when the device is unplugged.
+
+Set this policy to 'ActiveWhenUnpluggedBatteryLow' and efficiency mode becomes active when the device is unplugged and the battery is low.
+
+Set this policy to 'BalancedSavings' and when the device is unplugged, efficiency mode takes moderate steps to save battery. When the device is unplugged and the battery is low, efficiency mode takes extra steps to save battery.
+
+Set this policy to 'MaximumSavings' and when the device is unplugged or unplugged and the battery is low, efficiency mode takes extra steps to save battery.
+
+If the device does not have a battery, efficiency mode never becomes active in any mode other than 'AlwaysActive' unless the setting or 'EfficiencyModeEnabled' (Efficiency mode enabled) policy is enabled.
+
+This policy has no effect if the 'EfficiencyModeEnabled' policy is disabled.
+
+Learn more about efficiency mode: https://go.microsoft.com/fwlink/?linkid=2173921
+
+Learn more about energy saver: https://learn.microsoft.com/en-us/windows-hardware/design/component-guidelines/energy-saver
+
+Policy options mapping:
+
+* AlwaysActive (0) = Efficiency mode is always active
+
+* NeverActive (1) = Efficiency mode is never active
+
+* ActiveWhenUnplugged (2) = Efficiency mode is active when the device is unplugged
+
+* ActiveWhenUnpluggedBatteryLow (3) = Efficiency mode is active when the device is unplugged and the battery is low
+
+* BalancedSavings (4) = When the device is unplugged, efficiency mode takes moderate steps to save battery. When the device is unplugged and the battery is low, efficiency mode takes extra steps to save battery.
+
+* MaximumSavings (5) = When the device is unplugged or unplugged and the battery is low, efficiency mode takes extra steps to save battery.
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

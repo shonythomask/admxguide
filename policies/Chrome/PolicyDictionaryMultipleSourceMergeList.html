@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow merging dictionary policies from different sources | ADMX Guide</title>
+
+<meta name="description" content="Allow merging dictionary policies from different sources ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow merging dictionary policies from different sources</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy allows merging of selected policies when they come from different sources, with the same scopes and level. This merging is in the first level keys of the dictionary from each source. The key coming from the highest priority source takes precedence.
+
+Use the wildcard character '*' to allow merging of all supported dictionary policies.
+
+If a policy is in the list and there's conflict between sources with:
+
+* The same scopes and level: The values merge into a new policy dictionary.
+
+* Different scopes or level: The policy with the highest priority applies.
+
+If a policy isn't in the list and there's conflict between sources, scopes, or level, the policy with the highest priority applies.
+
+Example value:
+
+ExtensionSettings</p>
+
+</div>
+
+</body>
+</html>

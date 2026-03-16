@@ -1,82 +1,159 @@
 /* =====================================================
-   ADMX GUIDE – ENTERPRISE FRONTEND (FINAL STABLE)
-   - Expandable Tree
-   - Global Search
-   - Registry Rendering
-   - Deep Linking
-   - Enterprise Copy Dropdown
+   ADMX GUIDE – PRODUCTION FRONTEND
+   Stable, scalable, and optimized
    ===================================================== */
 
 if (typeof APP_ID === "undefined") {
-  throw new Error("APP_ID missing.");
+  throw new Error("APP_ID variable missing in application page.");
 }
 
-const DATA_PATH = `${window.location.origin}/Data/${APP_ID}`;
+const DATA_PATH = `../Data/${APP_ID}`;
 
 let policies = [];
+let searchIndex = [];
 let selectedCategoryPath = null;
 let currentPolicy = null;
 let debounceTimer = null;
 
-// ================= LOAD POLICIES =================
-fetch(`${DATA_PATH}/policies.json`)
-  .then(res => {
-    if (!res.ok) throw new Error("Failed to load policies.json");
-    return res.json();
-  })
-  .then(data => {
-    policies = data.policies || [];
-    buildCategoryTree();
-    renderPolicyList();
-    handleInitialRoute();
-  })
-  .catch(err => console.error("Policy load error:", err));
 
+/* ================= DOM READY ================= */
 
-// ================= SEARCH =================
 document.addEventListener("DOMContentLoaded", () => {
 
-  const input = document.getElementById("search");
-  const clearBtn = document.getElementById("clearSearch");
+  initializeSearch();
+  loadPolicies();
 
-  if (!input) return;
-
-  input.addEventListener("input", () => {
-    if (clearBtn)
-      clearBtn.style.display = input.value ? "block" : "none";
-
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(renderPolicyList, 200);
-  });
-
-  if (clearBtn) {
-    clearBtn.addEventListener("click", () => {
-      input.value = "";
-      clearBtn.style.display = "none";
-      renderPolicyList();
-    });
-  }
 });
 
 
-// ================= TREE =================
+/* ================= LOAD POLICIES ================= */
+
+function loadPolicies() {
+
+  fetch(`${DATA_PATH}/policies.json`)
+    .then(res => {
+      if (!res.ok) throw new Error("Failed to load policies.json");
+      return res.json();
+    })
+    .then(data => {
+
+      policies = data.policies || [];
+
+      if (!policies.length) {
+        showError("No policies found in dataset.");
+        return;
+      }
+
+      buildSearchIndex();
+
+      buildCategoryTree();
+      renderPolicyList();
+      handleInitialRoute();
+      initializeTreeControls();
+
+    })
+    .catch(err => {
+
+      console.error("Policy load error:", err);
+      showError("Failed to load policy database.");
+
+    });
+
+}
+
+
+/* ================= SEARCH INDEX ================= */
+
+function buildSearchIndex() {
+
+  searchIndex = policies.map(p => ({
+
+    policy: p,
+
+    text: [
+      p.displayName,
+      p.description,
+      p.registry?.key,
+      ...(p.registry?.values?.map(v => v.valueName) || []),
+      ...(p.registry?.values?.flatMap(v => v.possibleValues || []) || []),
+      ...(p.categoryPath || [])
+    ]
+      .join(" ")
+      .toLowerCase()
+
+  }));
+
+}
+
+
+/* ================= SEARCH ================= */
+
+function initializeSearch() {
+
+  const input = document.getElementById("searchInput");
+
+  if (!input) {
+    console.warn("Search input not found.");
+    return;
+  }
+
+  input.addEventListener("input", () => {
+
+    clearTimeout(debounceTimer);
+
+    debounceTimer = setTimeout(() => {
+
+      selectedCategoryPath = null;
+      renderPolicyList();
+
+    }, 120);
+
+  });
+
+}
+
+
+/* ================= ERROR DISPLAY ================= */
+
+function showError(msg) {
+
+  const el = document.getElementById("policyList");
+  if (!el) return;
+
+  el.innerHTML = `<p style="color:red;padding:12px">${msg}</p>`;
+
+}
+
+
+/* ================= CATEGORY TREE ================= */
+
 function buildCategoryTree() {
+
   const tree = {};
 
   policies.forEach(p => {
+
     let node = tree;
-    p.categoryPath.forEach(c => {
-      node[c] = node[c] || {};
-      node = node[c];
+
+    (p.categoryPath || []).forEach(cat => {
+
+      if (!node[cat]) node[cat] = {};
+      node = node[cat];
+
     });
+
   });
 
   const container = document.getElementById("categoryTree");
+
   if (!container) return;
 
   container.innerHTML = "";
+
   renderTree(tree, container, []);
+
 }
+
 
 function renderTree(node, parent, path) {
 
@@ -95,18 +172,23 @@ function renderTree(node, parent, path) {
     toggle.textContent = hasChildren ? "+" : "";
 
     toggle.onclick = e => {
+
       e.stopPropagation();
+
       if (!hasChildren) return;
 
       row.classList.toggle("expanded");
+
       toggle.textContent =
         row.classList.contains("expanded") ? "−" : "+";
+
     };
 
     const label = document.createElement("span");
     label.textContent = " " + key;
 
     label.onclick = e => {
+
       e.stopPropagation();
 
       document.querySelectorAll(".tree-node.selected")
@@ -115,8 +197,11 @@ function renderTree(node, parent, path) {
       row.classList.add("selected");
 
       selectedCategoryPath = fullPath;
+
       expandCategoryPath(fullPath);
+
       renderPolicyList();
+
     };
 
     row.append(toggle, label);
@@ -124,16 +209,22 @@ function renderTree(node, parent, path) {
 
     const children = document.createElement("div");
     children.className = "tree-children";
+
     parent.appendChild(children);
 
     renderTree(node[key], children, fullPath);
+
   });
+
 }
 
+
 function expandCategoryPath(path) {
+
   let current = [];
 
   path.forEach(seg => {
+
     current.push(seg);
 
     const node = document.querySelector(
@@ -141,195 +232,263 @@ function expandCategoryPath(path) {
     );
 
     if (node) {
+
       node.classList.add("expanded");
+
       const toggle = node.querySelector(".tree-toggle");
+
       if (toggle) toggle.textContent = "−";
+
     }
+
   });
+
 }
 
 
-// ================= POLICY LIST =================
+/* ================= POLICY LIST ================= */
+
 function renderPolicyList() {
 
-  const el = document.getElementById("policyList");
-  const resultCount = document.getElementById("resultCount");
+  const list = document.getElementById("policyList");
+  if (!list) return;
 
-  if (!el) return;
-
-  el.innerHTML = "";
+  list.innerHTML = "";
 
   const query =
-    document.getElementById("search")?.value?.trim().toLowerCase();
+    document.getElementById("searchInput")?.value?.trim().toLowerCase();
 
   let filtered = [];
 
-  // -------- GLOBAL SEARCH --------
   if (query) {
 
-    filtered = policies.filter(p =>
-      p.displayName?.toLowerCase().includes(query) ||
-      p.description?.toLowerCase().includes(query) ||
-      p.registry?.key?.toLowerCase().includes(query) ||
-      p.registry?.values?.some(v =>
-        v.valueName?.toLowerCase().includes(query)
-      ) ||
-      p.registry?.values?.some(v =>
-        v.possibleValues?.some(val =>
-          val.toLowerCase().includes(query)
-        )
-      )
-    );
+    filtered = searchIndex
+      .map(item => {
+
+        if (!item.text.includes(query)) return null;
+
+        let score = 0;
+
+        const name = item.policy.displayName.toLowerCase();
+
+        if (name.includes(query)) score += 10;
+
+        if (item.policy.description?.toLowerCase().includes(query))
+          score += 5;
+
+        if (item.policy.registry?.key?.toLowerCase().includes(query))
+          score += 4;
+
+        if (item.policy.categoryPath
+            ?.join(" ")
+            .toLowerCase()
+            .includes(query))
+          score += 3;
+
+        return { policy: item.policy, score };
+
+      })
+      .filter(Boolean)
+      .sort((a, b) => b.score - a.score)
+      .map(item => item.policy);
 
   } else {
 
     if (!selectedCategoryPath) {
-      el.innerHTML = "<p>Select a category or use search.</p>";
-      if (resultCount) resultCount.textContent = "";
+
+      list.innerHTML = "<p>Select a category or search.</p>";
       return;
+
     }
 
     filtered = policies.filter(p =>
+
       p.categoryPath
         .slice(0, selectedCategoryPath.length)
         .join("||") === selectedCategoryPath.join("||")
+
     );
+
   }
 
   if (!filtered.length) {
-    el.innerHTML = "<p>No matching policies found.</p>";
-    if (resultCount) resultCount.textContent = "0 results";
-    return;
-  }
 
-  if (resultCount)
-    resultCount.textContent =
-      `${filtered.length} result${filtered.length > 1 ? "s" : ""}`;
+    list.innerHTML = "<p>No matching policies found.</p>";
+    return;
+
+  }
 
   filtered.forEach(p => {
 
-    const d = document.createElement("div");
-    d.className = "policy";
-    d.innerHTML = `<strong>${p.displayName}</strong>`;
+    const div = document.createElement("div");
+    div.className = "policy";
 
-    d.onclick = () => {
-      history.pushState({}, "", `./${p.policyId}.html`);
+    let title = p.displayName;
+
+    if (query) {
+
+      const regex = new RegExp(`(${query})`, "ig");
+
+      title = title.replace(
+        regex,
+        `<span class="search-highlight">$1</span>`
+      );
+
+    }
+
+    div.innerHTML = `<strong>${title}</strong>`;
+
+    div.onclick = () => {
+
+      history.pushState({}, "", `#${p.policyId}`);
+
       showPolicyDetails(p);
+
     };
 
-    el.appendChild(d);
+    list.appendChild(div);
+
   });
+
 }
 
 
-// ================= POLICY DETAILS =================
+/* ================= POLICY DETAILS ================= */
+
 function showPolicyDetails(p) {
 
   currentPolicy = p;
+
   document.title = `${p.displayName} | ADMX Guide`;
 
   let html = `
-    <div class="policy-pane">
+  <div class="policy-pane">
 
-      <div class="breadcrumb">
-        ${p.categoryPath.join(" › ")}
-      </div>
+  <div class="breadcrumb">
+  ${p.categoryPath.join(" › ")}
+  </div>
 
-      <h2>${p.displayName}</h2>
+  <h2>${p.displayName}</h2>
 
-      <div><strong>Scope:</strong> ${p.policyClass}</div>
+  <div><strong>Scope:</strong> ${p.policyClass}</div>
 
-      <div class="policy-description">
-        ${p.description || ""}
-      </div>
+  <div class="policy-description">
+  ${p.description || ""}
+  </div>
   `;
 
   if (p.registry) {
 
     html += `
-      <div class="registry-block">
-        <h3>Registry Details</h3>
-        <div><strong>Hive:</strong> ${p.registry.hive || "-"}</div>
-        <div><strong>Key:</strong> ${p.registry.key || "-"}</div>
+    <div class="registry-block">
+
+    <h3>Registry Details</h3>
+
+    <div><strong>Hive:</strong> ${p.registry.hive || "-"}</div>
+    <div><strong>Key:</strong> ${p.registry.key || "-"}</div>
     `;
 
-    if (p.registry.values?.length) {
-      p.registry.values.forEach(v => {
+    (p.registry.values || []).forEach(v => {
 
-        html += `
-          <div class="registry-value">
-            <div><strong>Value Name:</strong> ${v.valueName || "-"}</div>
-            <div><strong>Type:</strong> ${v.valueType || "-"}</div>
-        `;
+      html += `
+      <div class="registry-value">
 
-        if (v.possibleValues?.length) {
-          html += "<ul>";
-          v.possibleValues.forEach(pv => {
-            html += `<li>${pv}</li>`;
-          });
-          html += "</ul>";
-        }
+      <div><strong>Value Name:</strong> ${v.valueName || "-"}</div>
+      <div><strong>Type:</strong> ${v.valueType || "-"}</div>
+      `;
 
-        html += "</div>";
-      });
-    }
+      if (v.possibleValues?.length) {
+
+        html += "<ul>";
+
+        v.possibleValues.forEach(pv => {
+          html += `<li>${pv}</li>`;
+        });
+
+        html += "</ul>";
+
+      }
+
+      html += "</div>";
+
+    });
 
     html += "</div>";
+
   }
 
   html += `
-      <div id="copyStatus" class="copy-status"></div>
+  <div id="copyStatus" class="copy-status"></div>
 
-      <div class="copy-container">
-        <button id="copyToggle" class="copy-btn">Copy ▾</button>
+  <div class="copy-container">
 
-        <div id="copyMenu" class="copy-menu">
-          <div data-copy="url">Copy URL</div>
-          <div data-copy="name">Copy Policy Name</div>
-          <div data-copy="category">Copy Category Path</div>
-          <div data-copy="registry">Copy Registry Key</div>
-          <div data-copy="summary">Copy Summary</div>
-        </div>
-      </div>
+  <button id="copyToggle" class="copy-btn">Copy ▾</button>
 
-    </div>
+  <div id="copyMenu" class="copy-menu">
+
+  <div data-copy="url">Copy URL</div>
+  <div data-copy="name">Copy Policy Name</div>
+  <div data-copy="category">Copy Category Path</div>
+  <div data-copy="registry">Copy Registry Key</div>
+  <div data-copy="summary">Copy Summary</div>
+
+  </div>
+  </div>
+  </div>
   `;
 
   const container = document.getElementById("policyDetails");
   container.innerHTML = html;
 
   initializeCopyMenu();
+
 }
 
 
-// ================= COPY MENU =================
+/* ================= COPY MENU ================= */
+
 function initializeCopyMenu() {
 
-  const toggleBtn = document.getElementById("copyToggle");
+  const btn = document.getElementById("copyToggle");
   const menu = document.getElementById("copyMenu");
 
-  if (!toggleBtn || !menu) return;
+  if (!btn || !menu) return;
 
   menu.style.display = "none";
 
-  toggleBtn.onclick = (e) => {
+  btn.onclick = e => {
+
     e.stopPropagation();
+
     menu.style.display =
       menu.style.display === "block" ? "none" : "block";
+
   };
 
   menu.querySelectorAll("div").forEach(item => {
-    item.onclick = (e) => {
+
+    item.onclick = e => {
+
       e.stopPropagation();
+
       copyOption(item.dataset.copy);
+
       menu.style.display = "none";
+
     };
+
   });
 
-  document.addEventListener("click", () => {
-    menu.style.display = "none";
-  });
 }
+
+document.addEventListener("click", () => {
+
+  const menu = document.getElementById("copyMenu");
+
+  if (menu) menu.style.display = "none";
+
+});
+
 
 function copyOption(type) {
 
@@ -357,44 +516,96 @@ function copyOption(type) {
       break;
 
     case "summary":
+
       text =
 `Policy: ${currentPolicy.displayName}
+
 Scope: ${currentPolicy.policyClass}
+
 Category: ${currentPolicy.categoryPath.join(" › ")}
+
 Registry: ${currentPolicy.registry?.hive}\\${currentPolicy.registry?.key}
 
 Description:
 ${currentPolicy.description}`;
+
       break;
+
   }
 
-  navigator.clipboard.writeText(text).then(() => {
-    const status = document.getElementById("copyStatus");
-    if (status) {
-      status.textContent = "Copied!";
-      setTimeout(() => status.textContent = "", 2000);
-    }
-  });
+  navigator.clipboard.writeText(text);
+
 }
 
 
-// ================= ROUTING =================
+/* ================= ROUTING ================= */
+
 function handleInitialRoute() {
 
-  const match =
-    window.location.pathname.match(/\/([^\/]+)\.html$/);
+  const id = window.location.hash.replace("#", "");
 
-  if (!match) return;
+  if (!id) return;
 
-  const policy =
-    policies.find(p => p.policyId === match[1]);
+  const policy = policies.find(p => p.policyId === id);
 
-  if (policy) {
-    selectedCategoryPath = policy.categoryPath;
-    expandCategoryPath(policy.categoryPath);
-    renderPolicyList();
-    showPolicyDetails(policy);
-  }
+  if (!policy) return;
+
+  selectedCategoryPath = policy.categoryPath;
+
+  expandCategoryPath(policy.categoryPath);
+
+  renderPolicyList();
+
+  showPolicyDetails(policy);
+
 }
 
 window.addEventListener("popstate", handleInitialRoute);
+
+
+/* ================= TREE CONTROLS ================= */
+
+function initializeTreeControls() {
+
+  const expandBtn = document.getElementById("expandAll");
+  const collapseBtn = document.getElementById("collapseAll");
+
+  if (expandBtn) {
+
+    expandBtn.onclick = () => {
+
+      document.querySelectorAll(".tree-node").forEach(node => {
+
+        node.classList.add("expanded");
+
+        const toggle = node.querySelector(".tree-toggle");
+
+        if (toggle && toggle.textContent !== "")
+          toggle.textContent = "−";
+
+      });
+
+    };
+
+  }
+
+  if (collapseBtn) {
+
+    collapseBtn.onclick = () => {
+
+      document.querySelectorAll(".tree-node").forEach(node => {
+
+        node.classList.remove("expanded");
+
+        const toggle = node.querySelector(".tree-toggle");
+
+        if (toggle && toggle.textContent !== "")
+          toggle.textContent = "+";
+
+      });
+
+    };
+
+  }
+
+}

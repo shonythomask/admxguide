@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Settings for Help Me Write | ADMX Guide</title>
+
+<meta name="description" content="Settings for Help Me Write ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Settings for Help Me Write</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Generative AI</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Help Me Write is an AI-based writing assistant for short-form content on the web. Suggested content is based on prompts entered by the user and the content of the web page.
+
+0 = Allow the feature to be used, while allowing Google to use relevant data to improve its AI models. Relevant data may include prompts, inputs, outputs, source materials, and written feedback, depending on the feature. It may also be reviewed by humans to improve AI models. 0 is the default value, except when noted below.
+
+1 = Allow the feature to be used, but does not allow Google to improve models using users' content (including prompts, inputs, outputs, source materials, and written feedback). 1 is the default value for Enterprise users managed by Google Admin console and for Education accounts managed by Google Workspace.
+
+2 = Do not allow the feature.
+
+If the policy is unset, its behavior is determined by the GenAiDefaultSettings policy.
+
+For more information on data handling for generative AI features, please see https://support.google.com/chrome/a?p=generative_ai_settings.</p>
+
+</div>
+
+</body>
+</html>

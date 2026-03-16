@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow specified hosts to show Basic Authentication prompts to Office apps | ADMX Guide</title>
+
+<meta name="description" content="Allow specified hosts to show Basic Authentication prompts to Office apps ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow specified hosts to show Basic Authentication prompts to Office apps</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Security Settings</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\identity</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to specify which hosts can show Basic Authentication sign-in prompts to Office apps.
+
+By default, all Basic Authentication sign-in prompts are blocked, and the user is shown a message that the sign-in method isn’t allowed.
+
+If you enable this policy setting, you need to enter the hosts by name, separating the host names with a semi-colon. For example: server1.contoso.com; server2.fabrikam.com.
+
+Warning: Allowing Basic Authentication sign-in prompts isn’t recommended because it’s a security risk.
+
+Basic Authentication sign-in prompts from all other hosts will be blocked and the user will be shown a message that the sign-in method isn’t allowed.
+
+If you disable or don’t configure this policy setting, all Basic Authentication sign-in prompts will be blocked, and the user will be shown a message that the sign-in method isn’t allowed.
+
+Note: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise, and to subscription versions of Project and Visio.
+
+For more information, see https://go.microsoft.com/fwlink/p/?linkid=2199001.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,58 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Microsoft 365 Apps ADMX Guide</title>
-  <link rel="stylesheet" href="../style.css" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Microsoft 365 Policies | ADMX Guide</title>
+<meta name="description" content="Complete reference of Microsoft 365 Apps Administrative Template (ADMX) policies. View policy descriptions, registry paths, and configuration details for enterprise administrators.">
+<meta name="keywords" content="Microsoft 365 ADMX, Office ADMX policies, Group Policy Office, Microsoft 365 administrative templates, Office registry policies, ADMX Guide">
+<meta name="author" content="ADMX Guide">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://admxguide.com/apps/office.html">
+<meta property="og:title" content="Microsoft 365 Administrative Template Policies | ADMX Guide">
+<meta property="og:description" content="Explore all Microsoft 365 Apps ADMX policies including registry paths and configuration options for enterprise administrators.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.admxguide.com/apps/office.html">
+<meta property="og:site_name" content="ADMX Guide">
+<meta property="og:title" content="Microsoft 365 Administrative Template Policies | ADMX Guide">
+<meta property="og:description" content="Explore all Microsoft 365 Apps ADMX policies including registry paths and configuration options for enterprise administrators.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://admxguide.com/apps/office.html">
+<meta property="og:site_name" content="ADMX Guide">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Microsoft 365 ADMX Policies | ADMX Guide">
+<meta name="twitter:description" content="Complete administrative template reference for Microsoft 365 Apps policies.">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../style.css">
+
 </head>
+
+
 <body>
 
-<script>
-  const APP_ID = "office";
-</script>
 
 <header class="top-bar">
+
   <div class="header-left">
-<a href="../index.html" class="home-link" title="Home">
-  🏠 <span>Home</span>
-</a>
 
+    <div class="page-title">
 
-    <h1>Microsoft 365 Apps ADMX Guide</h1>
+      <a href="../index.html" class="logo">
+        Microsoft 365 Apps for Enterprise | ADMX Guide
+      </a>
+
+      <div class="page-subtitle">
+        Administrative template reference for Microsoft 365 Apps including all available Group Policy settings and registry paths.
+      </div>
+
+    </div>
+
   </div>
+
 
   <div class="header-right">
-    <input id="search" placeholder="Search policies..." />
-    
-    <!-- Only Office page will include this -->
-    <select id="productFilter">
-      <option value="">All Products</option>
-    </select>
+
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#about">About</a>
+    </nav>
+
+    <div class="header-tools">
+
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Search policies..."
+        autocomplete="off"
+      >
+
+      <button id="expandAll">Expand All</button>
+      <button id="collapseAll">Collapse All</button>
+
+    </div>
+
   </div>
+
 </header>
 
 
 <div class="container">
-  <!-- Left Pane: Category Tree -->
-  <aside id="categoryTree" class="pane left"></aside>
 
-  <!-- Middle Pane: Policy List -->
-  <main id="policyList" class="pane middle">
-    <p>Select a category to view policies.</p>
-  </main>
 
-  <!-- Right Pane: Policy Details -->
-  <section id="policyDetails" class="pane right">
-    <p>Select a policy to see details.</p>
-  </section>
+<!-- LEFT PANE -->
+<div class="pane left">
+
+  <div id="categoryTree"></div>
+
 </div>
 
+
+<!-- MIDDLE PANE -->
+<div class="pane middle" id="policyList">
+
+<p>Select a category or search.</p>
+
+</div>
+
+
+<!-- RIGHT PANE -->
+<div class="pane right" id="policyDetails">
+
+<h2>Policy Details</h2>
+
+<p>Select a policy to view details.</p>
+
+</div>
+
+
+</div>
+
+
 <footer id="footerBar">
-  Microsoft, Microsoft 365, Windows, and related names are trademarks of Microsoft Corporation.
-  This site is an independent, unofficial reference for ADMX/ADML policies and is not affiliated
-  with or endorsed by Microsoft.
+
+ADMX Guide – Administrative Template Reference | Microsoft, Microsoft 365, Windows, and related names are trademarks of Microsoft Corporation. This site is an independent, unofficial reference for ADMX/ADML policies and is not affiliated with or endorsed by Microsoft.
+
 </footer>
 
+
+<script>
+const APP_ID = "office";
+</script>
+
 <script src="../app.js"></script>
+
+
 </body>
 </html>

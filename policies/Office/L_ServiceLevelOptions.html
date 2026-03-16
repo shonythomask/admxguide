@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Service Level Options | ADMX Guide</title>
+
+<meta name="description" content="Service Level Options ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Service Level Options</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Tools | Options | General | Service Options... > Online Content</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\internet</p>
+
+<h3>Description</h3>
+
+<p>This policy setting controls the types of services that can be used by the online features of Office 2016.
+
+If you enable this policy setting, you can choose one of three options for gating access to online services based on the owner of the service:
+
+* Office services only - Office 2016 applications on the computer communicate only with Office-owned services.  All other Microsoft or third-party service integration in Office 2016 is disabled on the computer. This is the most restrictive option.
+
+* Microsoft services only - Office 2016 applications on the computer communicate only with Microsoft-owned services.  All third-party service integration in Office 2016 is disabled on the computer.
+
+* All services - All service integration in Office 2016 is enabled on the computer.  This is also the default configuration.
+
+If you disable or do not configure this policy setting, Office 2016 client applications allow all service integrations. Individual users can manage the set of services they use through the new My Office place in Office Backstage view.</p>
+
+</div>
+
+</body>
+</html>

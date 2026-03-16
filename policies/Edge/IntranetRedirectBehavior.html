@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Intranet Redirection Behavior | ADMX Guide</title>
+
+<meta name="description" content="Intranet Redirection Behavior ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Intranet Redirection Behavior</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy configures behavior for intranet redirection via DNS interception checks. The checks attempt to discover whether the browser is behind a proxy that redirects unknown host names.
+
+If this policy isn't configured, the browser will use the default behavior of DNS interception checks and intranet redirect suggestions. In M88, they are enabled by default but will be disabled by default in the future release.
+
+'DNSInterceptionChecksEnabled' (DNS interception checks enabled) is a related policy that might also disable DNS interception checks. However, this policy is a more flexible version which might separately control intranet redirection infobars and might be expanded in the future.
+If either 'DNSInterceptionChecksEnabled' or this policy make a request to disable interception checks, the checks will be disabled.
+If DNS interception checks are disabled by this policy but 'GoToIntranetSiteForSingleWordEntryInAddressBar' (Force direct intranet site navigation instead of searching on single word entries in the Address Bar) is enabled, single word queries will still result in intranet navigations.
+
+Policy options mapping:
+
+* Default (0) = Use default browser behavior.
+
+* DisableInterceptionChecksDisableInfobar (1) = Disable DNS interception checks and did-you-mean "http://intranetsite/" infobars.
+
+* DisableInterceptionChecksEnableInfobar (2) = Disable DNS interception checks; allow did-you-mean "http://intranetsite/" infobars.
+
+* EnableInterceptionChecksEnableInfobar (3) = Allow DNS interception checks and did-you-mean "http://intranetsite/" infobars.
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

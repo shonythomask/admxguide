@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure users ability to override feature flags | ADMX Guide</title>
+
+<meta name="description" content="Configure users ability to override feature flags ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure users ability to override feature flags</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Experimentation</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Configures users ability to override state of feature flags.
+If you set this policy to 'CommandLineOverridesEnabled', users can override state of feature flags using command line arguments but not edge://flags page.
+
+If you set this policy to 'OverridesEnabled', users can override state of feature flags using command line arguments or edge://flags page.
+
+If you set this policy to 'OverridesDisabled', users can't override state of feature flags using command line arguments or edge://flags page.
+
+If you don't configure this policy, the behavior is the same as the 'OverridesEnabled'.
+
+Policy options mapping:
+
+* CommandLineOverridesEnabled (2) = Allow users to override feature flags using command line arguments only
+
+* OverridesEnabled (1) = Allow users to override feature flags
+
+* OverridesDisabled (0) = Prevent users from overriding feature flags
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

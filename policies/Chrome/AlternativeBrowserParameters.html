@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Command-line parameters for the alternative browser. | ADMX Guide</title>
+
+<meta name="description" content="Command-line parameters for the alternative browser. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Command-line parameters for the alternative browser.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Legacy Browser Support</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy to a list of strings means each string is passed to the alternative browser as separate command-line parameters. On Microsoft® Windows®, the parameters are joined with spaces. On macOS and Linux®, a parameter can have spaces and still be treated as a single parameter.
+
+If a parameter contains ${url}, ${url} is replaced with the URL of the page to open. If no parameter contains ${url}, the URL is appended at the end of the command line.
+
+Environment variables are expanded. On Microsoft® Windows®, %ABC% is replaced with the value of the ABC environment variable. On macOS and Linux®, ${ABC} is replaced with the value of the ABC environment variable.
+
+Leaving the policy unset means only the URL is passed as a command-line parameter.
+
+Example value:
+
+-foreground
+-new-window
+${url}
+-profile
+%HOME%\browser_profile</p>
+
+</div>
+
+</body>
+</html>

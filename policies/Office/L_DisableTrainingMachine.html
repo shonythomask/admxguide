@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Disable local training of all features for the computer. | ADMX Guide</title>
+
+<meta name="description" content="Disable local training of all features for the computer. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Disable local training of all features for the computer.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Office 2016 (Machine) > AI > Training > General</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\software\policies\microsoft\office\16.0\common\ai\training\general</p>
+
+<h3>Description</h3>
+
+<p>
+This policy setting disables local training of all features for the computer.
+
+For local training policy, feature-specific settings are prioritized over general settings and computer settings are prioritized over user settings.
+
+If a higher priority policy setting is not configured, then:
+- If this policy setting is enabled, local training of all features is disabled for the computer.
+- If this policy setting is disabled, local training of all features is enabled for the computer.
+- If this policy setting is not configured, local training of all features is determined by lower priority policy settings.
+- If this policy setting is not configured and lower priority policy settings are also not configured, local training of all features is enabled for the computer.
+
+For this policy setting, the order of priority is:
+1. Disable local training of [a specific feature] for the computer.
+2. Disable local training of all features for the computer.
+3. Disable local training of [a specific feature] for the user.
+4. Disable local training of all features for the user.</p>
+
+</div>
+
+</body>
+</html>

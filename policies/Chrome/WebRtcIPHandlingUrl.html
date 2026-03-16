@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WebRTC per URL IP Handling | ADMX Guide</title>
+
+<meta name="description" content="WebRTC per URL IP Handling ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>WebRTC per URL IP Handling</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > WebRtc settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy allows restricting which IP addresses and interfaces WebRTC uses when attempting to find the best available connection for each specific URL pattern.
+
+It accepts a list of URL patterns and handling type pairs. The URL patterns are checked in order and the first match will configure which handling is used by WebRTC for the domain. When the URL of the current document is not matched against any entry, it uses the configuration set by the policy WebRtcIPHandling.
+
+For detailed information on valid input patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns. Wildcards, *, are allowed. This policy only matches based on origin, so any path in the URL pattern is ignored.
+
+Valid handling values:
+
+* default - WebRTC uses all network interfaces.
+
+* default_public_and_private_interfaces - WebRTC uses all public and private interfaces.
+
+* default_public_interface_only - WebRTC uses all public interfaces, but not private ones.
+
+* disable_non_proxied_udp - WebRTC uses either UDP SOCKS proxying or will fallback to TCP proxying.
+
+See RFC 8828 section 5.2 (https://tools.ietf.org/html/rfc8828.html#section-5.2) for a detailed description of all the handling values.
+See https://cloud.google.com/docs/chrome-enterprise/policies/?policy=WebRtcIPHandlingUrl for more information about schema and formatting.
+
+
+Example value:
+
+[
+  {
+    "url": "https://www.example.com",
+    "handling": "default_public_and_private_interfaces"
+  },
+  {
+    "url": "https://[*.]example.edu",
+    "handling": "default_public_interface_only"
+  },
+  {
+    "url": "*",
+    "handling": "disable_non_proxied_udp"
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

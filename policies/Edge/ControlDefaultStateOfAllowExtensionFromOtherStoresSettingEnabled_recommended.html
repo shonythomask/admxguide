@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure default state of Allow extensions from other stores setting | ADMX Guide</title>
+
+<meta name="description" content="Configure default state of Allow extensions from other stores setting ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure default state of Allow extensions from other stores setting</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge - Default Settings (users can override) > Extensions</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge\Recommended</p>
+
+<h3>Description</h3>
+
+<p>This policy allows you to control the default state of the Allow extensions from other stores setting.
+This policy can't be used to stop installation of extensions from other stores such as Chrome Web Store.
+To stop installation of extensions from other stores, use the Extension Settings policy: https://go.microsoft.com/fwlink/?linkid=2187098.
+
+When enabled, Allow extensions from other stores will be turned on. So, users won't have to turn on the flag manually
+while installing extensions from other supported stores such as Chrome Web Store. However a user can override this setting.
+If the user has already turned on the setting and then turned it off, this setting may not work.
+If the Admin first sets the policy as Enabled, but then changes it to not configured or disabled, it will have no impact on
+user settings and the setting will remain as it is.
+
+When disabled or not configured, the user can manage the Allow extensions from other store setting.</p>
+
+</div>
+
+</body>
+</html>

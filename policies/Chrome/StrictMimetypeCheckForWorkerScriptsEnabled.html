@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enable strict MIME type checking for worker scripts | ADMX Guide</title>
+
+<meta name="description" content="Enable strict MIME type checking for worker scripts ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enable strict MIME type checking for worker scripts</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy enables strict MIME type checking for worker scripts.
+
+When enabled or unset, then worker scripts will use strict MIME type checking for JavaScript, which is the new default behaviour. Worker scripts with legacy MIME types will be rejected.
+
+When disabled, then worker scripts will use lax MIME type checking, so that worker scripts with legacy MIME types, e.g. text/ascii, will continue to be loaded and executed.
+
+Browsers traditionally used lax MIME type checking, so that resources with a number of legacy MIME types were supported. E.g. for JavaScript resources, text/ascii is a legacy supported MIME type. This may cause security issues, by allowing to load resources as scripts that were never intended to be used as such. Chrome will transition to use strict MIME type checking in the near future. The enabled policy will track the default behaviour. Disabling this policy allows administrators to retain the legacy behaviour, if desired.
+
+See https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguage for details about JavaScript / ECMAScript media types.
+</p>
+
+</div>
+
+</body>
+</html>

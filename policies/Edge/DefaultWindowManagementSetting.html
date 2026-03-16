@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Default Window Management permission setting | ADMX Guide</title>
+
+<meta name="description" content="Default Window Management permission setting ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Default Window Management permission setting</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy to "BlockWindowManagement" (value 2) automatically denies the window management permission to sites by default. This limits the ability of sites to see information about the device's screens and use that information to open and place windows or request fullscreen on specific screens.
+
+Setting the policy to "AskWindowManagement" (value 3) by default prompts the user when the window management permission is requested. If users allow the permission, it extends the ability of sites to see information about the device's screens and use that information to open and place windows or request fullscreen on specific screens.
+
+Not configuring the policy means the "AskWindowManagement" policy applies, but users can change this setting.
+
+Policy options mapping:
+
+* BlockWindowManagement (2) = Denies the Window Management permission on all sites by default
+
+* AskWindowManagement (3) = Ask every time a site wants obtain the Window Management permission
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

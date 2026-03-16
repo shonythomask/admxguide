@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Show context menu to open a file:// link in Internet Explorer mode | ADMX Guide</title>
+
+<meta name="description" content="Show context menu to open a file:// link in Internet Explorer mode ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Show context menu to open a file:// link in Internet Explorer mode</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy controls the visibility of the 'Open link in new Internet Explorer mode tab' option on the context menu for file:// links.
+
+This setting works in conjunction with:
+'InternetExplorerIntegrationLevel' (Configure Internet Explorer integration) is set to 'IEMode'.
+
+If you set this policy to true, the 'Open link in new Internet Explorer mode tab' context menu item will be available for file:// links.
+
+If you set this policy to false or don't configure it, the context menu item will not be added.
+
+If the 'InternetExplorerIntegrationReloadInIEModeAllowed' (Allow unconfigured sites to be reloaded in Internet Explorer mode) policy allows users to reload sites in Internet Explorer mode, then the 'Open link in new Internet Explorer mode tab' context menu item will be available for all links, except links to sites explicitly configured by the site list to use Microsoft Edge mode. In this case, if you set this policy to true, the context menu item will be available for file:// links even for sites configured to use Microsoft Edge mode. If you set this policy to false or don't configure it, this policy has no effect.
+
+To learn more about Internet Explorer mode, see https://go.microsoft.com/fwlink/?linkid=2094210</p>
+
+</div>
+
+</body>
+</html>

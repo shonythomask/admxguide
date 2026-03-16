@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow listed sites connect to specific HID devices | ADMX Guide</title>
+
+<meta name="description" content="Allow listed sites connect to specific HID devices ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow listed sites connect to specific HID devices</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This setting lets you list the URLs that specify which sites are automatically granted permission to access a HID device with the given vendor and product IDs.
+
+Setting the policy Each item in the list requires both devices and urls fields for the item to be valid, otherwise the item is ignored.
+
+  * Each item in the devices field must have a vendor_id and may have a product_id field.
+
+  * Omitting the product_id field will create a policy matching any device with the specified vendor ID.
+
+  * An item which has a product_id field without a vendor_id field is invalid and is ignored.
+
+If you don't set this policy, that means 'DefaultWebHidGuardSetting' (Control use of the WebHID API) applies, if it's set. If not, the user's personal setting applies.
+
+For detailed information about valid url patterns, see https://go.microsoft.com/fwlink/?linkid=2095322. * is not an accepted value for this policy.
+
+URLs in this policy shouldn't conflict with those configured through 'WebHidBlockedForUrls' (Block the WebHID API on these sites). If they do, this policy takes precedence over 'WebHidBlockedForUrls'.
+
+Example value:
+
+[
+  {
+    "devices": [
+      {
+        "product_id": 5678,
+        "vendor_id": 1234
+      }
+    ],
+    "urls": [
+      "https://microsoft.com",
+      "https://chromium.org"
+    ]
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

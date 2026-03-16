@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Automatically grant sites permission to connect to USB serial devices | ADMX Guide</title>
+
+<meta name="description" content="Automatically grant sites permission to connect to USB serial devices ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Automatically grant sites permission to connect to USB serial devices</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy lets you list sites that are automatically granted permission to access USB serial devices with vendor and product IDs that match the vendor_id and product_id fields.
+
+Optionally you can omit the product_id field. This enables site access to all the vendor's devices.  When you provide a product ID, then you give the site access to a specific device from the vendor but not all devices.
+
+The URLs must be valid, or the policy is ignored. Only the origin (scheme, host, and port) of the URL is considered.
+
+This policy overrides 'DefaultSerialGuardSetting' (Control use of the Serial API), 'SerialAskForUrls' (Allow the Serial API on specific sites), 'SerialBlockedForUrls' (Block the Serial API on specific sites) and the user's preferences.
+
+This policy only affects access to USB devices through the Web Serial API. To grant access to USB devices through the WebUSB API see the 'WebUsbAllowDevicesForUrls' (Grant access to specific sites to connect to specific USB devices) policy.
+
+Example value:
+
+[
+  {
+    "devices": [
+      {
+        "product_id": 5678,
+        "vendor_id": 1234
+      }
+    ],
+    "urls": [
+      "https://specific-device.example.com"
+    ]
+  },
+  {
+    "devices": [
+      {
+        "vendor_id": 1234
+      }
+    ],
+    "urls": [
+      "https://all-vendor-devices.example.com"
+    ]
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

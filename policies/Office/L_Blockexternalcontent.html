@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Display pictures and external content in HTML e-mail | ADMX Guide</title>
+
+<meta name="description" content="Display pictures and external content in HTML e-mail ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Display pictures and external content in HTML e-mail</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Outlook 2016 > Security > Automatic Picture Download Settings</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\outlook\options\mail</p>
+
+<h3>Description</h3>
+
+<p>This policy setting setting controls whether Outlook downloads untrusted pictures and external content located in HTML e-mail messages without users explicitly choosing to download them. 
+
+If you enable this policy setting, Outlook will not automatically download content from external servers unless the sender is included in the Safe Senders list. Recipients can choose to download external content from untrusted senders on a message-by-message basis. 
+
+If you disable this policy setting, Outlook will display pictures and external content in HTML e-mail automatically.
+
+If you do not configure this policy setting, Outlook does not download external content in HTML e-mail and RSS items unless the content is considered safe. Content that Outlook can be configured to consider safe includes: 
+
+- Content in e-mail messages from senders and to recipients defined in the Safe Senders and Safe Recipients lists. 
+- Content from Web sites in Internet Explorer's Trusted Sites security zone. 
+- Content in RSS items. 
+- Content from SharePoint Discussion Boards. Users can control what content is considered safe by changing the options in the "Automatic Download" section of the Trust Center. If Outlook's default blocking configuration is overridden, in the Trust Center or by some other method, Outlook will display external content in all HTML e-mail messages, including any that include Web beacons.</p>
+
+</div>
+
+</body>
+</html>

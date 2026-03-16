@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enable Domain Actions Download from Microsoft (obsolete) | ADMX Guide</title>
+
+<meta name="description" content="Enable Domain Actions Download from Microsoft (obsolete) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enable Domain Actions Download from Microsoft (obsolete)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
+
+This policy doesn't work because conflicting states should be avoided. This policy was used to enable/disable download of the domain actions list, but it didn't always achieve the desired state. The Experimentation and Configuration Service, which handles the download, has its own policy to configure what is downloaded from the service. Use the 'ExperimentationAndConfigurationServiceControl' (Control communication with the Experimentation and Configuration Service) policy instead.
+
+In Microsoft Edge, Domain Actions represent a series of compatibility features that help the browser work correctly on the web.
+
+Microsoft keeps a list of actions to take on certain domains for compatibility reasons. For example, the browser may override the User Agent string on a website if that website is broken due to the new User Agent string on Microsoft Edge. Each of these actions is intended to be temporary while Microsoft tries to resolve the issue with the site owner.
+
+When the browser starts up and then periodically afterwards, the browser will contact the Experimentation and Configuration Service that contains the most up to date list of compatibility actions to perform. This list is saved locally after it is first retrieved so that subsequent requests will only update the list if the server's copy has changed.
+
+If you enable this policy, the list of Domain Actions will continue to be downloaded from the Experimentation and Configuration Service.
+
+If you disable this policy, the list of Domain Actions will no longer be downloaded from the Experimentation and Configuration Service.
+
+If you don't configure this policy, the list of Domain Actions will continue to be downloaded from the Experimentation and Configuration Service.</p>
+
+</div>
+
+</body>
+</html>

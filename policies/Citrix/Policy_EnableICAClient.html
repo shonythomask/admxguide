@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow client connections | ADMX Guide</title>
+
+<meta name="description" content="Allow client connections ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow client connections</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Citrix Components > Citrix Workspace</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Citrix\ICA Client\Engine\Lockdown Profiles\All Regions</p>
+
+<h3>Description</h3>
+
+<p>Use this policy to enable or completely disable connections from the Citrix Workspace app.  
+
+When this policy is not configured, the client will allow connection to servers.  
+
+When this policy is enabled, the client will only connect to a server if the "Enable client" option is selected, and if its version number is greater or equal to the "Minimum client version".  
+
+When the policy is disabled, the client will not allow connections to any servers.  
+
+
+Troubleshooting:
+If a connection is refused because the client is not enabled, the error message "<Server> ERROR:  Cannot connect to the Citrix XenApp server.  The Server (…) is not trusted for ICA connections.  Connections to the (All Regions) Region are not allowed by lockdown settings.  Please contact your administrator." appears.  
+
+If the client does not allow a connection because the version number is too low, the error message "Error number 2321:  ICA Client Configuration Manager:  The ICA Client version is too low to run using the installed configuration data." appears.</p>
+
+</div>
+
+</body>
+</html>

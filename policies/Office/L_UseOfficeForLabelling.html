@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Use the Sensitivity feature in Office to apply and view sensitivity labels | ADMX Guide</title>
+
+<meta name="description" content="Use the Sensitivity feature in Office to apply and view sensitivity labels ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Use the Sensitivity feature in Office to apply and view sensitivity labels</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Security Settings</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\security\labels</p>
+
+<h3>Description</h3>
+
+<p>This policy setting controls whether sensitivity labels configured by an admin can be applied and viewed by using sensitivity labels in an Office app, such as Word. It applies only to subscription versions of Office, such as Microsoft 365 Apps for enterprise.​
+
+This setting has been updated for newer versions of M365 Apps. For more information about this setting and how it applies to versions of M365 Apps, see https://go.microsoft.com/fwlink/p/?linkid=2207430. ​
+
+For newer versions of M365 Apps:​
+
+If you enable this policy setting, or don’t configure this policy setting, sensitivity labels that are built into Office apps can be used to apply and view sensitivity labels.
+
+If you disable this policy setting, sensitivity labels that are built into Office apps can’t be used to apply or view sensitivity labels. If the Microsoft Azure Information Protection unified labeling client is installed and you want to use the add-in from that client for labeling, you must also configure the policy setting "Use the Azure Information Protection add-in for sensitivity labeling".​
+
+For prior versions:​
+
+If you enable this policy setting, labels built into Office apps can be used to apply and view sensitivity labels. If the Microsoft Azure Information Protection unified labeling client is installed, we also recommend you block that client’s add-in from loading in Word, Excel, PowerPoint, and Outlook.
+
+If you disable this policy setting, or don’t configure this policy setting, labels built into Office apps can’t be used to apply and view sensitivity labels. If the Microsoft Azure Information Protection unified labeling client is installed, the add-in from that client can be used to apply and view sensitivity labels in Office apps.</p>
+
+</div>
+
+</body>
+</html>

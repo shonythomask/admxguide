@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enable default legacy SameSite cookie behavior setting (obsolete) | ADMX Guide</title>
+
+<meta name="description" content="Enable default legacy SameSite cookie behavior setting (obsolete) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enable default legacy SameSite cookie behavior setting (obsolete)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 94.
+
+This policy doesn't work because it was only intended to serve only as a short-term mechanism to give enterprises more time to update their environments if they were found to be incompatible with the SameSite behavior change.
+
+If you still require legacy cookie behavior, please use 'LegacySameSiteCookieBehaviorEnabledForDomainList' (Revert to legacy SameSite behavior for cookies on specified sites) to configure behavior on a per-domain basis.
+
+Lets you revert all cookies to legacy SameSite behavior. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+
+If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
+
+Policy options mapping:
+
+* DefaultToLegacySameSiteCookieBehavior (1) = Revert to legacy SameSite behavior for cookies on all sites
+
+* DefaultToSameSiteByDefaultCookieBehavior (2) = Use SameSite-by-default behavior for cookies on all sites
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

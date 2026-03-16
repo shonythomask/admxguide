@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enable post-quantum key agreement for TLS | ADMX Guide</title>
+
+<meta name="description" content="Enable post-quantum key agreement for TLS ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enable post-quantum key agreement for TLS</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy configures whether Microsoft Edge offers a post-quantum key agreement algorithm in TLS. This lets supporting servers protect user traffic from being decrypted by quantum computers.
+
+If you enable or don't configure this policy, Microsoft Edge offers a post-quantum key agreement in TLS connections. TLS connections are protected from quantum computers when communicating with compatible servers.
+
+If you disable this policy, Microsoft Edge will not offer a post-quantum key agreement in TLS connections. User traffic is unprotected from decryption by quantum computers.
+
+Offering a post-quantum key agreement is backwards-compatible. Existing TLS servers and networking middleware are expected to ignore the new option and continue selecting previous options.
+
+However, devices that don't implement TLS correctly may malfunction when offered the new option. For example, they might disconnect in response to unrecognized options or the resulting larger messages. These devices aren't post-quantum-ready and will interfere with an enterprise's post-quantum transition. If this issue is encountered, administrators should contact the vendor for a fix.
+
+This policy is a temporary measure and will be removed in future versions of Microsoft Edge. You can enable it to test for issues and you can disable it while you resolve issues.</p>
+
+</div>
+
+</body>
+</html>

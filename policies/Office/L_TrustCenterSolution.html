@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trust Local Solution | ADMX Guide</title>
+
+<meta name="description" content="Trust Local Solution ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Trust Local Solution</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Document Information Panel</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\documentinformationpanel\trustsolution</p>
+
+<h3>Description</h3>
+
+<p>Suppresses prompt that asks to load a locally installed full-trust solution of a Document Information Panel in the background. This is normally shown if a full-trust solution is deployed and there are bound properties in the document (e.g. lookups) that must load the Document Information Panel in the background to retrieve the contents of the property. 
+
+Enter pairs corresponding to the Document Information Panel solution path and a value of 1 to disable. If the value is set, the user will not be prompted when loading the full-trust solution in the background. The solution will load normally (and any non-related warnings that exist).</p>
+
+</div>
+
+</body>
+</html>

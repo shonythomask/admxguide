@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Specify uninstall behavior for Microsoft Edge | ADMX Guide</title>
+
+<meta name="description" content="Specify uninstall behavior for Microsoft Edge ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Specify uninstall behavior for Microsoft Edge</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge Update > Applications > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\EdgeUpdate</p>
+
+<h3>Description</h3>
+
+<p>You can specify whether Microsoft Edge (stable channel) is uninstalled, or is blocked from being uninstalled, on domain-joined devices in the European Economic Area (EEA).
+
+If this policy is set to 'Enabled', Microsoft Edge will be automatically uninstalled on all devices in the EEA where this policy is deployed. User data will be kept on the device. Microsoft Edge will be uninstalled the next time Microsoft Edge Update automatically checks for updates. If Microsoft Edge is uninstalled from the devices, applications, widgets (for example, News, Search, and Weather) or any other Progressive Web Applications (PWAs) that depend on Microsoft Edge will no longer be available.
+
+If this policy is set to 'Enabled and delete user data' (Setting '2'), Microsoft Edge will be automatically uninstalled on all devices in the EEA where this policy is deployed, and user data will be deleted from the device.
+
+If this policy is set to 'Disabled' (Setting '3'), all users in the EEA are prevented from uninstalling Microsoft Edge where this policy is deployed.
+
+If the policy is 'Not configured' (default setting), a user's Windows region setting determines whether they can uninstall Microsoft Edge on a domain-joined device. Only users in EEA countries will be able to uninstall Microsoft Edge if they choose to do so. Users outside of this area will not be able to uninstall Microsoft Edge.
+
+This policy is available only on Home, Pro, Pro Education, Pro for Workstations, Enterprise, Education, and Enterprise multi-session editions of Windows 10 22H2 and Windows 11 23H2 and later versions.
+
+This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
+
+If Microsoft Edge needs to be reinstalled:
+- You can set the 'Install' Policy to Force Installs (Machine-Wide) to reinstall Microsoft Edge.
+- If you set the Install policy to Force Installs (Machine-Wide), and also set the Uninstall policy to Enabled, the Force Installs (Machine-Wide) policy will override the Uninstall policy.</p>
+
+</div>
+
+</body>
+</html>

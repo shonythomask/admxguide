@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure enhanced hang detection for Internet Explorer mode | ADMX Guide</title>
+
+<meta name="description" content="Configure enhanced hang detection for Internet Explorer mode ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure enhanced hang detection for Internet Explorer mode</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Enhanced hang detection is a more granular approach to detecting hung webpages in Internet Explorer mode than what standalone Internet Explorer uses. When a hung webpage is detected, the browser will apply a mitigation to prevent the rest of the browser from hanging.
+
+This setting allows you to configure the use of enhanced hang detection in case you run into incompatible issues with any of your websites. We recommend disabling this policy only if you see notifications such as "(website) is not responding" in Internet Explorer mode but not in standalone Internet Explorer.
+
+This setting works in conjunction with:
+'InternetExplorerIntegrationLevel' (Configure Internet Explorer integration) is set to 'IEMode'
+and
+'InternetExplorerIntegrationSiteList' (Configure the Enterprise Mode Site List) policy where the list has at least one entry.
+
+If you set this policy to 'Enabled' or don't configure it, websites running in Internet Explorer mode will use enhanced hang detection.
+
+If you set this policy to 'Disabled', enhanced hang detection is disabled, and users will get the basic Internet Explorer hang detection behavior.
+
+To learn more about Internet Explorer mode, see https://go.microsoft.com/fwlink/?linkid=2094210
+
+Policy options mapping:
+
+* Disabled (0) = Enhanced hang detection disabled
+
+* Enabled (1) = Enhanced hang detection enabled
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

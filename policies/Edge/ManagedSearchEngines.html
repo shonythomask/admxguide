@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manage Search Engines | ADMX Guide</title>
+
+<meta name="description" content="Manage Search Engines ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Manage Search Engines</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Lets you configure a list of up to 10 search engines, one of which must be marked as the default search engine. Starting in Microsoft Edge version 100, you can configure up to 100 engines.
+
+You do not need to specify the encoding. Starting in Microsoft Edge 80, the suggest_url and image_search_url parameters are optional. The optional parameter, image_search_post_params (consists of comma-separated name/value pairs), is available starting in Microsoft Edge 80.
+
+Starting in Microsoft Edge 83, you can enable search engine discovery with the optional allow_search_engine_discovery parameter. This parameter must be the first item in the list. If allow_search_engine_discovery isn't specified, search engine discovery will be disabled by default. Starting in Microsoft Edge 84, you can set this policy as a recommended policy to allow search provider discovery. You don't need to add the optional allow_search_engine_discovery parameter. Starting in Microsoft Edge 100, setting this policy as a recommended policy will also allow users to manually add new search engines from their Microsoft Edge settings.
+
+If you enable this policy, users can't add, remove, or change any search engine in the list. Users can set their default search engine to any search engine in the list.
+
+If you disable or don't configure this policy, users can modify the search engines list as desired.
+
+If the 'DefaultSearchProviderSearchURL' (Default search provider search URL) policy is set, this policy (ManagedSearchEngines) is ignored. The user must restart their browser to finish applying this policy.
+
+Example value:
+
+[
+  {
+    "allow_search_engine_discovery": true
+  },
+  {
+    "is_default": true,
+    "keyword": "example1.com",
+    "name": "Example1",
+    "search_url": "https://www.example1.com/search?q={searchTerms}",
+    "suggest_url": "https://www.example1.com/qbox?query={searchTerms}"
+  },
+  {
+    "image_search_post_params": "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}",
+    "image_search_url": "https://www.example2.com/images/detail/search?iss=sbiupload",
+    "keyword": "example2.com",
+    "name": "Example2",
+    "search_url": "https://www.example2.com/search?q={searchTerms}",
+    "suggest_url": "https://www.example2.com/qbox?query={searchTerms}"
+  },
+  {
+    "encoding": "UTF-8",
+    "image_search_url": "https://www.example3.com/images/detail/search?iss=sbiupload",
+    "keyword": "example3.com",
+    "name": "Example3",
+    "search_url": "https://www.example3.com/search?q={searchTerms}",
+    "suggest_url": "https://www.example3.com/qbox?query={searchTerms}"
+  },
+  {
+    "keyword": "example4.com",
+    "name": "Example4",
+    "search_url": "https://www.example4.com/search?q={searchTerms}"
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

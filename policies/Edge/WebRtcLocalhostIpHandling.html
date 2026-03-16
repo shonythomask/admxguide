@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Restrict exposure of local IP address by WebRTC | ADMX Guide</title>
+
+<meta name="description" content="Restrict exposure of local IP address by WebRTC ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Restrict exposure of local IP address by WebRTC</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > WebRtc settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Allows you to set whether or not WebRTC exposes the user's local IP address.
+
+If you set this policy to "AllowAllInterfaces" or "AllowPublicAndPrivateInterfaces", WebRTC exposes the local IP address.
+
+If you set this policy to "AllowPublicInterfaceOnly" or "DisableNonProxiedUdp", WebRTC doesn't expose the local IP address.
+
+If you don't set this policy, or if you disable it, WebRTC exposes the local IP address.
+
+Note: This policy does not provide an option to exclude specific domains.
+
+Policy options mapping:
+
+* AllowAllInterfaces (default) = Allow all interfaces. This exposes the local IP address
+
+* AllowPublicAndPrivateInterfaces (default_public_and_private_interfaces) = Allow public and private interfaces over http default route. This exposes the local IP address
+
+* AllowPublicInterfaceOnly (default_public_interface_only) = Allow public interface over http default route. This doesn't expose the local IP address
+
+* DisableNonProxiedUdp (disable_non_proxied_udp) = Use TCP unless proxy server supports UDP. This doesn't expose the local IP address
+
+Use the preceding information when configuring this policy.
+
+Example value: default</p>
+
+</div>
+
+</body>
+</html>

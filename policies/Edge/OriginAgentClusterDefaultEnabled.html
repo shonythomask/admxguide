@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Origin-keyed agent clustering enabled by default | ADMX Guide</title>
+
+<meta name="description" content="Origin-keyed agent clustering enabled by default ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Origin-keyed agent clustering enabled by default</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>The Origin-Agent-Cluster: HTTP header controls whether a document is isolated in an origin-keyed agent cluster or in a site-keyed agent cluster. This has security implications because an origin-keyed agent cluster allows isolating documents by origin. The consequence of this for developers is that the document.domain accessor can no longer be set when origin-keyed agent clustering is enabled.
+
+If you enable or don't configure this policy, documents without the Origin-Agent-Cluster: header will be assigned to origin-keyed agent clustering by default. On these documents, the document.domain accessor will not be settable.
+
+If you disable this policy, documents without the Origin-Agent-Cluster: header will be assigned to site-keyed agent clusters by default. On these documents, the document.domain accessor will be settable.
+
+See https://go.microsoft.com/fwlink/?linkid=2191896 for additional details.</p>
+
+</div>
+
+</body>
+</html>

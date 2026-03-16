@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Websites to open in alternative browser | ADMX Guide</title>
+
+<meta name="description" content="Websites to open in alternative browser ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Websites to open in alternative browser</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Legacy Browser Support</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy controls the list of websites to open in an alternative browser. Each item is treated as a rule for something to open in an alternative browser. Google Chrome uses those rules when choosing if a URL should open in an alternative browser. When the Internet Explorer® add-in is on, Internet Explorer® switches back to Google Chrome when the rules don't match. If rules contradict each other, Google Chrome uses the most specific rule.
+
+Leaving the policy unset adds no websites to the list.
+
+Note: Elements can also be added to this list through the BrowserSwitcherUseIeSitelist and BrowserSwitcherExternalSitelistUrl policies.
+
+Example value:
+
+ie.com
+!open-in-chrome.ie.com
+foobar.com/ie-only/</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Specify the location to save the licensing token used by shared computer activation | ADMX Guide</title>
+
+<meta name="description" content="Specify the location to save the licensing token used by shared computer activation ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Specify the location to save the licensing token used by shared computer activation</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Office 2016 (Machine) > Licensing Settings</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\software\policies\microsoft\office\16.0\common\licensing</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to specify the file folder to save the licensing token used by shared computer activation. 
+
+Shared computer activation is used only for situations where multiple users share the same computer. For example, when using Remote Desktop Services (RDS). 
+
+By default, the licensing token used by shared computer activation is saved in the %localappdata%\Microsoft\Office\16.0\Licensing folder. But, this location isn’t included in the user’s roaming profile, so the licensing token won’t be available if the user signs in to a different computer.
+
+If you enable this policy setting, you need to specify a location to store the licensing token used by shared computer activation.  You should specify a folder that is specific to the user and that will be available to the user from whatever computer on the network that the user signs in to. For example, a folder that’s included in the user’s roaming profile, or a shared folder on the network, where there is a folder for each user.
+
+If you disable or don’t configure this policy setting, Office uses the default folder to save the licensing token used by shared computer activation.
+
+Note: This policy setting only applies to subscription plans that include Microsoft 365 Apps for enterprise, and to subscription versions of Project and Visio.​</p>
+
+</div>
+
+</body>
+</html>

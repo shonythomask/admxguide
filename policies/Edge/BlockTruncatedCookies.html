@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Block truncated cookies (obsolete) | ADMX Guide</title>
+
+<meta name="description" content="Block truncated cookies (obsolete) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Block truncated cookies (obsolete)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge WebView2 > Network settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge\WebView2</p>
+
+<h3>Description</h3>
+
+<p>OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 131.
+
+This policy provides a temporary opt-out for changes to how Microsoft Edge handles cookies set via JavaScript that contain certain control characters (NULL, carriage return, and line feed).
+Previously, the presence of any of these characters in a cookie string would cause it to be truncated but still set.
+Now, the presence of these characters will cause the whole cookie string to be ignored.
+
+If you enable or don't configure this policy, the new behavior is enabled.
+
+If you disable this policy, the old behavior is enabled.
+
+This policy is obsolete because this policy was originally implemented as a safety measure in case of breakage, but none have been reported.</p>
+
+</div>
+
+</body>
+</html>

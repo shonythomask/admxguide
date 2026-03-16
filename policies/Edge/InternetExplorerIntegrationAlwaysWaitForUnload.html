@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wait for Internet Explorer mode tabs to completely unload before ending the browser session | ADMX Guide</title>
+
+<meta name="description" content="Wait for Internet Explorer mode tabs to completely unload before ending the browser session ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Wait for Internet Explorer mode tabs to completely unload before ending the browser session</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy causes Microsoft Edge to continue running until all Internet Explorer tabs have completely finished unloading. This allows Internet Explorer plugins like ActiveX controls to perform additional critical work even after the browser has been closed. However, this can cause stability and performance issues, and Microsoft Edge processes may remain active in the background with no visible windows if the webpage or plugin prevents Internet Explorer from unloading. This policy should only be used if your organization depends on a plugin that requires this behavior.
+
+If you enable this policy, Microsoft Edge will always wait for Internet Explorer mode tabs to fully unload before ending the browser session.
+
+If you disable or don't configure this policy, Microsoft Edge will not always wait for Internet Explorer mode tabs to fully unload before ending the browser session.
+
+To learn more about Internet Explorer mode, see https://go.microsoft.com/fwlink/?linkid=2174004</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Live captions allowed | ADMX Guide</title>
+
+<meta name="description" content="Live captions allowed ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Live captions allowed</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Allow users to turn the Live captions feature on or off.
+
+Live captions is an accessibility feature that converts speech from the audio that plays in Microsoft Edge in to text and shows this text in a separate window. The entire process happens on the device and no audio or caption text ever leaves the device.
+
+Note: This feature is not generally available. Clients that have the 'ExperimentationAndConfigurationServiceControl' (Control communication with the Experimentation and Configuration Service) policy set to 'FullMode' may receive the feature before broad availability. Broad availability will be announced via Microsoft Edge release notes.
+
+If you enable or don't configure this policy, users can turn this feature on or off at edge://settings/accessibility.
+
+If you disable this policy, users will not be able to turn this accessibility feature on. If speech recognition files have been downloaded previously, they will be deleted from the device in 30 days. We recommend avoiding this option unless it's needed in your environment.
+
+If users choose to turn on Live captions, speech recognition files (approximately 100 megabytes) will be downloaded to the device on first run and then periodically to improve performance and accuracy. These files will be deleted after 30 days.</p>
+
+</div>
+
+</body>
+</html>

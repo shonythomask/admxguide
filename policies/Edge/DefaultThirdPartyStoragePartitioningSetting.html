@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Default setting for third-party storage partitioning (deprecated) | ADMX Guide</title>
+
+<meta name="description" content="Default setting for third-party storage partitioning (deprecated) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Default setting for third-party storage partitioning (deprecated)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+
+This policy controls whether third-party storage partitioning is allowed by default.
+
+If this policy is set to 1 - AllowPartitioning, or unset, third-party storage partitioning will be allowed by default. This default may be overridden for specific top-level origins by other means.
+
+If this policy is set to 2 - BlockPartitioning, third-party storage partitioning will be disabled for all contexts.
+
+Use ThirdPartyStoragePartitioningBlockedForOrigins to disable third-party storage partitioning for specific top-level origins.
+
+This feature will be removed starting in Microsoft Edge version 145. To ensure compatibility, use the requestStorageAccess method instead. For more information, see https://developer.mozilla.org/en-US/docs/Web/API/Document/requestStorageAccess.
+
+Policy options mapping:
+
+* AllowPartitioning (1) = Allow third-party storage partitioning by default.
+
+* BlockPartitioning (2) = Disable third-party storage partitioning.
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

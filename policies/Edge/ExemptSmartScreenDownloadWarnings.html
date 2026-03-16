@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Disable SmartScreen AppRep based warnings for specified file types on specified domains | ADMX Guide</title>
+
+<meta name="description" content="Disable SmartScreen AppRep based warnings for specified file types on specified domains ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Disable SmartScreen AppRep based warnings for specified file types on specified domains</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > SmartScreen settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>You can enable this policy to create a dictionary of file type extensions with a corresponding list of domains that are exempted from SmartScreen AppRep warnings. For example, if the `vbe` extension is associated with "contoso.com," users wouldn't see a SmartScreen AppRep warning when downloading `vbe` files from "contoso.com." They might, however, see a download warning when downloading `vbe` files from "fabrikam.com."
+
+Files with file type extensions specified for domains identified by this policy are still subject to file type extension-based security warnings and mixed-content download warnings.
+
+If you disable this policy or don't configure it, files that trigger SmartScreen AppRep download warnings show warnings to the user.
+
+If you enable this policy:
+
+* The URL pattern should be formatted according to https://go.microsoft.com/fwlink/?linkid=2095322.
+* The file type extension entered must be in lower-cased ASCII. The leading separator shouldn't be included when listing the file type extension, so `vbe` should be used instead of `.vbe`.
+
+Example:
+
+The following example would prevent SmartScreen AppRep warnings on msi, exe, and vbe extensions for *.contoso.com domains. It might show the user a SmartScreen AppRep warning on any other domain for exe and msi files, but not for vbe files.
+
+[
+  { "file_extension": "msi", "domains": ["contoso.com"] },
+  { "file_extension": "exe", "domains": ["contoso.com"] },
+  { "file_extension": "vbe", "domains": ["*"] }
+]
+
+Note: While the preceding example shows the suppression of SmartScreen AppRep download warnings for `vbe` files for all domains, applying suppression of such warnings for all domains isn't recommended due to security concerns. The ability to suppress warnings for all domains is shown in the example merely to demonstrate the ability to do so.
+
+Example value:
+
+[
+  {
+    "domains": [
+      "https://contoso.com",
+      "contoso2.com"
+    ],
+    "file_extension": "msi"
+  },
+  {
+    "domains": [
+      "*"
+    ],
+    "file_extension": "vbe"
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

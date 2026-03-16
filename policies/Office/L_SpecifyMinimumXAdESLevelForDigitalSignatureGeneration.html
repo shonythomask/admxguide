@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Specify minimum XAdES level for digital signature generation | ADMX Guide</title>
+
+<meta name="description" content="Specify minimum XAdES level for digital signature generation ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Specify minimum XAdES level for digital signature generation</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Security Settings > Digital Signatures</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\signatures</p>
+
+<h3>Description</h3>
+
+<p>This policy setting  lets you  specify a minimum XAdES level that Office 2016 applications must reach in order to create an XAdES digital signature. If unable to reach the minimum XAdESLevel, the Office application fails to create the signature.  
+
+If you enable this policy setting, you can set the following minimum XAdES levels that must be met by the Office application before creating the digital signature.
+
+- No minimum level
+- XAdES-BES: Must create at least XAdES-BES or fail
+- XAdES-T: Must create at least XAdES-T (timestamp) or fail. 
+- XAdES-C: Must create at least XAdES-C (certificate and revocation references) or fail. 
+- XAdES-X: Must create at least XAdES-X (timestamp -C) or fail. 
+- XAdES-X-L: Must create at least XAdES-X-L (store certificate and revocation values) or fail.
+
+If you disable or do not configure this policy setting, Office 2016 does not require a minimum XAdES level and creates the most advanced XAdES signature possible, up to the level specified in the policy setting</p>
+
+</div>
+
+</body>
+</html>

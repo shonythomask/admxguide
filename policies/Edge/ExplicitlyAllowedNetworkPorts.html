@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Explicitly allowed network ports | ADMX Guide</title>
+
+<meta name="description" content="Explicitly allowed network ports ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Explicitly allowed network ports</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>There is a list of restricted ports built into Microsoft Edge. Connections to these ports will fail. This policy allows bypassing that list. The set of ports is defined as a comma-separated list that outgoing connections should be permitted on.
+
+Ports are restricted to prevent Microsoft Edge from being used as a vector to exploit various network vulnerabilities. Setting this policy may expose your network to attacks. This policy is intended as a temporary workaround for error code "ERR_UNSAFE_PORT" while migrating a service running on a blocked port to a standard port (for example port 80 or 443).
+
+Malicious websites can easily detect that this policy is set, and for which ports, then use that information to target attacks.
+
+Each port listed in this policy is labeled with a date that it can be unblocked until. After that date the port will be restricted regardless of if it's specified by the value of this policy.
+
+Leaving the value empty or unset means that all restricted ports will be blocked. Invalid port values set through this policy will be ignored while valid ones will still be applied.
+
+This policy overrides the "--explicitly-allowed-ports" command-line option.
+
+Policy options mapping:
+
+* 554 (554) = port 554 (can be unblocked until 2021/10/15)
+
+* 10080 (10080) = port 10080 (can be unblocked until 2022/04/01)
+
+* 6566 (6566) = port 6566 (can be unblocked until 2021/10/15)
+
+* 989 (989) = port 989 (can be unblocked until 2022/02/01)
+
+* 990 (990) = port 990 (can be unblocked until 2022/02/01)
+
+Use the preceding information when configuring this policy.
+
+Example value:
+
+10080</p>
+
+</div>
+
+</body>
+</html>

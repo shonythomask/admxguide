@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Notify a user that a browser restart is recommended or required for pending updates | ADMX Guide</title>
+
+<meta name="description" content="Notify a user that a browser restart is recommended or required for pending updates ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Notify a user that a browser restart is recommended or required for pending updates</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Notify users that they need to restart Microsoft Edge to apply a pending update.
+
+If you don't configure this policy, Microsoft Edge adds a recycle icon at the far right of the top menu bar to prompt users to restart the browser to apply the update.
+
+If you enable this policy and set it to 'Recommended', a recurring warning prompts users that a restart is recommended. Users can dismiss this warning and defer the restart.
+
+If you set the policy to 'Required', a recurring warning prompts users that the browser will be restarted automatically as soon as a notification period passes. The default period is seven days. You can configure this period with the 'RelaunchNotificationPeriod' (Set the time period for update notifications) policy.
+
+The user's session is restored when the browser restarts.
+
+Policy options mapping:
+
+* Recommended (1) = Recommended - Show a recurring prompt to the user indicating that a restart is recommended
+
+* Required (2) = Required - Show a recurring prompt to the user indicating that a restart is required
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

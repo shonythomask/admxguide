@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Disable printer types on the deny list | ADMX Guide</title>
+
+<meta name="description" content="Disable printer types on the deny list ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Disable printer types on the deny list</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Printing</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>The printers of types placed on the deny list will be disabled from being discovered or having their capabilities fetched.
+
+Placing all printer types on the deny list effectively disables printing, as there would be no available destinations to send a document for printing.
+
+In versions before 102, including cloud on the deny list has the same effect as setting the CloudPrintSubmitEnabled policy to false. In order to keep Google Cloud Print destinations discoverable, the CloudPrintSubmitEnabled policy must be set to true and cloud must not be on the deny list. Beginning in version 102, Google Cloud Print destinations are not supported and will not appear regardless of policy values.
+
+If the policy is not set, or is set to an empty list, all printer types will be available for discovery.
+
+Extension printers are also known as print provider destinations, and include any destination that belongs to a Google Chrome extension.
+
+Local printers are also known as native printing destinations, and include destinations available to the local machine and shared network printers.
+
+Example value:
+
+local
+pdf</p>
+
+</div>
+
+</body>
+</html>

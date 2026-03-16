@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure favorites | ADMX Guide</title>
+
+<meta name="description" content="Configure favorites ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure favorites</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Configures a list of managed favorites.
+
+The policy creates a list of favorites. Each favorite contains the keys "name" and "url," which hold the favorite's name and its target. You can configure a subfolder by defining a favorites without an "url" key but with an additional "children" key that contains a list of favorites as defined above (some of which may be folders again). Microsoft Edge amends incomplete URLs as if they were submitted via the Address Bar, for example "microsoft.com" becomes "https://microsoft.com/".
+
+These favorites are placed in a folder that can't be modified by the user (but the user can choose to hide it from the favorites bar). By default the folder name is "Managed favorites" but you can change it by adding to the list of favorites a dictionary containing the key "toplevel_name" with the desired folder name as the value.
+
+Managed favorites are not synced to the user account and can't be modified by extensions.
+
+Example value:
+
+[
+  {
+    "toplevel_name": "My managed favorites folder"
+  },
+  {
+    "name": "Microsoft",
+    "url": "microsoft.com"
+  },
+  {
+    "name": "Bing",
+    "url": "bing.com"
+  },
+  {
+    "children": [
+      {
+        "name": "Microsoft Edge Insiders",
+        "url": "www.microsoftedgeinsider.com"
+      },
+      {
+        "name": "Microsoft Edge",
+        "url": "www.microsoft.com/windows/microsoft-edge"
+      }
+    ],
+    "name": "Microsoft Edge links"
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

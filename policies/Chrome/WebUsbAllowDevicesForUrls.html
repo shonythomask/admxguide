@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Automatically grant permission to these sites to connect to USB devices with the given vendor and product IDs. | ADMX Guide</title>
+
+<meta name="description" content="Automatically grant permission to these sites to connect to USB devices with the given vendor and product IDs. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Automatically grant permission to these sites to connect to USB devices with the given vendor and product IDs.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy lets you list the URL patterns that specify which sites are automatically granted permission to access a USB device with the given vendor and product IDs. Each item in the list requires both devices and urls fields for the policy to be valid. Each item in the devices field can have a vendor_id and product_id field. Omitting the vendor_id field will create a policy matching any device. Omitting the product_id field will create a policy matching any device with the given vendor ID. A policy which has a product_id field without a vendor_id field is invalid.
+
+The USB permission model will grant the specified URL permission to access the USB device as a top-level origin. If embedded frames need to access USB devices, the 'usb' feature-policy header should be used to grant access. The URL must be valid, otherwise the policy is ignored.
+
+Deprecated: The USB permission model used to support specifying both the requesting and embedding URLs. This is deprecated and only supported for backwards compatibility in this manner: if both a requesting and embedding URL is specified, then the embedding URL will be granted the permission as top-level origin and the requesting URL will be ignored entirely.
+
+This policy overrides DefaultWebUsbGuardSetting, WebUsbAskForUrls, WebUsbBlockedForUrls and the user's preferences.
+
+This policy only affects access to USB devices through the WebUSB API. To grant access to USB devices through the Web Serial API see the SerialAllowUsbDevicesForUrls policy.
+See https://cloud.google.com/docs/chrome-enterprise/policies/?policy=WebUsbAllowDevicesForUrls for more information about schema and formatting.
+
+
+Example value:
+
+[
+  {
+    "devices": [
+      {
+        "product_id": 5678,
+        "vendor_id": 1234
+      }
+    ],
+    "urls": [
+      "https://google.com"
+    ]
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

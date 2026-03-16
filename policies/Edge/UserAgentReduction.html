@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enable or disable the User-Agent Reduction (deprecated) | ADMX Guide</title>
+
+<meta name="description" content="Enable or disable the User-Agent Reduction (deprecated) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enable or disable the User-Agent Reduction (deprecated)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+
+The User-Agent HTTP request header has been reduced by default since Microsoft Edge version 119. To continue receiving detailed platform information, migrate to User-Agent Client Hints, which replace the deprecated detailed User-Agent header. For more information, visit: https://web.dev/articles/migrate-to-ua-ch
+
+If you don't configure this policy or set it to Default, the User-Agent header will be reduced and controlled by experimentation.
+
+Set this policy to 'ForceEnabled' to force the reduced version of the  User-Agent request header for all origins.
+
+Set this policy to 'ForceDisabled' to always use the full (legacy)  User-Agent header.
+
+To learn more about the User-Agent string, read here:
+
+https://go.microsoft.com/fwlink/?linkid=2186267
+
+Policy options mapping:
+
+* Default (0) = Reduced User Agent, or controlled by experimentation.
+
+* ForceDisabled (1) = Full (legacy) User Agent.
+
+* ForceEnabled (2) = Reduced User Agent.
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

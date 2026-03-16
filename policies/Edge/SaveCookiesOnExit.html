@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Save cookies when Microsoft Edge closes | ADMX Guide</title>
+
+<meta name="description" content="Save cookies when Microsoft Edge closes ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Save cookies when Microsoft Edge closes</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>When this policy is enabled, the specified set of cookies is exempt from deletion when the browser closes. This policy is only effective when:
+- The 'Cookies and other site data' toggle is configured in Settings/Privacy and services/Clear browsing data on close or
+- The policy 'ClearBrowsingDataOnExit' (Clear browsing data when Microsoft Edge closes) is enabled or
+- The policy 'DefaultCookiesSetting' (Configure cookies) is set to 'Keep cookies for the duration of the session'.
+
+You can define a list of sites, based on URL patterns, that will have their cookies preserved across sessions.
+
+Note: Users can still edit the cookie site list to add or remove URLs. However, they can't remove URLs that have been added by an Admin.
+
+If you enable this policy, the list of cookies won't be cleared when the browser closes.
+
+If you disable or don't configure this policy, the user's personal configuration is used.
+
+Example value:
+
+https://www.contoso.com
+[*.]contoso.edu</p>
+
+</div>
+
+</body>
+</html>

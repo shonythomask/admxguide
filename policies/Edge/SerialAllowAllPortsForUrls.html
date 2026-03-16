@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Automatically grant sites permission to connect all serial ports | ADMX Guide</title>
+
+<meta name="description" content="Automatically grant sites permission to connect all serial ports ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Automatically grant sites permission to connect all serial ports</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy allows you to list sites which are automatically granted permission to access all available serial ports.
+
+The URLs must be valid, or the policy is ignored. Only the origin (scheme, host, and port) of the URL is considered.
+
+This policy overrides 'DefaultSerialGuardSetting' (Control use of the Serial API), 'SerialAskForUrls' (Allow the Serial API on specific sites), 'SerialBlockedForUrls' (Block the Serial API on specific sites) and the user's preferences.
+
+Example value:
+
+https://www.example.com</p>
+
+</div>
+
+</body>
+</html>

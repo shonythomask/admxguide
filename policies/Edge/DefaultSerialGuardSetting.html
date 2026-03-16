@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Control use of the Serial API | ADMX Guide</title>
+
+<meta name="description" content="Control use of the Serial API ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Control use of the Serial API</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Set whether websites can access serial ports. You can completely block access or ask the user each time a website wants to get access to a serial port.
+
+Setting the policy to 3 lets websites ask for access to serial ports. Setting the policy to 2 denies access to serial ports.
+
+You can override this policy for specific URL patterns by using the 'SerialAskForUrls' (Allow the Serial API on specific sites) and 'SerialBlockedForUrls' (Block the Serial API on specific sites) policies.
+
+If you don't configure this policy, by default, websites can ask users whether they can access a serial port, and users can change this setting.
+
+Policy options mapping:
+
+* BlockSerial (2) = Do not allow any site to request access to serial ports via the Serial API
+
+* AskSerial (3) = Allow sites to ask for user permission to access a serial port
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

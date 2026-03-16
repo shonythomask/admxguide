@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Specifies whether to (temporarily) opt out of Local Network Access restrictions | ADMX Guide</title>
+
+<meta name="description" content="Specifies whether to (temporarily) opt out of Local Network Access restrictions ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Specifies whether to (temporarily) opt out of Local Network Access restrictions</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Local Network Access settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>When this policy is set to Enabled, Local Network Access
+requests will only display warnings in Chrome DevTools due to Local Network Access checks failing.
+
+When this policy is set to Disabled or unset, Local Network Access requests will use the
+default handling of these requests.
+
+See https://wicg.github.io/local-network-access/ for Local Network Access restrictions.
+
+This enterprise policy is temporary, and will be removed after M146.
+
+Long term, the policy LocalNetworkAccessAllowedForUrls
+can be used to allowlist URL patterns that should be automatically granted
+the Local Network Access permission.
+
+Note that if the policy LocalNetworkAccessRestrictionsEnabled
+is enabled, it will take precedence over this policy.</p>
+
+</div>
+
+</body>
+</html>

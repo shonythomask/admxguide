@@ -1,67 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Mozilla Firefox ADMX Guide</title>
-  <link rel="stylesheet" href="../style.css" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mozilla Firefox | ADMX Guide</title>
+<meta name="description" content="Complete reference of Mozilla Firefox Administrative Template (ADMX) policies. View policy descriptions, registry paths, and configuration details for enterprise administrators.">
+<meta name="keywords" content="Mozilla Firefox, Mozilla Firefox ADMX policies, Group Policy Office, Mozilla Firefox administrative templates, Mozilla Firefox registry policies, ADMX Guide">
+<meta name="author" content="ADMX Guide">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.admxguide.com/apps/mozilla.html">
+<meta property="og:title" content="Mozilla Firefox Administrative Template Policies | ADMX Guide">
+<meta property="og:description" content="Explore all Mozilla Firefox ADMX policies including registry paths and configuration options for enterprise administrators.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.admxguide.com/apps/mozilla.html">
+<meta property="og:site_name" content="ADMX Guide">
+<meta property="og:title" content="Mozilla Firefox Administrative Template Policies | ADMX Guide">
+<meta property="og:description" content="Explore all Mozilla Firefox ADMX policies including registry paths and configuration options for enterprise administrators.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.admxguide.com/apps/mozilla.html">
+<meta property="og:site_name" content="ADMX Guide">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=Mozilla Firefox ADMX Policies | ADMX Guide">
+<meta name="twitter:description" content="Complete administrative template reference for Mozilla Firefox policies.">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../style.css">
+
 </head>
+
+
 <body>
 
-<script>
-  const APP_ID = "mozilla";
-</script>
 
 <header class="top-bar">
+
   <div class="header-left">
-<a href="../index.html" class="home-link" title="Home">
-  🏠 <span>Home</span>
-</a>
 
+    <div class="page-title">
 
-    <h1>Mozilla Firefox ADMX Guide</h1>
+      <a href="../index.html" class="logo">
+        Mozilla Firefox | ADMX Guide
+      </a>
+
+      <div class="page-subtitle">
+        Administrative template reference for Mozilla Firefox including all available Group Policy settings and registry paths.
+      </div>
+
+    </div>
+
   </div>
+
 
   <div class="header-right">
-    <input id="search" placeholder="Search policies..." />
-    
-    <!-- Only Office page will include this -->
-    <select id="productFilter">
-      <option value="">All Products</option>
-    </select>
+
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#about">About</a>
+    </nav>
+
+    <div class="header-tools">
+
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Search policies..."
+        autocomplete="off"
+      >
+
+      <button id="expandAll">Expand All</button>
+      <button id="collapseAll">Collapse All</button>
+
+    </div>
+
   </div>
+
 </header>
 
 
 <div class="container">
-  <!-- Left Pane: Category Tree -->
-  <aside id="categoryTree" class="pane left"></aside>
 
-  <!-- Middle Pane: Policy List -->
-  <main id="policyList" class="pane middle">
-    <p>Select a category to view policies.</p>
-  </main>
 
-  <!-- Right Pane: Policy Details -->
-  <section id="policyDetails" class="pane right">
-    <p>Select a policy to see details.</p>
-  </section>
+<!-- LEFT PANE -->
+<div class="pane left">
+
+  <div id="categoryTree"></div>
+
 </div>
 
+
+<!-- MIDDLE PANE -->
+<div class="pane middle" id="policyList">
+
+<p>Select a category or search.</p>
+
+</div>
+
+
+<!-- RIGHT PANE -->
+<div class="pane right" id="policyDetails">
+
+<h2>Policy Details</h2>
+
+<p>Select a policy to view details.</p>
+
+</div>
+
+
+</div>
+
+
 <footer id="footerBar">
-  Mozilla Firefox � Security & Trademark Disclaimer
 
-Disclaimer:
+ADMX Guide – Administrative Template Reference | Disclaimer: This repository and the ADMX Guide are not affiliated with, sponsored by, or endorsed by the Mozilla Foundation or Mozilla Corporation. Firefox and the Firefox logo are registered trademarks of the Mozilla Foundation.   ..The administrative templates provided here are for reference and informational purposes only. Use of these policies is at your own risk; the maintainers of this guide assume no liability for browser instability or security issues resulting from their application.
 
-This website is an independent reference project and is not affiliated with, endorsed by, or sponsored by Mozilla Foundation or Mozilla Corporation.
-
-Mozilla, Firefox, and related names, logos, and trademarks are the property of Mozilla Foundation and/or its licensors.
-
-All policy definitions and configuration information presented on this site are derived from publicly available Firefox ADMX/ADML administrative template files and are provided for educational and informational purposes only.
-
-Policy behavior, registry paths, and supported settings may vary by Firefox version and platform.
-Administrators should always validate configurations in a test environment before deploying policies in production.
 </footer>
 
+
+<script>
+const APP_ID = "Mozila Firefox";
+</script>
+
 <script src="../app.js"></script>
+
+
 </body>
 </html>

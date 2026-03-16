@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EKU filtering | ADMX Guide</title>
+
+<meta name="description" content="EKU filtering ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>EKU filtering</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Signing</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\signatures</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to specify enhanced key usage (EKU) values to be used in filtering a list of digital certificates for signing Excel, PowerPoint, and Word documents. An enhanced key usage (EKU) extension to a digital certificate is a collection of one or more values that indicate how a certificate should be used. Examples of EKU values include Smart Card Logon and Client Authentication. EKU filtering allows you to filter the list of installed certificates that can be used for digitally signing documents. The filtered list will appear when users attempt to select a certificate for digitally signing a document. 
+
+If you enable this policy setting, you can specify a list of object identifiers (OIDs) that represent acceptable EKUs for certificates used in conjunction with signed documents. For example, for a certificate with the Encrypting File System (1.3.6.1.4.1.311.10.3.4) identifier, the OID is 1.3.6.1.4.1.311.10.3.4. This list of appropriate OIDs will vary according to the specific certificates that the organization uses.  For a list of object IDs associated with Microsoft cryptography, see Microsoft Knowledge Base article 287547, "Object IDs associated with Microsoft cryptography" at http://officeredir.microsoft.com/r/rlidGPOIDAndCrypt2O14?clid=1033. 
+
+If you disable or do not configure this policy setting, EKU filtering is not available.</p>
+
+</div>
+
+</body>
+</html>

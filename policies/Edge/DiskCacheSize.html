@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Set disk cache size, in bytes | ADMX Guide</title>
+
+<meta name="description" content="Set disk cache size, in bytes ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Set disk cache size, in bytes</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy configures the disk cache size in Microsoft Edge.
+
+If you enable this policy, Microsoft Edge uses the specified cache size, regardless of whether the user has set the --disk-cache-size command-line flag.
+
+The value defined in this policy is treated as a suggestion to the caching system, not a strict limit. Values below a few megabytes are rounded up to a reasonable minimum.
+
+If you set the value to 0, the default cache size is used and users cannot override it.
+
+It is recommended not to configure a custom value, as Microsoft Edge automatically manages the cache size for optimal performance. Setting a small value can degrade performance and increase network usage.
+
+If you don’t configure this policy, the default size is used, but users can override it with the --disk-cache-size flag.
+
+Note: The specified value is treated as a hint to multiple cache subsystems. The total disk usage of all caches may be larger than (but within the same order of magnitude as) the configured value.</p>
+
+</div>
+
+</body>
+</html>

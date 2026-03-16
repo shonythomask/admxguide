@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Browser sign in settings | ADMX Guide</title>
+
+<meta name="description" content="Browser sign in settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Browser sign in settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy controls the sign-in behavior of the browser. It allows you to specify if the user can sign in to Google Chrome with their account and use account related services like Google Chrome Sync.
+
+If the policy is set to "Disable browser sign-in" then the user cannot sign in to the browser and use account-based services. In this case browser-level features like Google Chrome Sync cannot be used and will be unavailable. On iOS, if the user was signed in and the policy is set to "Disabled" they will be signed out immediately. On other platforms, they will be signed out the next time they run Google Chrome. On all platforms, their local profile data like bookmarks, passwords etc. will be preserved and still usable. The user will still be able to sign into and use Google web services like Gmail.
+
+If the policy is set to "Enable browser sign-in," then the user is allowed to sign in to the browser. On all platforms except iOS, the user is automatically signed in to the browser when signed in to Google web services like Gmail. Being signed in to the browser means the user's account information will be kept by the browser. However, it does not mean that Google Chrome Sync will be turned on by default; the user must separately opt-in to use this feature. Enabling this policy will prevent the user from turning off the setting that allows browser sign-in. To control the availability of Google Chrome Sync, use the SyncDisabled policy.
+
+If the policy is set to "Force browser sign-in" the user is presented with an account selection dialog and has to choose and sign in to an account to use the browser. This ensures that for managed accounts the policies associated with the account are applied and enforced. The default value of BrowserGuestModeEnabled will be set to disabled. Note that existing unsigned profiles will be locked and inaccessible after enabling this policy. For more information, see help center article: https://support.google.com/chrome/a/answer/7572556 . This option is not supported on Linux nor Android, where it will fall back to "Enable browser sign-in" if used.
+
+If this policy is not set then the user can decide if they want to enable browser sign-in in the Google Chrome settings and use it as they see fit.</p>
+
+</div>
+
+</body>
+</html>

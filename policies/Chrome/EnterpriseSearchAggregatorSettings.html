@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enterprise search aggregator settings | ADMX Guide</title>
+
+<meta name="description" content="Enterprise search aggregator settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enterprise search aggregator settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy allows administrators to set a designated enterprise search aggregator that will provide search recommendations and results within the omnibox (address bar) and the search box on the New Tab page.
+
+By default, enterprise search suggestions will be blended and shown alongside regular Google Chrome recommendations. Users can explicitly scope their search to just the enterprise search aggregator by typing the keyword specified in the shortcut field with or without the @ prefix (e.g. @work) followed by Space or Tab in the omnibox. Scoped enterprise searches (triggered by a keyword) are currently only supported in the omnibox and not in the search box on the New Tab page.
+
+The following fields are required: name, shortcut, search_url, suggest_url.
+
+The name field corresponds to the search engine name shown to the user in the address bar.
+
+The shortcut field corresponds to the keyword that the user enters to trigger the search. The shortcut can include plain words and characters, but cannot include spaces or start with the @ symbol. Shortcuts must be unique.
+
+The search_url field specifies the URL on which to search. Enter the web address for the search engine's results page, and use '{searchTerms}' in place of the query.
+
+The suggest_url field specifies the URL that provides search suggestions. A POST request will be made and the user's query will be passed in the POST params under key 'query'.
+
+The icon_url field specifies the URL to an image that will be used on the search suggestions. A default icon will be used when this field is not set. It's recommended to use a favicon (example https://www.google.com/favicon.ico). Supported image file formats: JPEG, PNG, and ICO.
+
+The require_shortcut field specifies whether the address bar shortcut is required to see search recommendations. If required, suggestions will not be shown in the search box on the New Tab page, but will continue to be shown in the omnibox (address bar) in scoped search mode. If this field is not set, the address bar shortcut is not required.
+
+On Microsoft® Windows®, this policy is only available on instances that are joined to a Microsoft® Active Directory® domain, joined to Microsoft® Azure® Active Directory® or enrolled in Chrome Enterprise Core.
+
+On macOS, this policy is only available on instances that are managed via MDM, joined to a domain via MCX or enrolled in Chrome Enterprise Core.
+See https://cloud.google.com/docs/chrome-enterprise/policies/?policy=EnterpriseSearchAggregatorSettings for more information about schema and formatting.
+
+
+Example value:
+
+{
+  "name": "My Search Aggregator",
+  "shortcut": "work",
+  "search_url": "https://www.aggregator.com/search?q={searchTerms}",
+  "suggest_url": "https://www.aggregator.com/suggest",
+  "icon_url": "https://www.google.com/favicon.ico",
+  "require_shortcut": true
+}</p>
+
+</div>
+
+</body>
+</html>

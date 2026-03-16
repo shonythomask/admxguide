@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enable built-in PDF reader powered by Adobe Acrobat for WebView2 | ADMX Guide</title>
+
+<meta name="description" content="Enable built-in PDF reader powered by Adobe Acrobat for WebView2 ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enable built-in PDF reader powered by Adobe Acrobat for WebView2</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge WebView2</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge\WebView2</p>
+
+<h3>Description</h3>
+
+<p>This policy configures WebView2 applications to launch the new version of the PDF reader that's powered by Adobe Acrobat's PDF reader. The new PDF reader ensures that there's no loss of functionality and delivers an enhanced PDF experience. This experience includes richer rendering, improved performance, strong security for PDF file handling, and greater accessibility.
+
+If this policy is specified for an application, it is possible that it may impact other related applications as well. The policy is applied to all WebView2s sharing the same WebView2 user data folder. These WebView2s could potentially belong to multiple applications if those applications, which are likely from the same product family, are designed to share the same user data folder.
+
+Use a name-value pair to enable the new PDF reader for the application. Set the name to the Application User Model ID or the executable file name. You can use the "*" wildcard as value name to apply to all applications. Set the Value to true to enable the new reader or set it to false to use the existing one.
+
+If you enable this policy for the specified WebView2 applications, they will use the new Adobe Acrobat powered PDF reader to open all PDF files.
+
+If you disable the policy for the specified WebView2 applications or don't configure it, they will use the existing PDF reader to open all PDF files.
+
+Example value:
+
+{"name": "app1.exe", "value": true}
+{"name": "app_id_for_app2", "value": true}
+{"name": "*", "value": false}</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Restrict which Google accounts are allowed to be set as browser primary accounts in Google Chrome | ADMX Guide</title>
+
+<meta name="description" content="Restrict which Google accounts are allowed to be set as browser primary accounts in Google Chrome ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Restrict which Google accounts are allowed to be set as browser primary accounts in Google Chrome</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Contains a regular expression which is used to determine which Google accounts can be set as browser primary accounts in Google Chrome (i.e. the account that is chosen during the Sync opt-in flow).
+
+An appropriate error is displayed if a user tries to set a browser primary account with a username that does not match this pattern.
+
+If this policy is left not set or blank, then the user can set any Google account as a browser primary account in Google Chrome.
+
+Example value: .*@example\.com</p>
+
+</div>
+
+</body>
+</html>

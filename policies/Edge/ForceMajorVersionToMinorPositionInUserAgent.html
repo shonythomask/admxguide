@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enable or disable freezing the User-Agent string at major version 99 (obsolete) | ADMX Guide</title>
+
+<meta name="description" content="Enable or disable freezing the User-Agent string at major version 99 (obsolete) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enable or disable freezing the User-Agent string at major version 99 (obsolete)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 117.
+
+This policy was removed in Microsoft Edge 118 and is ignored if configured.
+
+This policy controls whether the User-Agent string major
+version should be frozen at 99.
+
+The User-Agent request header lets websites identify the application,
+operating system, vendor, and/or version of the requesting user agent.
+Some websites make assumptions about how this header is formatted and may
+encounter issues with version strings that include three digits in the
+major position (for example, 100.0.0.0).
+
+Setting the policy to 'Default' or leaving it unset will default to
+browser settings for the User-Agent string major version.
+If set to 'ForceEnabled', the User-Agent string will always report the
+major version as 99 and include the browser's major version in the minor
+position. For example, browser version 101.0.0.0 would send a User-Agent
+request header that reports version 99.101.0.0.
+If set to 'ForceDisabled', the User-Agent string will not freeze the
+major version.
+
+This policy is temporary and will be deprecated in the future. Note that
+if this policy and
+User-Agent Reduction are
+both enabled, the User-Agent version string will always be 99.0.0.0.
+
+Policy options mapping:
+
+* Default (0) = Default to browser settings for User-Agent string version.
+
+* ForceDisabled (1) = The User-Agent string will not freeze the major version.
+
+* ForceEnabled (2) = The User-Agent string will freeze the major version as 99 and include the browser's major version in the minor position.
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

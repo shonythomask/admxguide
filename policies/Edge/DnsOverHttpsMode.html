@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Control the mode of DNS-over-HTTPS | ADMX Guide</title>
+
+<meta name="description" content="Control the mode of DNS-over-HTTPS ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Control the mode of DNS-over-HTTPS</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Control the mode of the DNS-over-HTTPS resolver. Note that this policy will only set the default mode for each query.
+The mode can be overridden for special types of queries such as requests to resolve a DNS-over-HTTPS server hostname.
+
+The "off" mode will disable DNS-over-HTTPS.
+
+The "automatic" mode will send DNS-over-HTTPS queries first if a DNS-over-HTTPS server is available and may fallback to sending insecure queries on error.
+
+The "secure" mode will only send DNS-over-HTTPS queries and will fail to resolve on error.
+
+If this policy is not configured for managed devices, DNS-over-HTTPS queries will not be sent. Instead, the browser
+may send DNS requests to a resolver associated with the user's system resolver.
+This could lead to a less secure or private DNS resolution process, depending on the resolver in use.
+
+Policy options mapping:
+
+* off (off) = Disable DNS-over-HTTPS
+
+* automatic (automatic) = Enable DNS-over-HTTPS with insecure fallback
+
+* secure (secure) = Enable DNS-over-HTTPS without insecure fallback
+
+Use the preceding information when configuring this policy.
+
+Example value: off</p>
+
+</div>
+
+</body>
+</html>

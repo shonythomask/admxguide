@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure copy and paste from Office documents opened in Application Guard | ADMX Guide</title>
+
+<meta name="description" content="Configure copy and paste from Office documents opened in Application Guard ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure copy and paste from Office documents opened in Application Guard</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Security Settings > Trust Center > Application Guard</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\security\applicationguard</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to control whether users can copy and paste content from Office to and from documents opened in Application Guard, as well as the allowed formats. This policy setting only applies to Word, Excel, and PowerPoint.
+
+If you enable this policy setting, you must choose from the following behaviors:
+
+- Enable clipboard functionality between the host and Application Guard (default).
+- Disable clipboard functionality completely between the host and Application Guard.
+- Enable the clipboard to copy content from Application Guard to the host.
+- Enable the clipboard to copy content from the host to Application Guard.
+
+Note: Application Guard only allows copying text and images and doesn’t allow copying of rich content.
+Important: We recommend that you don't enable copying from the host to Application Guard. If you enable this functionality, a potentially compromised Application Guard session will have access to the host device’s clipboard and its content.
+
+You can also choose the type of content that can be copied, by using the content options:
+- Allows text copying (default).
+- Allows image copying.
+- Allows both text and image copying.
+
+If you disable or don't configure this policy setting, users can copy and paste content to and from documents opened in Application Guard to other locations outside Application Guard.
+
+Note: Application Guard only allows copying text and images and doesn’t allow copying of rich content.
+
+Note: This policy setting only applies to Microsoft 365 Apps for enterprise.
+      </p>
+
+</div>
+
+</body>
+</html>

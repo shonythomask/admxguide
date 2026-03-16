@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users | ADMX Guide</title>
+
+<meta name="description" content="Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>If FriendlyURLs are enabled, Microsoft Edge will compute additional representations of the URL and place them on the clipboard.
+
+This policy configures what format will be pasted when the user pastes in external applications, or inside Microsoft Edge without the 'Paste as' context menu item.
+
+If configured, this policy makes a choice on behalf of the user. The options in edge://settings/shareCopyPaste will be grayed out, and the options in the 'Paste As' context menu will not be available.
+
+* Not configured = The user will be able to choose their preferred paste format. By default, this is set to the friendly URL format. The 'Paste As' menu will be available in Microsoft Edge.
+
+* 1 = No additional formats will be stored on the clipboard. There will be no 'Paste as' context menu item in Microsoft Edge and the only format available to paste will be the plain text URL format. Effectively, the friendly URL feature will be disabled.
+
+* 3 = The user will get a friendly URL whenever they paste into surfaces that accept rich text. The plain URL will still be available for non-rich surfaces. There will be no 'Paste As' menu in Microsoft Edge.
+
+* 4 = (Not currently used)
+
+The richer formats may not be well-supported in some paste destinations and/or websites. In these scenarios, the plain URL option is recommended when configuring this policy.
+
+The recommended policy is available in Microsoft Edge 105 or later.
+
+Policy options mapping:
+
+* PlainText (1) = The plain URL without any extra information, such as the page's title. This is the recommended option when this policy is configured. For more information, see the description.
+
+* TitledHyperlink (3) = Titled Hyperlink: A hyperlink that points to the copied URL, but whose visible text is the title of the destination page. This is the Friendly URL format.
+
+* WebPreview (4) = Coming soon. If set, behaves the same as 'Plain URL'.
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

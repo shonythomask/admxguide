@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure the sticky print preview settings | ADMX Guide</title>
+
+<meta name="description" content="Configure the sticky print preview settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure the sticky print preview settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Printing</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Configuring this policy sets the print preview settings as the most recent choice in Print Preview instead of the default print preview settings.
+
+Each item of this policy expects a boolean:
+
+Layout specifies if the webpage layout should be kept sticky or not in print preview settings. If we set this to True the webpage layout uses the recent choice otherwise it will set to default value.
+
+Size specifies if the page size should be kept sticky or not in print preview settings. If we set this to True the page size uses the recent choice otherwise it will set to default value.
+
+Scale Type specifies if the scaling percentage and scale type should be kept sticky or not in print preview settings. If we set this to True the scale percentage and scale type both uses the recent choice oherwise it will set to default value.
+
+Margins specifies if the page margin should be kept sticky or not in print preview settings. If we set this to True the page margins uses the recent choice otherwise it will set to default value.
+
+If you enable this policy, the selected values will use the most recent choice in Print Preview.
+
+If you disable or don't configure this policy, print preview settings will not be impacted.
+
+Example value:
+
+{
+  "layout": false,
+  "margins": true,
+  "scaleType": false,
+  "size": true
+}
+
+
+Compact example value:
+
+{"layout": false, "margins": true, "scaleType": false, "size": true}</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Online Repair | ADMX Guide</title>
+
+<meta name="description" content="Online Repair ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Online Repair</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Office 2016 (Machine) > Updates</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\software\policies\microsoft\office\16.0\common\officeupdate</p>
+
+<h3>Description</h3>
+
+<p>
+This policy setting controls whether users can run an online repair for an Office client, such as Microsoft 365 Apps for enterprise, that comes with an Office 365 or Microsoft 365 plan. You can also control whether the online repair only uses a local source and doesn't use the Office Content Delivery Network (CDN) on the Internet.
+
+Note: Users must have administrative privileges on the local computer to run an online repair.
+
+If you enable or don't configure this policy setting, users can run an online repair from "Programs and Features" or "Add/Remove Programs" in Control Panel.
+
+The online repair downloads and reinstalls Office from the Office CDN or from a local source, such a network share, depending on how Office is configured to get updates. If you aren't using the Office CDN, the local source must contain all the required files, including language files, to perform the repair.
+
+Select "Use Office CDN (if needed)" if you want to use the Office CDN as an alternative location for the repair if the local source isn't available or doesn't contain all the necessary files.
+
+You can also use a local copy of the Office Deployment Tool (setup.exe) for the repair by entering a local path for the Office Deployment Tool. This path can be a network share. If setup.exe can't be found in the local path specified, and "Use Office CDN (if needed)" is selected, then the online repair downloads a copy of setup.exe from the Office CDN. Otherwise, the online repair will fail.
+
+The repair maintains all configuration settings, including products, languages, excluded applications, and update settings.
+
+If you disable this policy setting, users can't run an online repair, but they can still run a quick repair.
+
+Note: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise, and to subscription versions of Project and Visio.</p>
+
+</div>
+
+</body>
+</html>

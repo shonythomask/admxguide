@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow users to select cast devices with an access code or QR code from within the Google Cast menu. | ADMX Guide</title>
+
+<meta name="description" content="Allow users to select cast devices with an access code or QR code from within the Google Cast menu. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow users to select cast devices with an access code or QR code from within the Google Cast menu.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Google Cast</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy controls whether a user will be presented with an option, within the Google Cast menu which allows them to cast to cast devices that do not appear in the Google Cast menu, using either the access code or QR code displayed on the cast devices's screen.
+By default, a user must reenter the access code or rescan the QR code in order to initiate a subsequent casting session, but if the AccessCodeCastDeviceDuration policy has been set to a non-zero value (the default is zero), then the cast device will remain in the list of available cast devices until the specified period of time has expired.
+When this policy is set to Enabled, users will be presented with the option to select cast devices by using an access code or by scanning a QR code.
+When this policy is set to Disabled or not set, users will not be given the option to select cast devices by using an access code or by scanning a QR code.</p>
+
+</div>
+
+</body>
+</html>

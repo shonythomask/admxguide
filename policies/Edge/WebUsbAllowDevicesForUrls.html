@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grant access to specific sites to connect to specific USB devices | ADMX Guide</title>
+
+<meta name="description" content="Grant access to specific sites to connect to specific USB devices ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Grant access to specific sites to connect to specific USB devices</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Allows you to set a list of urls that specify which sites will automatically be granted permission to access a USB device with the given vendor and product IDs. Each item in the list must contain both devices and urls in order for the policy to be valid. Each item in devices can contain a vendor ID and product ID field. Any ID that is omitted is treated as a wildcard with one exception, and that exception is that a product ID cannot be specified without a vendor ID also being specified. Otherwise, the policy will not be valid and will be ignored.
+
+The USB permission model uses the URL of the requesting site ("requesting URL") and the URL of the top-level frame site ("embedding URL") to grant permission to the requesting URL to access the USB device. The requesting URL may be different than the embedding URL when the requesting site is loaded in an iframe. Therefore, the "urls" field can contain up to two URL strings delimited by a comma to specify the requesting and embedding URL respectively. If only one URL is specified, then access to the corresponding USB devices will be granted when the requesting site's URL matches this URL regardless of embedding status. The URLs in "urls" must be valid URLs, otherwise the policy will be ignored.
+
+This is deprecated and only supported for backwards compatibility in the following manner. If both a requesting and embedding URL is specified, then the embedding URL will be granted the permission as top-level origin and the requesting URL will be ignored entirely.
+
+If this policy is left not set, the global default value will be used for all sites either from the 'DefaultWebUsbGuardSetting' (Control use of the WebUSB API) policy if it is set, or the user's personal configuration otherwise.
+
+URL patterns in this policy should not clash with the ones configured via 'WebUsbBlockedForUrls' (Block WebUSB on specific sites). If there is a clash, this policy will take precedence over 'WebUsbBlockedForUrls' and 'WebUsbAskForUrls' (Allow WebUSB on specific sites).
+
+Example value:
+
+[
+  {
+    "devices": [
+      {
+        "product_id": 5678,
+        "vendor_id": 1234
+      }
+    ],
+    "urls": [
+      "https://contoso.com",
+      "https://fabrikam.com"
+    ]
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

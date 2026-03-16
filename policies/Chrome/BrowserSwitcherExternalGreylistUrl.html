@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>URL of an XML file that contains URLs that should never trigger a browser switch. | ADMX Guide</title>
+
+<meta name="description" content="URL of an XML file that contains URLs that should never trigger a browser switch. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>URL of an XML file that contains URLs that should never trigger a browser switch.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Legacy Browser Support</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy to a valid URL has Google Chrome download the site list from that URL and apply the rules as if they were set up with the BrowserSwitcherUrlGreylist policy. These policies prevent Google Chrome and the alternative browser from opening one another.
+
+Leaving it unset (or set to a invalid URL) means Google Chrome doesn't use the policy as a source of rules for not switching browsers.
+
+Note: This policy points to an XML file in the same format as Internet Explorer®'s SiteList policy. This loads rules from an XML file, without sharing those rules with Internet Explorer®. Read more on Internet Explorer®'s SiteList policy ( https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/what-is-enterprise-mode )
+
+Example value: http://example.com/greylist.xml</p>
+
+</div>
+
+</body>
+</html>

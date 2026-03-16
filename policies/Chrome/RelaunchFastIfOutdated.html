@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Relaunch fast if outdated | ADMX Guide</title>
+
+<meta name="description" content="Relaunch fast if outdated ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Relaunch fast if outdated</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Specifies the minimum release age beyond which relaunch notifications are more aggressive. The age is calculated from the time the currently-running version was last served to clients.
+
+If a browser relaunch or device restart is needed to finalize a pending update and the current version has been outdated for more than the number of days specified by this setting, the RelaunchNotificationPeriod policy is overridden to 2 hours. If the RelaunchNotification policy is set to 1 ('Required'), users will be forced to relaunch or restart at the end of the period.
+
+If not set, or if the release age cannot be determined, the RelaunchNotificationPeriod policy will be used for all updates.</p>
+
+</div>
+
+</body>
+</html>

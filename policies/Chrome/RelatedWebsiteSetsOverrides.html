@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Override Related Website Sets. | ADMX Guide</title>
+
+<meta name="description" content="Override Related Website Sets. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Override Related Website Sets.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Related Website Sets Settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy provides a way to override the list of sets the browser uses for Related Website Sets features.
+
+This policy overrides the FirstPartySetsOverrides policy.
+
+Each set in the browser's list of Related Website Sets must meet the requirements of a Related Website Set.
+A Related Website Set must contain a primary site and one or more member sites.
+A set can also contain a list of service sites that it owns, as well as a map from a site to all of its ccTLD variants.
+See https://github.com/WICG/first-party-sets for more information on how Google Chrome uses Related Website Sets.
+
+
+All sites in a Related Website Set must be a registrable domain served over HTTPS. Each site in a Related Website Set must also be unique,
+meaning a site cannot be listed more than once in a Related Website Set.
+
+When this policy is given an empty dictionary, the browser uses the public list of Related Website Sets.
+
+For all sites in a Related Website Set from the replacements list, if a site is also present
+on a Related Website Set in the browser's list, then that site will be removed from the browser's Related Website Set.
+After this, the policy's Related Website Set will be added to the browser's list of Related Website Sets.
+
+For all sites in a Related Website Set from the additions list, if a site is also present
+on a Related Website Set in the browser's list, then the browser's Related Website Set will be updated so that the
+new Related Website Set can be added to the browser's list. After the browser's list has been updated,
+the policy's Related Website Set will be added to the browser's list of Related Website Sets.
+
+The browser's list of Related Website Sets requires that for all sites in its list, no site is in
+more than one set. This is also required for both the replacements list
+and the additions list. Similarly, a site cannot be in both the
+replacements list and the additions list.
+
+Wildcards (*) are not supported as a policy value, nor within any Related Website Set in these lists.
+
+All sets provided by the policy must be valid Related Website Sets, if they aren't then an
+appropriate error will be outputted.
+
+On Microsoft® Windows®, this policy is only available on instances that are joined to a Microsoft® Active Directory® domain, joined to Microsoft® Azure® Active Directory® or enrolled in Chrome Enterprise Core.
+
+On macOS, this policy is only available on instances that are managed via MDM, joined to a domain via MCX or enrolled in Chrome Enterprise Core.
+See https://cloud.google.com/docs/chrome-enterprise/policies/?policy=RelatedWebsiteSetsOverrides for more information about schema and formatting.
+
+
+Example value:
+
+{
+  "additions": [
+    {
+      "associatedSites": [
+        "https://associate2.test"
+      ],
+      "ccTLDs": {
+        "https://associate2.test": [
+          "https://associate2.com"
+        ]
+      },
+      "primary": "https://primary2.test",
+      "serviceSites": [
+        "https://associate2-content.test"
+      ]
+    }
+  ],
+  "replacements": [
+    {
+      "associatedSites": [
+        "https://associate1.test"
+      ],
+      "ccTLDs": {
+        "https://associate1.test": [
+          "https://associate1.co.uk"
+        ]
+      },
+      "primary": "https://primary1.test",
+      "serviceSites": [
+        "https://associate1-content.test"
+      ]
+    }
+  ]
+}</p>
+
+</div>
+
+</body>
+</html>

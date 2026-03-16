@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Control how Office handles form-based sign-in prompts | ADMX Guide</title>
+
+<meta name="description" content="Control how Office handles form-based sign-in prompts ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Control how Office handles form-based sign-in prompts</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Security Settings</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common</p>
+
+<h3>Description</h3>
+
+<p>This policy setting controls how Office applications handle form-based sign-in prompts.​
+
+If you enable this policy setting, you must choose one of the following options:​
+
+Block all prompts​
+Ask the user what to do for each new host​
+Show prompts only from allowed hosts​
+
+If you select “Block all prompts” then no form-based sign-in prompts are shown to the user and the user is shown a message that the sign-in method isn’t allowed.​
+
+If you select “Ask the user what do for each new host” then the user is asked for each new host whether the user wants to sign-in to the host. If the user has previously signed-in to a host, a form-based sign-in prompt is shown for that host. Also, form-based sign-in prompts are shown for any hosts specified by the “Specify hosts allowed to show form-based sign-in prompts to users” setting.
+
+If you select “Show prompts only from allowed hosts” then form-based sign-in prompts are shown only from hosts that have been specified by the additional “Specify hosts allowed to show form-based sign-in prompts to users” setting. Form-based sign-in prompts from all other hosts are blocked and the user is shown a message that the sign-in method isn’t allowed.
+
+Note: If you don’t configure the “Specify hosts allowed to show form-based sign-in prompts to users” setting or don’t specify any hosts in that setting, then the behavior of the “Show prompts only from allowed hosts” option will be the same as if you selected the “Block all prompts” option.
+
+If you disable or don’t configure this policy setting, all form-based sign-in prompts are blocked and the  user is shown a message that the sign-in method isn’t allowed. But users are able to change the behavior for form-based sign-in prompts by going to File > Options > Trust Center > Trust Center Settings > Form-based sign-in.
+
+
+Note: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise, and to subscription versions of Project and Visio.​</p>
+
+</div>
+
+</body>
+</html>

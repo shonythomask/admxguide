@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Turn off camera and microphone access for Office apps using Application Guard. | ADMX Guide</title>
+
+<meta name="description" content="Turn off camera and microphone access for Office apps using Application Guard. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Turn off camera and microphone access for Office apps using Application Guard.</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Security Settings > Trust Center > Application Guard</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\security\applicationguard</p>
+
+<h3>Description</h3>
+
+<p>The policy allows you to control whether Office apps using Application Guard can access the user's camera and microphone if they're enabled on the user's device.
+
+Important: A compromised Application Guard container could bypass camera and microphone permissions and access the camera and microphone without the user’s knowledge. To prevent unauthorized access, we recommend that the camera and microphone be turned off on the user’s device when they aren’t needed.
+
+If you enable this policy setting, Office apps using Application Guard won't be able to access the camera and microphone on the user’s device. 
+
+If you disable or don't configure this policy setting, Office apps using Application Guard will be able to access the camera and microphone on the user’s device.
+
+Note: This policy setting only applies to Microsoft 365 Apps for enterprise.</p>
+
+</div>
+
+</body>
+</html>

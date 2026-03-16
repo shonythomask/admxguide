@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JavaScript setTimeout will not be clamped until a higher nesting threshold is set (deprecated) | ADMX Guide</title>
+
+<meta name="description" content="JavaScript setTimeout will not be clamped until a higher nesting threshold is set (deprecated) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>JavaScript setTimeout will not be clamped until a higher nesting threshold is set (deprecated)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+
+This policy is deprecated because it is a temporary policy for web standards compliance. It won't work in Microsoft Edge as soon as version 107.
+If you enable this policy, the JavaScript setTimeout and setInterval, with an interval smaller than 4ms, will not be clamped. This improves short horizon performance, but websites abusing the API will still eventually have their setTimeout usages clamped.
+If you disable or don't configure policy, the JavaScript setTimeout and setInterval, with an interval smaller than 4ms, will be clamped.
+
+This is a web standards compliancy feature that may change task ordering on a web page, leading to unexpected behavior on sites that are dependent on a certain ordering.
+It also may affect sites with a lot of usage of a timeout of 0ms for setTimeout. For example, increasing CPU load.</p>
+
+</div>
+
+</body>
+</html>

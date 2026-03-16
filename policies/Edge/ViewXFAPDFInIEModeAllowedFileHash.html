@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>View XFA-based PDF files using IE Mode for allowed file hash. | ADMX Guide</title>
+
+<meta name="description" content="View XFA-based PDF files using IE Mode for allowed file hash. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>View XFA-based PDF files using IE Mode for allowed file hash.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > PDF Reader</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>XFA is a legacy technology that is deprecated by its original creators. It is not an ISO standard and as such, doesn't align with the modern web architecture. Continued use poses potential risks and vulnerabilities. For more information, see - 'ViewXFAPDFInIEModeAllowedOrigins' (View XFA-based PDF files using IE Mode for allowed file origin.).
+
+If you enable this policy, you can configure the list of base64 encoded SHA256 file hashes for which XFA PDF files will automatically open in Microsoft Edge using IE Mode.
+
+If you disable or don't configure this policy, XFA PDFs won't be considered for opening via IE mode except the files from file origin mentioned in Policy 'ViewXFAPDFInIEModeAllowedOrigins'
+
+For more information, see - [Get-FileHash](https://go.microsoft.com/fwlink/?linkid=2294823), [Dot Net Convert API](https://go.microsoft.com/fwlink/?linkid=2294913).
+
+Example value:
+
+pZGm1Av0IEBKARczz7exkNYsZb8LzaMrV7J32a2fFG4=
+nFeL0Q+9HX7WFI3RsmSDFTlUtrbclXH67MTdXDwWuu4=</p>
+
+</div>
+
+</body>
+</html>

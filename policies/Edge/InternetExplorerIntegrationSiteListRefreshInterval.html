@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure how frequently the Enterprise Mode Site List is refreshed | ADMX Guide</title>
+
+<meta name="description" content="Configure how frequently the Enterprise Mode Site List is refreshed ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure how frequently the Enterprise Mode Site List is refreshed</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This setting lets you specify a custom refresh interval for the Enterprise Mode Site List. The refresh interval is specified in minutes. The minimum refresh interval is 30 minutes.
+
+This setting is applicable only when the 'InternetExplorerIntegrationSiteList' (Configure the Enterprise Mode Site List) or 'InternetExplorerIntegrationCloudSiteList' (Configure the Enterprise Mode Cloud Site List) setting is configured.
+
+If you configure this policy, Microsoft Edge will attempt to retrieve an updated version of the configured Enterprise Mode Site List using the specified refresh interval.
+
+If you disable or don't configure this policy, Microsoft Edge will use a default refresh interval, it is 10080 minutes (7 days) starting from version 110 or later, 120 minutes from version 93 to 110, and 30 minutes before version 93.</p>
+
+</div>
+
+</body>
+</html>

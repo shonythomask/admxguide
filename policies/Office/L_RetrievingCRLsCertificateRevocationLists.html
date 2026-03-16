@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Retrieving CRLs (Certificate Revocation Lists) | ADMX Guide</title>
+
+<meta name="description" content="Retrieving CRLs (Certificate Revocation Lists) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Retrieving CRLs (Certificate Revocation Lists)</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Outlook 2016 > Security > Cryptography > Signature Status dialog box</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\outlook\security</p>
+
+<h3>Description</h3>
+
+<p>This policy setting controls how Outlook retrieves Certificate Revocation Lists to verify the validity of certificates.Certificate revocation lists (CRLs) are lists of digital certificates that have been revoked by their controlling certificate authorities (CAs), typically because the certificates were issued improperly or their associated private keys were compromised. 
+
+If you enable this policy setting, you can choose from three options to govern how Outlook uses CRLs: 
+
+- Use system Default. Outlook relies on the CRL download schedule that is configured for the operating system. 
+- When online always retrieve the CRL. This option is the default configuration in Outlook. 
+- Never retrieve the CRL. Outlook will not attempt to download the CRL for a certificate, even if it is online. This option can reduce security. 
+
+If you disable or do not configure this policy setting, when Outlook handles a certificate that includes a URL from which a CRL can be downloaded, Outlook will retrieve the CRL from the provided URL if Outlook is online.</p>
+
+</div>
+
+</body>
+</html>

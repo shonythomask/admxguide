@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enable the browser's UI Automation accessibility framework provider on Windows | ADMX Guide</title>
+
+<meta name="description" content="Enable the browser's UI Automation accessibility framework provider on Windows ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enable the browser's UI Automation accessibility framework provider on Windows</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Accessibility settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Enables the UI Automation accessibility framework
+provider in Google Chrome for use by
+accessibility tools.
+
+This policy is supported in
+Google Chrome for a one-year
+transition period to allow enterprise administrators to control the deployment
+of the browser's UI Automation accessibility
+framework provider. Accessibility and other tools that use the
+UI Automation accessibility framework to interoperate
+with the browser may require updates to function properly with the browser's
+UI Automation provider. Administrators can use this
+policy to temporarily disable the browser's
+UI Automation provider (thereby reverting to the old
+behavior) while they work with vendors to provide updates to impacted tools.
+
+When set to false, Google Chrome only
+enables its Microsoft Active Accessibility
+provider. Accessibility and other tools that use the newer
+UI Automation accessibility framework to interoperate
+with the browser will communicate with it by way of a compatibility shim in
+Microsoft® Windows®.
+
+When set to true, Google Chrome
+enables its UI Automation provider in addition to its
+Microsoft Active Accessibility provider.
+Accessibility and other tools that use the newer
+UI Automation accessibility framework to interoperate
+with the browser will communicate directly with it.
+
+When left unset, the variations framework in Google Chrome is used to enable or disable
+the provider.
+
+Support for this policy setting will end in Google Chrome 146.</p>
+
+</div>
+
+</body>
+</html>

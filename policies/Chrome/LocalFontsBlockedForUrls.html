@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Block Local Fonts permission on these sites | ADMX Guide</title>
+
+<meta name="description" content="Block Local Fonts permission on these sites ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Block Local Fonts permission on these sites</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Sets a list of site url patterns that specify sites which will automatically deny the local fonts permission. This will limit the ability of sites to see information about local fonts.
+
+For detailed information on valid site url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns. Wildcards, *, are allowed. This policy only matches based on origin, so any path in the URL pattern is ignored.
+
+If this policy is not set for a site then the policy from DefaultLocalFontsSetting applies to the site, if set, otherwise the permission will follow the browser's defaults and allow users to choose this permission per site.
+
+Example value:
+
+https://www.example.com
+[*.]example.edu</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Block additional file extensions for OLE embedding | ADMX Guide</title>
+
+<meta name="description" content="Block additional file extensions for OLE embedding ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Block additional file extensions for OLE embedding</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Security Settings</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\common\security</p>
+
+<h3>Description</h3>
+
+<p>This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise, and to subscription versions of Project and Visio.​
+
+This policy setting allows you to specify additional file extensions that Office will block when they are embedded as an OLE package in an Office file by using the Object Packager control.
+
+By default, Office blocks certain file extensions. For a list of those file extensions, go to https://go.microsoft.com/fwlink/?linkid=847759.
+
+Important: Malicious scripts and executables can be embedded as an OLE package and can cause harm if clicked by the user.
+
+If you enable this policy setting, enter the additional file extensions to block, separated by semicolons. For example, py;rb.
+
+If you disable or don’t configure this policy setting, the default set of file extensions will be blocked.
+
+If you want to allow certain file extensions, enable the "Allow file extensions for OLE embedding" policy setting. Extensions added to this policy setting will take precedence over extensions in "Allow file extensions for OLE embedding"</p>
+
+</div>
+
+</body>
+</html>

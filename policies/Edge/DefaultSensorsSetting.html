@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Default sensors setting | ADMX Guide</title>
+
+<meta name="description" content="Default sensors setting ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Default sensors setting</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Set whether websites can access and use sensors such as motion and light sensors. You can completely block or allow websites to get access to sensors.
+
+Setting the policy to 1 lets websites access and use sensors. Setting the policy to 2 denies access to sensors.
+
+You can override this policy for specific URL patterns by using the 'SensorsAllowedForUrls' (Allow access to sensors on specific sites) and 'SensorsBlockedForUrls' (Block access to sensors on specific sites) policies.
+
+If you don't configure this policy, websites can access and use sensors, and users can change this setting. This is the global default for 'SensorsAllowedForUrls' and 'SensorsBlockedForUrls'.
+
+Policy options mapping:
+
+* AllowSensors (1) = Allow sites to access sensors
+
+* BlockSensors (2) = Do not allow any site to access sensors
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

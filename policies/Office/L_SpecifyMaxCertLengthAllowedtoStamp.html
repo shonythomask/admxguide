@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Set Maximum Certificate Size Limit for Signed Emails in Reply Scenarios. | ADMX Guide</title>
+
+<meta name="description" content="Set Maximum Certificate Size Limit for Signed Emails in Reply Scenarios. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Set Maximum Certificate Size Limit for Signed Emails in Reply Scenarios.</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Outlook 2016 > Outlook Options > Mail > Compose Messages</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\outlook\options\mail</p>
+
+<h3>Description</h3>
+
+<p>This policy setting controls the maximum limit for the size of the stored certificate in Exchange server when replying to a digitally signed email using Outlook.
+
+If you enable this policy setting, you can configure the maximum limit for the size of the stored certificate, up to a maximum of 16384 kb. This helps to avoid issues where a reply to a digitally signed email may not be delivered or saved in the sent items due to large certificate sizes of the original sender.
+
+By disabling this policy setting, the maximum limit will be the default set at 12921 kb, limiting the ability of administrators to adjust the maximum size of the stored certificate.
+
+If you do not set the policy setting, it is treated as enabled and the default maximum limit for the size of the stored certificate is set at 12921 kb.	
+      </p>
+
+</div>
+
+</body>
+</html>

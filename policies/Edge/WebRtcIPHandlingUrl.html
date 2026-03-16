@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WebRTC IP Handling Policy for URL Patterns | ADMX Guide</title>
+
+<meta name="description" content="WebRTC IP Handling Policy for URL Patterns ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>WebRTC IP Handling Policy for URL Patterns</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > WebRtc settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Controls which IP addresses and network interfaces WebRTC can use
+when establishing connections for specific URL patterns.
+
+How It Works:
+Accepts a list of URL patterns, each paired with a handling type.
+WebRTC evaluates patterns sequentially; the first match determines the handling type.
+If no match is found, WebRTC defaults to the WebRtcLocalhostIpHandling WebRtcLocalhostIpHandling. policy.
+This policy applies only to origins—URL path components are ignored.
+Wildcards (*) are supported in URL patterns.
+
+Supported Handling Values:
+default – Uses all available network interfaces.
+default_public_and_private_interfaces – WebRTC uses all public and private interfaces.
+default_public_interface_only – WebRTC uses only public interfaces.
+disable_non_proxied_udp – WebRTC uses UDP SOCKS proxying or falls back to TCP proxying.
+
+More Information:
+Valid input patterns: https://go.microsoft.com/fwlink/?linkid=2095322
+Handling types: https://tools.ietf.org/html/rfc8828.html#section-5.2
+
+Example value:
+
+[
+  {
+    "url": "https://www.example.com",
+    "handling": "default_public_and_private_interfaces"
+  },
+  {
+    "url": "https://[*.]example.edu",
+    "handling": "default_public_interface_only"
+  },
+  {
+    "url": "*",
+    "handling": "disable_non_proxied_udp"
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

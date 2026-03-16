@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Restrict sign in to Teams to accounts in specific tenants | ADMX Guide</title>
+
+<meta name="description" content="Restrict sign in to Teams to accounts in specific tenants ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Restrict sign in to Teams to accounts in specific tenants</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Teams</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\teams</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to control the accounts that can be used in Teams on managed devices running Windows.  
+
+If you enable this policy setting, users will only be allowed to sign in with accounts from Azure Active Directory (Azure AD) tenants that you specify. You can enter a comma separated list of tenant IDs.  
+ 
+The policy setting applies to all ways that the user signs in, including first and additional accounts on versions of Teams that support multiple accounts side by side. 
+
+The policy setting is also enforced when users sign out and sign back in. 
+
+If you disable or don't configure this policy setting, Teams will continue to allow users to sign in with work or school accounts, or personal Microsoft accounts. 
+
+Important: This policy setting only restricts which users can sign in. It does not restrict the ability for users to be invited as a guest in other Azure AD tenants, or switch to tenants they were invited to.
+
+Note: This policy does not apply to Teams web app.</p>
+
+</div>
+
+</body>
+</html>

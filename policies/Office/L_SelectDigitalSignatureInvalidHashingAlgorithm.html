@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure invalid hashing algorithm | ADMX Guide</title>
+
+<meta name="description" content="Configure invalid hashing algorithm ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure invalid hashing algorithm</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Security Settings > Digital Signatures</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\signatures</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to configure whether Office displays a digital signature as invalid when it contains specific hash algorithms.
+
+If you enable this policy setting, you can specify the weakest hash algorithm that Office treats as invalid. If you enable this policy setting, you can specify any of the following algorithms:
+- MD5
+- SHA1
+- SHA256
+- SHA384
+
+If you don’t configure this policy setting, Office won’t treat digital signatures as invalid because of the hashing algorithm.
+
+For example, if you set MD5 as the invalid hashing algorithm Office treats MD5 signatures as invalid.
+      </p>
+
+</div>
+
+</body>
+</html>

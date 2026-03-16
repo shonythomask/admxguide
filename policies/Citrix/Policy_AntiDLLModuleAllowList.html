@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anti-DLL Module Allow List | ADMX Guide</title>
+
+<meta name="description" content="Anti-DLL Module Allow List ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Anti-DLL Module Allow List</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Citrix Components > Citrix Workspace > App Protection > Anti-DLL Injection</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Citrix\AppProtection</p>
+
+<h3>Description</h3>
+
+<p> The DLL Allow List policy allows admins to exclude any DLL from the Anti-DLL protection.
+
+  When the policy is:
+
+  Not Configured - No DLL is part of the allow list. Includes all the DLLs during the Anti-DLL protection.
+
+  Enabled - Excludes DLLs mentioned in the allow list from the Anti-DLL protection.
+
+  Disabled - Clears the DLL allow list. DLLs need to be configured again when policy is enabled.
+
+  The Module Allow List field allows admins to add DLL information that can be excluded from the Anti-DLL protection.
+  Sample format to add DLL to the allow list:
+    [
+    {
+      "filePath": " C:\\Program Files (x86)\\trusted\\messagebox.dll"
+    },
+    {
+      "filePath": "%PROGRAMFILES%\\trusted\\logging.dll"
+    }
+    ]
+    </p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Specifies how long (in seconds) a cast device selected with an access code or QR code stays in the Google Cast menu's list of cast devices. | ADMX Guide</title>
+
+<meta name="description" content="Specifies how long (in seconds) a cast device selected with an access code or QR code stays in the Google Cast menu's list of cast devices. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Specifies how long (in seconds) a cast device selected with an access code or QR code stays in the Google Cast menu's list of cast devices.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Google Cast</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy specifies how long (in seconds) a cast device that was previously selected via an access code or QR code can be seen within the Google Cast menu of cast devices.
+The lifetime of an entry starts at the time the access code was first entered or the QR code was first scanned.
+During this period the cast device will appear in the Google Cast menu's list of cast devices.
+After this period, in order to use the cast device again the access code must be reentered or the QR code must be rescanned.
+By default, the period is zero seconds, so cast devices will not stay in the Google Cast menu, and so the access code must be reentered, or the QR code rescanned, in order to initiate a new casting session.
+Note that this policy only affects how long a cast devices appears in the Google Cast menu, and has no effect on any ongoing cast session which will continue even if the period expires.
+This policy has no effect unless the AccessCodeCastEnabled policy is Enabled.</p>
+
+</div>
+
+</body>
+</html>

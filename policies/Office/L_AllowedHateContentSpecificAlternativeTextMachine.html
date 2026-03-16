@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allowed severity of hate content to and from the Alternative Text scenario for the computer. | ADMX Guide</title>
+
+<meta name="description" content="Allowed severity of hate content to and from the Alternative Text scenario for the computer. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allowed severity of hate content to and from the Alternative Text scenario for the computer.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Office 2016 (Machine) > AI > Content Safety > Specific > Alternative Text</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\software\policies\microsoft\office\16.0\common\ai\contentsafety\specific\alternativetext</p>
+
+<h3>Description</h3>
+
+<p>
+This local content safety policy setting adjusts the allowed severity of hate content to and from the Alternative Text scenario for the computer. The allowed severity may range from 0 to 7.
+
+0 means allow no hate content.
+
+7 means allow all hate content.
+
+For more information on content safety severities, please refer to the following documentation:
+https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/harm-categories?tabs=definitions
+
+For local content safety policy, scenario-specific settings are prioritized over general settings and computer settings are prioritized over user settings.
+
+- If this policy setting is not configured, the allowed severity of hate content to and from the Alternative Text scenario is determined by lower priority policy settings.
+- If this policy setting is not configured and lower priority policy settings are also not configured, the allowed severity of hate content to and from the Alternative Text scenario defaults to 2.
+
+For this policy setting, the order of priority is:
+1. Allowed severity of hate content to and from the Alternative Text scenario for the computer.
+2. Allowed severity of hate content in general for the computer.
+3. Allowed severity of hate content to and from the Alternative Text scenario for the user.
+4. Allowed severity of hate content in general for the user.</p>
+
+</div>
+
+</body>
+</html>

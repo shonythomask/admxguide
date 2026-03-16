@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure proxy server settings (deprecated) | ADMX Guide</title>
+
+<meta name="description" content="Configure proxy server settings (deprecated) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure proxy server settings (deprecated)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Proxy server</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+
+This policy is deprecated, use 'ProxySettings' (Proxy settings) instead. It won't work in Microsoft Edge version 91.
+
+If you set this policy to Enabled you can specify the proxy server Microsoft Edge uses and prevents users from changing proxy settings. Microsoft Edge ignores all proxy-related options specified from the command line. The policy is only applied if the 'ProxySettings' policy isn't specified.
+
+Other options are ignored if you choose one of the following options:
+  * direct = Never use a proxy server and always connect directly
+  * system = Use system proxy settings
+  * auto_detect = Auto detect the proxy server
+
+If you choose to use:
+  * fixed_servers = Fixed proxy servers. You can specify further options with 'ProxyServer' (Configure address or URL of proxy server) and 'ProxyBypassList' (Configure proxy bypass rules).
+  * pac_script =  A .pac proxy script. Use 'ProxyPacUrl' (Set the proxy .pac file URL) to set the URL to a proxy .pac file.
+
+For detailed examples, go to https://go.microsoft.com/fwlink/?linkid=2094936.
+
+If you don't configure this policy, users can choose their own proxy settings.
+
+Policy options mapping:
+
+* ProxyDisabled (direct) = Never use a proxy
+
+* ProxyAutoDetect (auto_detect) = Auto detect proxy settings
+
+* ProxyPacScript (pac_script) = Use a .pac proxy script
+
+* ProxyFixedServers (fixed_servers) = Use fixed proxy servers
+
+* ProxyUseSystem (system) = Use system proxy settings
+
+Use the preceding information when configuring this policy.
+
+Example value: direct</p>
+
+</div>
+
+</body>
+</html>

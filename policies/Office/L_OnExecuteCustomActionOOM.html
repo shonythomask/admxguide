@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Set Outlook object model custom actions execution prompt | ADMX Guide</title>
+
+<meta name="description" content="Set Outlook object model custom actions execution prompt ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Set Outlook object model custom actions execution prompt</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Outlook 2016 > Security > Security Form Settings > Custom Form Security</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\outlook\security</p>
+
+<h3>Description</h3>
+
+<p>This policy setting controls whether Outlook prompts users before executing a custom action. Custom actions add functionality to Outlook that can be triggered as part of a rule. Among other possible features, custom actions can be created that reply to messages in ways that circumvent the Outlook model's programmatic send protections. 
+
+If you enable this policy setting, you can choose from four options to control how Outlook functions when a custom action is executed that uses the Outlook object model: 
+
+* Prompt User 
+* Automatically Approve 
+* Automatically Deny 
+* Prompt user based on computer security. This option enforces the default configuration in Outlook. 
+
+If you disable or do not configure this policy setting, when Outlook or another program initiates a custom action using the Outlook object model, users are prompted to allow or reject the action. If this configuration is changed, malicious code can use the Outlook object model to compromise sensitive information or otherwise cause data and computing resources to be at risk. This is the equivalent of choosing Enabled -- Prompt user based on computer security.</p>
+
+</div>
+
+</body>
+</html>

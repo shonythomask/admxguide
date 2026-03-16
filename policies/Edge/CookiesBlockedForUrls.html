@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Block cookies on specific sites | ADMX Guide</title>
+
+<meta name="description" content="Block cookies on specific sites ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Block cookies on specific sites</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Define a list of sites, based on URL patterns, that can't set cookies.
+
+If you don't configure this policy, the global default value from the 'DefaultCookiesSetting' (Configure cookies) policy (if set) or the user's personal configuration is used for all sites.
+
+See the 'CookiesAllowedForUrls' (Allow cookies on specific sites) and 'CookiesSessionOnlyForUrls' (Limit cookies from specific websites to the current session) policies for more information.
+
+Note there can't be conflicting URL patterns set between these three policies:
+
+- CookiesBlockedForUrls
+
+- 'CookiesAllowedForUrls'
+
+- 'CookiesSessionOnlyForUrls'
+
+For detailed information on valid url patterns, please see https://go.microsoft.com/fwlink/?linkid=2095322. * isn't an accepted value for this policy.
+
+Example value:
+
+https://www.contoso.com
+[*.]contoso.edu</p>
+
+</div>
+
+</body>
+</html>

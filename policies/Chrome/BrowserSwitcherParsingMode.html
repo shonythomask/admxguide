@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sitelist parsing mode | ADMX Guide</title>
+
+<meta name="description" content="Sitelist parsing mode ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Sitelist parsing mode</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Legacy Browser Support</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy controls how Google Chrome interprets sitelist/greylist policies for the Legacy Browser Support feature. It affects the following policies: BrowserSwitcherUrlList, BrowserSwitcherUrlGreylist, BrowserSwitcherUseIeSitelist, BrowserSwitcherExternalSitelistUrl, and BrowserSwitcherExternalGreylistUrl.
+
+If 'Default' (0) or unset, URL matching is less strict. Rules that do not contain "/" look for a substring anywhere in the URL's hostname. Matching the path component of a URL is case-sensitive.
+
+If 'IESiteListMode' (1), URL matching is more strict. Rules that do not contain "/" only match at the end of the hostname. They must also be at a domain name boundary. Matching the path component of a URL is case-insensitive. This is more compatible with Microsoft® Internet Explorer® and Microsoft® Edge®.
+
+For example, with the rules "example.com" and "acme.com/abc":
+
+"http://example.com/", "http://subdomain.example.com/" and "http://acme.com/abc" match regardless of parsing mode.
+
+"http://notexample.com/", "http://example.com.invalid.com/", "http://example.comabc/" only match in 'Default' mode.
+
+"http://acme.com/ABC" only matches in 'IESiteListMode'.</p>
+
+</div>
+
+</body>
+</html>

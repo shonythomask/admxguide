@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Check RSA key usage for server certificates issued by local trust anchors (obsolete) | ADMX Guide</title>
+
+<meta name="description" content="Check RSA key usage for server certificates issued by local trust anchors (obsolete) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Check RSA key usage for server certificates issued by local trust anchors (obsolete)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge WebView2</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge\WebView2</p>
+
+<h3>Description</h3>
+
+<p>OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 135.
+
+The X.509 key usage extension declares how the key in a certificate can be
+used. These instructions ensure certificates aren't used in an unintended
+context, which protects against a class of cross-protocol attacks on HTTPS and
+other protocols. HTTPS clients must verify that server certificates match the
+connection's TLS parameters.
+
+Starting in Microsoft Edge 124, this
+check is always enabled.
+
+Microsoft Edge 123 and earlier have the
+following behavior:
+
+If this policy is set to enabled,
+Microsoft Edge will perform this key
+check. This helps prevent attacks where an attacker manipulates the browser into
+interpreting a key in ways that the certificate owner did not intend.
+
+If this policy is set to disabled,
+Microsoft Edge will skip this key check in
+HTTPS connections that negotiate TLS 1.2 and use an RSA certificate that
+chains to a local trust anchor. Examples of local trust anchors include
+policy-provided or user-installed root certificates. In all other cases, the
+check is performed independent of this policy's setting.
+
+If this policy is not configured,
+Microsoft Edge will behave as if the
+policy is enabled.
+
+This policy is available for administrators to preview the behavior of a
+future release, which will enable this check by default. At that point, this
+policy will remain temporarily available for administrators that need more
+time to update their certificates to meet the new RSA key usage requirements.
+
+Connections that fail this check will fail with the error
+ERR_SSL_KEY_USAGE_INCOMPATIBLE. Sites that fail with this error likely have a
+misconfigured certificate. Modern ECDHE_RSA cipher suites use the
+"digitalSignature" key usage option, while legacy RSA decryption cipher suites
+use the "keyEncipherment" key usage option. If uncertain, administrators should
+include both in RSA certificates meant for HTTPS.
+
+The policy has been obsoleted starting from Microsoft Edge version 136,
+but the key check has been always enabled since Microsoft Edge version 124.</p>
+
+</div>
+
+</body>
+</html>

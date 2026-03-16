@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Exchange Unicode Mode - Silent OST format change | ADMX Guide</title>
+
+<meta name="description" content="Exchange Unicode Mode - Silent OST format change ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Exchange Unicode Mode - Silent OST format change</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Outlook 2016 > Account Settings > Exchange</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\outlook\emsp</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows .OST files to silently update to Unicode format from ANSI.
+
+If you enable this policy setting, it will only have meaning if the related policy setting "Exchange Unicode Mode - Ignore OST format" is enabled and set to the options listed below.
+
+The behavior is as follows -
+
+"Ignore OST Format" policy setting is enabled and set to "Create new OST if format doesn't match mode"; "Silent OST Format Change" policy setting is enabled:
+If Outlook detects a mode that is different than the current .OST mode, then a new .OST is created without prompting the user.
+
+"Ignore OST Format" policy setting is enabled and set to "Prompt to create new OST if format doesn't match mode"; "Silent OST Format Change" policy setting is enabled:
+If Outlook detects a mode that is different than the current .OST mode, the user is prompted to allow a delay in the conversion to the mode set by policy.  By clicking Ok, a new OST is created without a prompt for a new .OST name.
+
+If you disable or do not configure this policy setting, users will be prompted to enter a new name for the updated .OST file.</p>
+
+</div>
+
+</body>
+</html>

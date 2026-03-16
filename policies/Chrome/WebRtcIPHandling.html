@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WebRTC IP handling | ADMX Guide</title>
+
+<meta name="description" content="WebRTC IP handling ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>WebRTC IP handling</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > WebRtc settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy allows restricting which IP addresses and interfaces WebRTC uses when attempting to find the best available connection.
+
+Valid values:
+
+* default - WebRTC uses all available network interfaces.
+
+* default_public_and_private_interfaces - WebRTC uses all public and private interfaces.
+
+* default_public_interface_only - WebRTC uses all public interfaces, but not private ones.
+
+* disable_non_proxied_udp - WebRTC uses either UDP SOCKS proxying or will fallback to TCP proxying.
+
+When unset, defaults to using all available network interfaces.
+
+See RFC 8828 section 5.2 (https://tools.ietf.org/html/rfc8828.html#section-5.2) for a detailed description of all the handling values.
+
+Example value: default</p>
+
+</div>
+
+</body>
+</html>

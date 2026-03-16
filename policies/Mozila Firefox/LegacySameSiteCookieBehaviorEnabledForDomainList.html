@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Revert to legacy SameSite behavior on specific domains | ADMX Guide</title>
+
+<meta name="description" content="Revert to legacy SameSite behavior on specific domains ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Revert to legacy SameSite behavior on specific domains</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Firefox</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Mozilla\Firefox\LegacySameSiteCookieBehaviorEnabledForDomainList</p>
+
+<h3>Description</h3>
+
+<p>If this policy is enabled, Firefox will revert to the legacy behavior of SameSite for the specified domains. This means that cookies that don't explicitly specify a SameSite attribute are treated as if they were SameSite=None.
+
+If this policy is disabled or not configured, Firefox will enforce SameSite=lax for all domains.</p>
+
+</div>
+
+</body>
+</html>

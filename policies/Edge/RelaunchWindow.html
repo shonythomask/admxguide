@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Set the time interval for relaunch | ADMX Guide</title>
+
+<meta name="description" content="Set the time interval for relaunch ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Set the time interval for relaunch</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Specifies a target time window for the end of the relaunch notification period.
+
+Users are notified of the need for a browser relaunch or device restart based on the 'RelaunchNotification' (Notify a user that a browser restart is recommended or required for pending updates) and 'RelaunchNotificationPeriod' (Set the time period for update notifications) policy settings. Browsers and devices are forcibly restarted at the end of the notification period when the 'RelaunchNotification' policy is set to 'Required'. This RelaunchWindow policy can be used to defer the end of the notification period so that it falls within a specific time window.
+
+If you don't configure this policy, the default target time window is the whole day (i.e., the end of the notification period is never deferred).
+
+Note: Though the policy can accept multiple items in entries, all but the first item are ignored.
+Warning: Setting this policy may delay application of software updates.
+
+Example value:
+
+{
+  "entries": [
+    {
+      "duration_mins": 240,
+      "start": {
+        "hour": 2,
+        "minute": 15
+      }
+    }
+  ]
+}
+
+
+Compact example value:
+
+{"entries": [{"duration_mins": 240, "start": {"hour": 2, "minute": 15}}]}</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Point of Presence Survey | ADMX Guide</title>
+
+<meta name="description" content="Point of Presence Survey ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Point of Presence Survey</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Citrix Components > Citrix Workspace > Network routing</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Citrix\ICA Client\Engine</p>
+
+<h3>Description</h3>
+
+<p>Point of Presence Survey is used when connected via a cloud gateway.
+
+When Enabled, Citrix Workspace app will perform a PoP survey to determine the optimal PoP to connect to.  If latency increases above High Latency Threshold and does not improve below Low Latency Threshold within Minimum Time to Confirm Latency, a PoP survey is performed.  After a PoP survey, a Cool-off Period is applied before another PoP survey can be performed.
+When Disabled, Citrix Workspace app will not perform PoP surveys.
+
+Low Latency Threshold: Specifies the latency threshold (in milliseconds) below which a connection is considered low latency (good state).
+
+High Latency Threshold: Specifies the latency threshold (in milliseconds) above which a connection is considered high latency (bad state).
+
+Minimum Time to Confirm Latency: Specifies the minimum time (in seconds) that high latency conditions must persist before a PoP survey is performed.
+
+Cool-off Period: Specifies the time (in seconds) to wait after a PoP survey before another PoP survey can be performed.
+
+Cloud Gateway Whitelist: A newline-delimited list of regular expressions that match cloud gateway FQDNs for which PoP survey should be performed. If the list is empty, a default set of cloud gateway FQDNs is considered.
+Default/example expression:
+^global\.g\.nssvc\.net$
+^global-all\.g\.nssvc\.net$
+
+Wi-Fi Signal Strength Threshold: Specifies a threshold (in percentage) below which high latency conditions are presumed to be due to poor Wi-Fi signal strength, and a PoP survey is not performed.
+</p>
+
+</div>
+
+</body>
+</html>

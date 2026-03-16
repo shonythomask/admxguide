@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Websites that should never trigger a browser switch. | ADMX Guide</title>
+
+<meta name="description" content="Websites that should never trigger a browser switch. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Websites that should never trigger a browser switch.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Legacy Browser Support</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy controls the list of websites that will never cause a browser switch. Each item is treated as a rule. Those rules that match won't open an alternative browser. Unlike the BrowserSwitcherUrlList policy, rules apply to both directions. When the Internet Explorer® add-in is on, it also controls whether Internet Explorer® should open these URLs in Google Chrome.
+
+Leaving the policy unset adds no websites to the list.
+
+Note: Elements can also be added to this list through the BrowserSwitcherExternalGreylistUrl policy.
+
+Example value:
+
+ie.com
+!open-in-chrome.ie.com
+foobar.com/ie-only/</p>
+
+</div>
+
+</body>
+</html>

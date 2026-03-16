@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Specifies whether to block requests from public websites to devices on a user's local network. | ADMX Guide</title>
+
+<meta name="description" content="Specifies whether to block requests from public websites to devices on a user's local network. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Specifies whether to block requests from public websites to devices on a user's local network.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Network settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Local Network Access restrictions prevent public websites from making
+requests to devices on a user's local network without explicit user permission.
+
+If you enable this policy, Microsoft Edge blocks
+any request that would otherwise trigger a DevTools warning
+due to Local Network Access checks.
+These requests are denied without prompting the user.
+
+If you disable or don't configure this policy, Microsoft Edge handles
+these requests using the default behavior, which may include showing warnings in DevTools
+and allowing the request to proceed depending on the context.
+
+Note: This feature improves local network security by deprecating direct access to private IP addresses from public websites
+unless explicitly granted by the user. For more information about Local Network Access, see https://wicg.github.io/local-network-access/.
+
+Starting in version 140, Microsoft Edge introduces support for policies that manage Local Network Access behavior on a per-URL basis.
+
+You can configure exceptions to allow specific URLs to bypass Local Network Access restrictions.
+
+You can also block specific URLs from making Local Network Access requests.</p>
+
+</div>
+
+</body>
+</html>

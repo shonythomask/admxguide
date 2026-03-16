@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Requested XAdES level for signature generation | ADMX Guide</title>
+
+<meta name="description" content="Requested XAdES level for signature generation ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Requested XAdES level for signature generation</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Security Settings > Digital Signatures</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\signatures</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to specify a requested or desired XAdES level in creating a digital signature. 
+
+If you enable this policy setting, you may specify the XAdES level in creating a digital signature.  If the desired XAdES level is not reached, the last highest XAdES level reached is used if the level is higher than the minimum XAdES level (XAdeES-BES).
+
+- No XAdES: XML-DSig - No XAdES
+- XAdES-BES: Minimal XAdES (Default)
+- XAdES-T: Will fall back to XAdES-BES if minimum XAdES level < XAdes-T
+- XAdES-C: Will fall back to XAdES-T if minimum XAdES level < XAdes-C
+- XAdES-X: Will fall back to XAdES-C if minimum XAdES level < XAdes-X
+- XAdES-X-L: Will fall back to XAdES-X if minimum XAdES level < XAdes-X-L
+
+If you disable or do not configure this policy setting, XAdES-BES will be used.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure a list of origins that grant an extended background lifetime to connecting extensions. | ADMX Guide</title>
+
+<meta name="description" content="Configure a list of origins that grant an extended background lifetime to connecting extensions. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure a list of origins that grant an extended background lifetime to connecting extensions.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Extensions</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Extensions that connect to one of these origins will keep running as long as the port is connected.
+If unset, the policy's default values are used. These are the app origins that offer SDKs that are known to not offer the possibility to restart a closed connection to a previous state:
+- Smart Card Connector
+- Citrix Receiver (stable, beta, back-up)
+- VMware Horizon (stable, beta)
+
+If set, the default value list is extended with the newly configured values. The defaults and policy-provided entries will grant the exception to the connecting extensions, as long as the port is connected.
+
+Example value:
+
+chrome-extension://abcdefghijklmnopabcdefghijklmnop/
+chrome-extension://bcdefghijklmnopabcdefghijklmnopa/</p>
+
+</div>
+
+</body>
+</html>

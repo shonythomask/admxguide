@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure extension installation blocklist | ADMX Guide</title>
+
+<meta name="description" content="Configure extension installation blocklist ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure extension installation blocklist</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Extensions</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Allows you to specify which extensions the users can NOT install. Extensions already installed will be disabled if blocked, without a way for the user to enable them. Once an extension disabled due to the blocklist is removed from it, it will automatically get re-enabled.
+
+A blocklist value of '*' means all extensions are blocked by default. Extensions that are explicitly listed in the allowlist are allowed if they are signed (packed). All unpacked extensions are blocked.
+
+If this policy is left not set the user can install any extension in Google Chrome.
+
+Example value:
+
+extension_id1
+extension_id2</p>
+
+</div>
+
+</body>
+</html>

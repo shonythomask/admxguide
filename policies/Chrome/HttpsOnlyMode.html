@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow HTTPS-Only Mode to be enabled | ADMX Guide</title>
+
+<meta name="description" content="Allow HTTPS-Only Mode to be enabled ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow HTTPS-Only Mode to be enabled</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy controls whether users can enable HTTPS-Only Mode (Always Use Secure Connections) in Settings. HTTPS-Only Mode upgrades all navigations to HTTPS.
+If this setting is not set or set to allowed, users will be allowed to enable HTTPS-Only Mode.
+If this setting is set to disallowed, users will not be allowed to enable HTTPS-Only Mode.
+If this setting is set to force_enabled, HTTPS-Only Mode will be enabled in Strict mode and users will not be able to disable it.
+If this setting is set to force_balanced_enabled, HTTPS-Only Mode will be enabled in Balanced mode and users will not be able to disable it.
+force_enabled is supported from M112 onwards, force_balanced_enabled is supported from M129 onwards.
+If you set this policy to a value that is not supported by the version of Chrome that receives the policy, Chrome will default to the allowed setting.
+
+The separate HttpAllowlist policy
+can be used to exempt specific hostnames or hostname patterns from being
+upgraded to HTTPS by this feature.
+
+Example value: disallowed</p>
+
+</div>
+
+</body>
+</html>

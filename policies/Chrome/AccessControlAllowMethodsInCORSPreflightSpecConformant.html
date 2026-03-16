@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Make Access-Control-Allow-Methods matching in CORS preflight spec conformant | ADMX Guide</title>
+
+<meta name="description" content="Make Access-Control-Allow-Methods matching in CORS preflight spec conformant ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Make Access-Control-Allow-Methods matching in CORS preflight spec conformant</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Network settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy controls whether request methods are uppercased when matching with Access-Control-Allow-Methods response headers in CORS preflight.
+
+If the policy is Disabled, request methods are uppercased.
+This is the behavior on or before Google Chrome 108.
+
+If the policy is Enabled or not set, request methods are not uppercased, unless matching case-insensitively with DELETE, GET, HEAD, OPTIONS, POST, or PUT.
+This would reject fetch(url, {method: 'Foo'}) + "Access-Control-Allow-Methods: FOO" response header,
+and would accept fetch(url, {method: 'Foo'}) + "Access-Control-Allow-Methods: Foo" response header.
+
+Note: request methods "post" and "put" are not affected, while "patch" is affected.
+
+This policy is intended to be temporary and will be removed in the future.</p>
+
+</div>
+
+</body>
+</html>

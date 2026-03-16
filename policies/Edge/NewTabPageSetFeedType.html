@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure the Microsoft Edge new tab page experience (obsolete) | ADMX Guide</title>
+
+<meta name="description" content="Configure the Microsoft Edge new tab page experience (obsolete) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure the Microsoft Edge new tab page experience (obsolete)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Startup, home page and new tab page</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 92.
+
+This policy is obsolete because the new version of the enterprise new tab page no longer requires choosing between different content types. Instead, the content that is presented to the user can be controlled via the Microsoft 365 admin center. To get to the Microsoft 365 admin center, sign in at https://admin.microsoft.com with your admin account.
+
+Lets you choose either the Microsoft News or Office 365 feed experience for the new tab page.
+
+When you set this policy to 'News', users will see the Microsoft News feed experience on the new tab page.
+
+When you set this policy to 'Office', users with an Azure Active Directory browser sign-in will see the Office 365 feed experience on the new tab page.
+
+If you disable or don't configure this policy:
+
+- Users with an Azure Active Directory browser sign-in are offered the Office 365 new tab page feed experience, as well as the standard new tab page feed experience.
+
+- Users without an Azure Active Directory browser sign-in will see the standard new tab page experience.
+
+If you configure this policy *and* the 'NewTabPageLocation' (Configure the new tab page URL) policy, 'NewTabPageLocation' has precedence.
+
+Default setting:  Disabled or not configured.
+
+Policy options mapping:
+
+* News (0) = Microsoft News feed experience
+
+* Office (1) = Office 365 feed experience
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

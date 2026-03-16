@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow sites to make requests to local network endpoints. | ADMX Guide</title>
+
+<meta name="description" content="Allow sites to make requests to local network endpoints. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow sites to make requests to local network endpoints.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Network settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Specifies a list of URL patterns for which requests initiated from matching origins are exempt from Local Network Access restrictions.
+
+If an origin is specified by both this policy and the 'LocalNetworkAccessBlockedForUrls' (Block sites from making requests to local network endpoints.) policy, the blocked list takes precedence.
+
+For origins not covered by this policy, the user's personal settings and local network access restrictions will apply.
+
+For guidance on valid URL pattern syntax, see:
+https://learn.microsoft.com/deployedge/edge-learnmore-ent-policy-url-patterns
+
+Note: This policy enables controlled exceptions to local network access restrictions. It allows specific public websites to access private IP addresses when necessary for trusted local communication scenarios. For more information about Local Network Access, see https://wicg.github.io/local-network-access/.
+
+Example value:
+
+http://www.example.com:8080
+[*.]example.edu
+*</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Control where Developer Tools can be used | ADMX Guide</title>
+
+<meta name="description" content="Control where Developer Tools can be used ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Control where Developer Tools can be used</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy to 0 (the default) means you can access the developer tools and the JavaScript console, but not in the context of extensions installed by enterprise policy or, since version 114 and if this is a managed user, extensions built into the browser. Setting the policy to 1 means you can access the developer tools and the JavaScript console in all contexts, including that of extensions installed by enterprise policy. Setting the policy to 2 means you can't access developer tools, and you can't inspect website elements.
+
+This setting also turns off keyboard shortcuts and menu or context menu entries to open developer tools or the JavaScript console.
+
+As of Google Chrome version 99, this setting also controls entry points for the 'View page source' feature. If you set this policy to 'DeveloperToolsDisallowed' (value 2), users cannot access source viewing via keyboard shortcut or the context menu. To fully block source viewing, you must also add 'view-source:*' to the URLBlocklist policy.
+
+As of Google Chrome version 119, this setting also controls whether developer mode for Isolated Web Apps can be activated and used.
+
+As of Google Chrome version 128, this setting will not control developer mode on extensions page if ExtensionDeveloperModeSettings policy is set.
+
+If you want to restrict Developer Tools access based on the page URL, use the DeveloperToolsAvailabilityBlocklist and DeveloperToolsAvailabilityAllowlist policies.</p>
+
+</div>
+
+</body>
+</html>

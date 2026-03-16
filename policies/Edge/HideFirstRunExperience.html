@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hide the First-run experience and splash screen | ADMX Guide</title>
+
+<meta name="description" content="Hide the First-run experience and splash screen ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Hide the First-run experience and splash screen</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>If you enable this policy, the First-run experience and the splash screen will not be shown to users when they run Microsoft Edge for the first time.
+
+For the configuration options shown in the First Run Experience, the browser will default to the following:
+
+-On the New Tab Page, the feed type will be set to MSN News and the layout to Inspirational.
+
+-The user will still be automatically signed into Microsoft Edge if the Windows account is of Azure AD or MSA type.
+
+-Sync will not be enabled by default and users will be prompted to choose whether they'd like to sync on browser startup. You can use the 'ForceSync' (Force synchronization of browser data and do not show the sync consent prompt) or the 'SyncDisabled' (Disable synchronization of data using Microsoft sync services) policy to configure sync and the sync consent prompt.
+
+If you disable or don't configure this policy, the First-run experience and the Splash screen will be shown.
+
+Note: The specific configuration options shown to the user in the First Run Experience, can also be managed by using other specific policies. You can use the HideFirstRunExperience policy in combination with these policies to configure a specific browser experience on your managed devices. Some of these other policies are:
+
+-'AutoImportAtFirstRun' (Automatically import another browser's data and settings at first run)
+
+-'NewTabPageLocation' (Configure the new tab page URL)
+
+-'NewTabPageSetFeedType' (Configure the Microsoft Edge new tab page experience)
+
+-'ForceSync'
+
+-'SyncDisabled'
+
+-'BrowserSignin' (Browser sign-in settings)
+
+-'NonRemovableProfileEnabled' (Configure whether a user always has a default profile automatically signed in with their work or school account)</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Define a list of protocols that can launch an external application from listed origins without prompting the user | ADMX Guide</title>
+
+<meta name="description" content="Define a list of protocols that can launch an external application from listed origins without prompting the user ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Define a list of protocols that can launch an external application from listed origins without prompting the user</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Allows you to set a list of protocols, and for each protocol an associated list of allowed origin patterns, that can launch an external application without prompting the user. The trailing separator should not be included when listing the protocol, so list "skype" instead of "skype:" or "skype://".
+
+If this policy is set, a protocol will only be permitted to launch an external application without prompting by policy if the protocol is listed, and the origin of the site trying to launch the protocol matches one of the origin patterns in that protocol's allowed_origins list. If either condition is false the external protocol launch prompt will not be omitted by policy.
+
+If this policy is not set, no protocols can launch without a prompt by default. Users may opt out of prompts on a per-protocol/per-site basis unless the ExternalProtocolDialogShowAlwaysOpenCheckbox policy is set to Disabled. This policy has no impact on per-protocol/per-site prompt exemptions set by users.
+
+The origin matching patterns use a similar format to those for the 'URLBlocklist' policy, which are documented at https://support.google.com/chrome/a?p=url_blocklist_filter_format.
+
+However, origin matching patterns for this policy cannot contain "/path" or "@query" elements. Any pattern that does contain a "/path" or "@query" element will be ignored.
+See https://cloud.google.com/docs/chrome-enterprise/policies/?policy=AutoLaunchProtocolsFromOrigins for more information about schema and formatting.
+
+
+Example value:
+
+[
+  {
+    "allowed_origins": [
+      "example.com",
+      "http://www.example.com:8080"
+    ],
+    "protocol": "spotify"
+  },
+  {
+    "allowed_origins": [
+      "https://example.com",
+      "https://.mail.example.com"
+    ],
+    "protocol": "teams"
+  },
+  {
+    "allowed_origins": [
+      "*"
+    ],
+    "protocol": "outlook"
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

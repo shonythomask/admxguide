@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Choose how to specify proxy server settings | ADMX Guide</title>
+
+<meta name="description" content="Choose how to specify proxy server settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Choose how to specify proxy server settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge Update > Proxy Server</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\EdgeUpdate</p>
+
+<h3>Description</h3>
+
+<p>Allows you to specify the proxy server settings that are used by Microsoft Edge Update.
+
+  If you enable this policy, you can choose between the following proxy server options:
+   - If you choose to never use a proxy server and always connect directly, all other options are ignored.
+   - If you choose to use system proxy settings or auto-detect the proxy server, all other options are ignored.
+   - If you choose fixed server proxy mode, you can specify further options in 'Address or URL of a proxy server' policy.
+   - If you choose to use a .pac proxy script, you must specify the URL for the script in 'URL to proxy .pac file' policy.
+
+  If you enable this policy, users in your organization can't change the proxy settings in Microsoft Edge Update.
+
+  If you disable or don't configure this policy, no proxy server settings are configured, but users in your organization can choose their own proxy settings for Microsoft Edge Update.</p>
+
+</div>
+
+</body>
+</html>

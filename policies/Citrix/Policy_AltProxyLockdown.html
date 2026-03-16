@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure Client failover proxy settings | ADMX Guide</title>
+
+<meta name="description" content="Configure Client failover proxy settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure Client failover proxy settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Citrix Components > Citrix Workspace > Network routing > Proxy</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Citrix\ICA Client\Engine\Lockdown Profiles\All Regions\Lockdown\Network\Proxy</p>
+
+<h3>Description</h3>
+
+<p>Use this policy to configure alternative network proxies that the client can use if the primary network proxy fails to connect to a remote application or desktop.  
+
+When this policy is not configured, the client will use its own settings to decide whether to connect through a proxy server.  
+
+When this policy is enabled, the client will attempt a connection using an alternative proxy if connection to a primary proxy fails.  The failover proxy settings operate in an identical fashion to the primary proxy settings.  
+
+If both the primary and alternative proxy fail to service the connection, selecting the "Failover to direct" check box instructs the client to attempt a final direct connection with no proxies.
+
+
+Troubleshooting:
+Some proxy failures can make the client appear to hang on connection.  This is usually due to the proxy server reattempting the connection itself, or having a long time-out period.  Depending on the network topology, it may be preferable to configure the Web Interface server to identify the currently functioning proxy, or alter the proxy server time-out settings.</p>
+
+</div>
+
+</body>
+</html>

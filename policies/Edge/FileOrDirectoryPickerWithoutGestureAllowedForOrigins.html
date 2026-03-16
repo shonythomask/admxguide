@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow file or directory picker APIs to be called without prior user gesture | ADMX Guide</title>
+
+<meta name="description" content="Allow file or directory picker APIs to be called without prior user gesture ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow file or directory picker APIs to be called without prior user gesture</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>For security reasons, the showOpenFilePicker(), showSaveFilePicker() and showDirectoryPicker() web APIs require a prior user gesture ("transient activation") to be called or will otherwise fail.
+
+If you enable this policy, admins can specify origins on which these APIs can be called without prior user gesture.
+
+For detailed information on valid url patterns, please see https://go.microsoft.com/fwlink/?linkid=2095322. * is not an accepted value for this policy.
+
+If you disable or don't configure this policy, all origins will require a prior user gesture to call these APIs.
+
+Example value:
+
+https://www.example.com
+[*.]example.edu</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sets managed configuration values to websites to specific origins | ADMX Guide</title>
+
+<meta name="description" content="Sets managed configuration values to websites to specific origins ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Sets managed configuration values to websites to specific origins</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy defines the return value of Managed Configuration API for given origin.
+
+ Managed configuration API is a key-value configuration that can be accessed via navigator.managed.getManagedConfiguration() javascript call. This API is only available to origins which correspond to force-installed web applications via WebAppInstallForceList.
+
+See https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ManagedConfigurationPerOrigin for more information about schema and formatting.
+
+
+Example value:
+
+[
+  {
+    "managed_configuration_hash": "asd891jedasd12ue9h",
+    "managed_configuration_url": "https://gstatic.google.com/configuration.json",
+    "origin": "https://www.google.com"
+  },
+  {
+    "managed_configuration_hash": "djio12easd89u12aws",
+    "managed_configuration_url": "https://gstatic.google.com/configuration2.json",
+    "origin": "https://www.example.com"
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enforce Bing SafeSearch | ADMX Guide</title>
+
+<meta name="description" content="Enforce Bing SafeSearch ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enforce Bing SafeSearch</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Ensure that queries in Bing web search are done with SafeSearch set to the value specified. Users can't change this setting.
+
+If you configure this policy to 'BingSafeSearchNoRestrictionsMode', SafeSearch in Bing search falls back to the bing.com value.
+
+If you configure this policy to 'BingSafeSearchModerateMode', the moderate setting is used in SafeSearch. The moderate setting filters adult videos and images but not text from search results.
+
+If you configure this policy to 'BingSafeSearchStrictMode', the strict setting in SafeSearch is used. The strict setting filters adult text, images, and videos.
+
+If you disable this policy or don't configure it, SafeSearch in Bing search isn't enforced, and users can set the value they want on bing.com.
+
+Policy options mapping:
+
+* BingSafeSearchNoRestrictionsMode (0) = Don't configure search restrictions in Bing
+
+* BingSafeSearchModerateMode (1) = Configure moderate search restrictions in Bing
+
+* BingSafeSearchStrictMode (2) = Configure strict search restrictions in Bing
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

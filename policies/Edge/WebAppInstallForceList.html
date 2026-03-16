@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure list of force-installed Web Apps | ADMX Guide</title>
+
+<meta name="description" content="Configure list of force-installed Web Apps ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure list of force-installed Web Apps</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy specifies a list of web apps that install silently, without user interaction.  Users can't turn off the policy or uninstall these web apps.
+
+Each list item of the policy is an object with a mandatory member:
+url (the URL of the web app to install)
+
+and 6 optional members:
+- default_launch_container
+(for how the web app opens—a new tab is the default)
+
+- create_desktop_shortcut
+(True if you want to create Linux and
+Microsoft Windows desktop shortcuts).
+
+- fallback_app_name
+(Starting with Microsoft Edge version 90,
+lets you permanently override the app name if it is not a Progressive Web App (PWA)
+or temporarily override the app name if authentication is required before
+installation can be completed. If both
+custom_name and
+fallback_app_name are provided,
+the latter will be ignored.)
+
+- custom_name
+(Starting with Microsoft Edge version 112
+on all desktop platforms, lets you permanently override the app name for all
+web apps and PWAs.)
+
+- custom_icon
+(Starting with Microsoft Edge version 112
+on all desktop platforms, lets you to override the app icon of installed apps.
+The icons have to be square, maximal 1 MB in size, and in one of the following formats:
+jpeg, png, gif, webp, ico. The hash value has to be the SHA256 hash of the icon file.
+The url should be accessible without authentication to
+ensure the icon can be used upon app installation.)
+
+- install_as_shortcut
+(Starting with Microsoft Edge
+version 107). If enabled, the given url will be installed as a shortcut,
+as if done via the "Create Shortcut..." option in the desktop browser GUI.
+Note that when installed as a shortcut it won't be updated if the manifest in url changes.
+If disabled or unset, the web app at the given url will be installed normally.
+(This is not currently supported in Microsoft Edge.)
+
+Example value:
+
+[
+  {
+    "create_desktop_shortcut": true,
+    "default_launch_container": "window",
+    "url": "https://www.contoso.com/maps"
+  },
+  {
+    "default_launch_container": "tab",
+    "url": "https://app.contoso.edu"
+  },
+  {
+    "default_launch_container": "window",
+    "fallback_app_name": "Editor",
+    "url": "https://app.contoso.edu/editor"
+  },
+  {
+    "custom_name": "Spreadsheets",
+    "default_launch_container": "window",
+    "install_as_shortcut": true,
+    "url": "https://app.contoso.edu/sheets"
+  },
+  {
+    "custom_icon": {
+      "hash": "c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38",
+      "url": "https://mydomain.example.com/sunny_icon.png"
+    },
+    "url": "https://weather.example.com"
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

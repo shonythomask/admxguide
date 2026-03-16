@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enables merging of user cloud policies into machine-level policies | ADMX Guide</title>
+
+<meta name="description" content="Enables merging of user cloud policies into machine-level policies ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enables merging of user cloud policies into machine-level policies</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy to Enabled allows policies associated with a managed account to be merged into machine-level policies.
+
+Setting the policy to Disabled or leaving it unset prevents user-level cloud policies from being merged with policies from any other sources.
+
+Only policies originating from secure users can take precedence. A secure user is affiliated with the organization that manages their browser using Chrome Enterprise Core. All other user-level policies will have default precedence.
+
+Policies that need to be merged also need to be set in either PolicyListMultipleSourceMergeList or PolicyDictionaryMultipleSourceMergeList. This policy will be ignored if neither of the two aforementioned policies is configured.</p>
+
+</div>
+
+</body>
+</html>

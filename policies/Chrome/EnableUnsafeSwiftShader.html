@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow software WebGL fallback using SwiftShader | ADMX Guide</title>
+
+<meta name="description" content="Allow software WebGL fallback using SwiftShader ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow software WebGL fallback using SwiftShader</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>A policy that controls if SwiftShader will be used as a WebGL fallback when hardware GPU acceleration is not available.
+
+SwiftShader has been used to support WebGL on systems without GPU acceleration such as headless systems or virtual machines but has been deprecated due to security issues. Starting in M139, WebGL context creation will fail when it would have otherwise used SwiftShader. This policy allows the browser or administrator to temporarily defer the deprecation.
+
+Setting the policy to Enabled, SwiftShader will be used as a software WebGL fallback.
+
+Setting the policy to Disabled or not set, WebGL context creation may fail if hardware GPU acceleration is not available. Web pages may misbehave if they do not gracefully handle WebGL context creation failure.
+
+This is a temporary policy which will be removed in the future.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Disable all Trust Bar notifications for security issues | ADMX Guide</title>
+
+<meta name="description" content="Disable all Trust Bar notifications for security issues ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Disable all Trust Bar notifications for security issues</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Security Settings</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\trustcenter</p>
+
+<h3>Description</h3>
+
+<p>This policy setting controls whether Office 2016 applications notify users when potentially unsafe features or content are detected, or whether such features or content are silently disabled without notification. 
+
+The Message Bar in Office 2016 applications is used to identify security issues, such as unsigned macros or potentially unsafe add-ins. When such issues are detected, the application disables the unsafe feature or content and displays the Message Bar at the top of the active window. The Message Bar informs the users about the nature of the security issue and, in some cases, provides the users with an option to enable the potentially unsafe feature or content, which could harm the user's computer. 
+
+If you enable this policy setting, Office 2016 applications do not display information in the Message Bar about potentially unsafe content that has been detected or has automatically been blocked. 
+
+If you disable this policy setting, Office 2016 applications display information in the Message Bar about content that has automatically been blocked. 
+
+If you do not configure this policy setting, if an Office 2016 application detects a security issue, the Message Bar is displayed. However, this configuration can be modified by users in the Trust Center.</p>
+
+</div>
+
+</body>
+</html>

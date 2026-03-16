@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TLS and Compliance Mode Configuration | ADMX Guide</title>
+
+<meta name="description" content="TLS and Compliance Mode Configuration ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>TLS and Compliance Mode Configuration</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Citrix Components > Citrix Workspace > Network routing</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\Software\Policies\Citrix\ICA Client\Engine\Lockdown Profiles\All Regions\Lockdown\Network\SSL</p>
+
+<h3>Description</h3>
+
+<p>This option enables Citrix Workspace to identify secure connections and encrypt communication within the server. 
+
+Following  are the type of TLS secure connection between Citrix Workspace and XenApp and XenDesktop that Citrix supports:
+1. TLS 1.2
+2. TLS 1.3
+
+TLS 1.0 and 1.1 support has been dropped, but the options are still offered via the policy for compatibility purposes.
+
+The Security Compliance Mode values are:
+- FIPS - Enabling FIPS mode forces Windows operating system and its sub-systems to use only FIPS-validated cryptographic algorithms.
+- None - No compliance mode is enforced.
+- SP800-52 - NIST SP800-52r1 compliance is enforced.
+When you select SP800-52 from the Security Compliance Mode drop down , the following Certificate Revocation Check Policy (CRCP) is allowed:
+-Full Access Check And CRL Required. This is the default option.
+-Full Access Check And CRL Required All 
+
+You can restrict Citrix Workspace to connect only to a specified server/s  by a comma separated list in the Allowed TLS servers option  Wildcards and port numbers can be specified here, for example, *.citrix.com:4433 allows connection to any server whose common name ends with .citrix.com on port 4433. The accuracy of the information in a security certificate is asserted by the certificate's issuer.  If Citrix Workspace does not recognize and trust a certificate's issuer, the connection is rejected.
+
+The TLS version can be restricted to any combination of:
+
+- TLS 1.2 or TLS 1.3 (Any supported TLS)
+- TLS 1.2 only
+- TLS 1.3 only
+
+TLS cipher set is a group of cipher suites allowed by the client. The TLS cipher set can be configured to one of the following: 
+Note: The TLS_RSA_* cipher suites can be disabled using the Deprecated cipher suites policy.
+- Any : When "Any" is set, the following cipher suites are allowed in the NONE compliance  mode by default:
+*	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+- Commercial: When "Commercial" is set only the following cipher suites are allowed:
+*	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+- Government: When "Government" is set only the following cipher suites are allowed:
+*	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+The Certificate Revocation Check is used to improve the cryptographic authentication of the Citrix server and improves the overall security of the TLS connections between a client and a server. 
+Note: Certificate Revocation Check is valid only when SP800-52 Security Compliance mode is set.
+When you enable this setting, the client checks whether or not the server’s certificate is revoked. There are several levels to checking certificate revocation list.  For example, the client can be configured to check only its local certificate list, or to check the local and network certificate lists. In addition, certificate checking can be configured to allow users to log on only if all Certificate Revocation lists are verified.
+Certificate Revocation Check is an advanced feature supported by some certificate issuers. It allows an administrator to revoke security certificates (invalidated before their expiry date) in the case of compromise of the certificate private key.
+Applicable values for this setting are:
+
+- NoCheck - No Certificate Revocation check is performed.
+- Check With No Network Access - Certificate revocation check is performed. Only Stores in the local certificate revocation list are used. All distribution points are ignored. Finding a Certificate Revocation List is not critical for verification of the server certificate presented by the target SSL Relay/Secure Gateway server.
+- Full Access Check - Certificate Revocation check is performed. Local Certificate Revocation List stores and all distribution points are used. If revocation information for a certificate is found, the connection will be rejected. Finding a Certificate Revocation List is not critical for verification of the server certificate presented by the target server. 
+- Full Access Check And CRL Required - Certificate Revocation List check is performed, excluding the root CA. Local Certificate Revocation List stores and all distribution points are used. If revocation information for a certificate is found, the connection will be rejected. Finding all required Certificate Revocation Lists is critical for verification.
+- Full Access Check And CRL Required All - Certificate Revocation List check is performed, including the root CA. Local Certificate Revocation List stores and all distribution points are used. If revocation information for a certificate is found, the connection will be rejected. Finding all required Certificate Revocation Lists is critical for verification.
+Organizations that configure TLS for a range of products can choose to identify servers intended for Citrix Workspace by specifying a Certificate Policy Extension OID as part of the security certificate.  If a Policy Extension OID is configured here, Citrix Workspace accepts only certificates that declare a compatible policy.
+
+When connecting using TLS, the server may be configured to require Citrix Workspace to provide a security certificate identifying itself.  Use the "Client Authentication" setting to configure whether or not identification is provided automatically or if the user is notified. Options include:
+
+- Disabled - Client Authentication is disabled
+- Display certificate selector - Always prompt the user to select a certificate.
+- Select automatically if possible - Prompt the user only if there a choice of certificate to supply
+never supply identification
+-Not configured - Client Authentication is not configured. Default behaviour is applied.
+- Use specified certificate - Use the Client Certificate specified in the setting below
+
+Use the "Client Certificate" setting to specify the identifying certificate's thumbprint to avoid prompting the user unnecessarily.
+</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Proxy settings | ADMX Guide</title>
+
+<meta name="description" content="Proxy settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Proxy settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy configures the proxy settings for Chrome and ARC-apps, which ignore all proxy-related options specified from the command line.
+
+Leaving the policy unset lets users choose their proxy settings.
+
+Setting the ProxySettings policy accepts the following fields:
+
+* ProxyMode, which lets you specify the proxy server Chrome uses and prevents users from changing proxy settings
+
+* ProxyPacUrl, a URL to a proxy .pac file, or a PAC script encoded as a data URL with MIME type application/x-ns-proxy-autoconfig
+
+* ProxyPacMandatory, which prevents the network stack from falling back to direct connections with invalid or unavailable PAC script
+
+* ProxyServer, a URL of the proxy server
+
+* ProxyBypassList, a list of hosts for which the proxy will be bypassed
+
+The ProxyServerMode field is deprecated in favor of the ProxyMode field. For ProxyMode, if you choose the value:
+
+* direct, a proxy is never used and all other fields are ignored.
+
+* system, the systems's proxy is used and all other fields are ignored.
+
+* auto_detect, all other fields are ignored.
+
+* fixed_servers, the ProxyServer and ProxyBypassList fields are used.
+
+* pac_script, the ProxyPacUrl, ProxyPacMandatory and ProxyBypassList fields are used.
+
+Note: For more detailed examples, visit The Chromium Projects ( https://www.chromium.org/developers/design-documents/network-settings/#command-line-options-for-proxy-settings ).
+See https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ProxySettings for more information about schema and formatting.
+
+
+Example value:
+
+{
+  "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/",
+  "ProxyMode": "fixed_servers",
+  "ProxyServer": "123.123.123.123:8080"
+}</p>
+
+</div>
+
+</body>
+</html>

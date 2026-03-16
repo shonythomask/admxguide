@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Site search settings | ADMX Guide</title>
+
+<meta name="description" content="Site search settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Site search settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy provides a list of sites that users can quickly search using shortcuts in the address bar. Users can initiate a search by typing the shortcut or @shortcut (e.g. @work), followed by Space or Tab, in the address bar.
+
+The following fields are required for each site: name, shortcut, url.
+
+The name field corresponds to the site or search engine name to be shown to the user in the address bar.
+
+The shortcut can include plain words and characters, but cannot include spaces or start with the @ symbol. Shortcuts must also be unique.
+
+For each entry, the url field specifies the URL of the search engine used during a search with the corresponding keyword. The URL must include the string '{searchTerms}', replaced in the query by the user's search terms. Invalid entries and entries with duplicate shortcuts are ignored.
+
+Site search entries configured as featured are displayed in the address bar when the user types "@". Up to three entries can be selected as featured.
+
+For a site search entry where allow_user_override is true, users have the ability to edit or disable that entry. However, featured engines (beginning with "@") can only be disabled. If a user modifies an entry that was initially created by this policy, it will no longer be managed by policy and will be treated like a user-created shortcut. When allow_user_override is false or unspecified for a site search entry, users cannot edit or disable that entry. The setting to allow user override is only supported on M139 and later; earlier versions will default to disabling user override.
+
+Users cannot create new site search entries with a shortcut previously created via this policy unless allow_user_override is set to true for the site search entry.
+
+In case of a conflict with a shortcut previously created by the user, the user setting takes precedence. However, users can still trigger the option created by the policy by typing "@" in the search bar. For example, if the user already defined "work" as a shortcut to URL1 and the policy defines "work" as a shortcut to URL2, then typing "work" in the search bar will trigger a search to URL1, but typing "@work" in the search bar will trigger a search to URL2.
+
+On Microsoft® Windows®, this policy is only available on instances that are joined to a Microsoft® Active Directory® domain, joined to Microsoft® Azure® Active Directory® or enrolled in Chrome Enterprise Core.
+
+On macOS, this policy is only available on instances that are managed via MDM, joined to a domain via MCX or enrolled in Chrome Enterprise Core.
+See https://cloud.google.com/docs/chrome-enterprise/policies/?policy=SiteSearchSettings for more information about schema and formatting.
+
+
+Example value:
+
+[
+  {
+    "featured": true,
+    "name": "Google Wikipedia",
+    "shortcut": "wikipedia",
+    "url": "https://www.google.com/search?q=site%3Awikipedia.com+%s"
+  },
+  {
+    "name": "YouTube",
+    "shortcut": "youtube",
+    "url": "https://www.youtube.com/results?search_query=%s"
+  },
+  {
+    "name": "Google Drive",
+    "shortcut": "drive",
+    "url": "https://drive.google.com/?q=%s",
+    "allow_user_override": true
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

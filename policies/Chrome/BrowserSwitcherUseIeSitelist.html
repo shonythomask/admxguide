@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Use Internet Explorer's SiteList policy for Legacy Browser Support. | ADMX Guide</title>
+
+<meta name="description" content="Use Internet Explorer's SiteList policy for Legacy Browser Support. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Use Internet Explorer's SiteList policy for Legacy Browser Support.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Legacy Browser Support</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy controls whether to load rules from Internet Explorer®'s SiteList policy.
+
+When this policy is set to true, Google Chrome reads Internet Explorer®'s SiteList to obtain the site list's URL. Google Chrome then downloads the site list from that URL, and applies the rules as if they had been configured with the BrowserSwitcherUrlList policy.
+
+When this policy is false or unset, Google Chrome does not use Internet Explorer®'s SiteList policy as a source of rules for switching browsers.
+
+For more information on Internet Explorer's SiteList policy: https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/what-is-enterprise-mode</p>
+
+</div>
+
+</body>
+</html>

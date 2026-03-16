@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Browser sign-in settings | ADMX Guide</title>
+
+<meta name="description" content="Browser sign-in settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Browser sign-in settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Specify whether a user can sign into Microsoft Edge with their account and use account-related services like sync and single sign on. To control the availability of sync, use the 'SyncDisabled' (Disable synchronization of data using Microsoft sync services) policy instead.
+
+If you set this policy to 'Disable', make sure that you also set the 'NonRemovableProfileEnabled' (Configure whether a user always has a default profile automatically signed in with their work or school account) policy to disabled because 'NonRemovableProfileEnabled' disables the creation of an automatically signed in browser profile. If both policies are set, Microsoft Edge will use the 'Disable browser sign-in' policy and behave as if 'NonRemovableProfileEnabled' is set to disabled.
+
+If you set this policy to 'Enable', users can sign into the browser. Signing into the browser doesn't mean that sync is turned on by default; the user must separately opt-in to use this feature.
+
+If you set this policy to 'Force', users must sign into a profile to use the browser. By default, this will allow the user to choose whether they want to sync to their account, unless sync is disabled by the domain admin or with the 'SyncDisabled' policy. The default value of 'BrowserGuestModeEnabled' (Enable guest mode) policy is set to false.
+
+If you don't configure this policy users can decide if they want to enable the browser sign-in option and use it as they see fit.
+
+Policy options mapping:
+
+* Disable (0) = Disable browser sign-in
+
+* Enable (1) = Enable browser sign-in
+
+* Force (2) = Force users to sign-in to use the browser (all profiles)
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

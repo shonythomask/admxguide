@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Setting shortcuts on the New Tab Page | ADMX Guide</title>
+
+<meta name="description" content="Setting shortcuts on the New Tab Page ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Setting shortcuts on the New Tab Page</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy pre-configures up to 10 custom shortcuts on the Google Chrome New Tab page.
+
+If set, users will see these shortcuts by default, in addition to their personal shortcuts. Users can control visibility of their organization's shortcuts on the "Customize Chrome" panel.
+
+Shortcut URLs must be unique.
+
+If allow_user_edit is set to true, users can change the name of the shortcut. If set to false or unset, users cannot edit the name.
+
+If allow_user_delete is set to true, users can remove the shortcut. If set to false or unset, users cannot remove the shortcut.
+See https://cloud.google.com/docs/chrome-enterprise/policies/?policy=NTPShortcuts for more information about schema and formatting.
+
+
+Example value:
+
+[
+  {
+    "name": "Google",
+    "url": "https://www.google.com"
+  },
+  {
+    "name": "YouTube",
+    "url": "https://www.youtube.com"
+  },
+  {
+    "name": "Google Drive",
+    "url": "https://www.drive.google.com",
+    "allow_user_edit": true,
+    "allow_user_delete": true
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

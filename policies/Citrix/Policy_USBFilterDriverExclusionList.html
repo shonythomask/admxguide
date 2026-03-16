@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>USB Filter Driver Exclusion List | ADMX Guide</title>
+
+<meta name="description" content="USB Filter Driver Exclusion List ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>USB Filter Driver Exclusion List</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Citrix Components > Citrix Workspace > App Protection</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Citrix\AppProtection</p>
+
+<h3>Description</h3>
+
+<p>This feature is to exclude the USB devices which have compatibilty issues with App Protection feature.
+	
+When the policy is:
+
+Not Configured - None of the USB devices are part of the exclusion list. USB Filter attaches to all the USB devices if App Protection is active.
+
+Enabled - Excludes the USB devices(Pairs of vendor ID and product ID) mentioned in the exclusion list from the App Protection.
+
+Disabled - Clears device exclusion list.
+
+The USB Filter Driver Exclusion List field allows admins to add pairs of vendor ID and product ID information that can be excluded from the App Protection.
+  
+Sample format to add vendor IDs and product IDs to the exclusion list:
+[
+{
+	"deviceName": "Device1",
+	"vendorID": "FFFF",
+	"productID": "FFFF"
+},
+{
+	"deviceName": "Device2",
+	"vendorID": "FFFF",
+	"productID": "FFFF"
+}
+]
+    </p>
+
+</div>
+
+</body>
+</html>

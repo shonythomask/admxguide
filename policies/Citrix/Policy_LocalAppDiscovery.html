@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Local app discovery | ADMX Guide</title>
+
+<meta name="description" content="Local app discovery ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Local app discovery</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Citrix Components > Citrix Workspace > SelfService</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Citrix\Dazzle</p>
+
+<h3>Description</h3>
+
+<p>This policy helps integrate locally installed Windows operating system apps with Citrix Workspace app.
+
+When you set this policy to Not Configured, Citrix Workspace app is not integrated with the locally installed apps.
+
+When you set this policy to Enabled, Citrix Workspace app integrates with the apps that are locally installed only when Enable local app discovery option is also enabled.
+
+When you set this policy to Disabled, Citrix Workspace app is not integrated with the apps that are locally installed.
+
+The whitelist field lets you add the location of the apps that your administrator would like to pin to the Workspace app.
+For example:
+[
+    {
+        "arguments": "www.citrix.com",
+        "name" : "Company Pages - Citrix Home",
+        "path" : "C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe"
+    },
+    {
+        "arguments": "www.microsoft.com",
+        "name" : "Company Pages - Microsoft Home",
+        "path" : "C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe"
+    },
+    {
+        "arguments": "",
+        "name" : "Company Office - Word",
+        "path" : "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\winword.exe"
+    },
+    {
+        "arguments": "",
+        "name" : "Company Office - Excel",
+        "path" : "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\excel.exe"
+    },
+    {
+        "arguments": "",
+        "name" : "Company Office - PowerPoint",
+        "path" : "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\POWERPNT.exe"
+    }
+]
+      </p>
+
+</div>
+
+</body>
+</html>

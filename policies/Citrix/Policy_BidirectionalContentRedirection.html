@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bidirectional Content Redirection | ADMX Guide</title>
+
+<meta name="description" content="Bidirectional Content Redirection ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Bidirectional Content Redirection</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Citrix Components > Citrix Workspace > User experience</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\Software\Policies\Citrix\ICA Client\Bidirectional Content Redirection</p>
+
+<h3>Description</h3>
+
+<p>Bidirectional Content Redirection is the feature that allows URLs to be redirected from client to server and vice versa based on configuration.
+
+-Published Application/Desktop Name : Indicates the name of the published application / desktop used to launch the redirected URL. This is not used when Bidirectional Content Redirection is enabled on any of the active ICA sessions. Whether its Desktop or Application is decided based on the Type specified below.
+
+-Above Name is for Published Type : This indicates the above Name is whether Application or Desktop.
+
+-Allowed URLs to be redirected to VDA : This indicates the list of URLs that will be opened on VDA. Semi Colon ";" acts as a delimeter. "*" can be used as wild card. For example *.xyz.com.
+
+-Allowed URLs to be redirected to Client : This indicates the list of URLs that will be opened on Client. Semi Colon ";" acts as a delimeter. "*" can be used as wild card. For example *.xyz.com.
+
+Note: 
+1) If there is a URL that is put in both the places, then it will be launched from wherever it originated.
+2) If the URL is in neither of them, in that case as well it will be launched from wherever it originated.
+      </p>
+
+</div>
+
+</body>
+</html>

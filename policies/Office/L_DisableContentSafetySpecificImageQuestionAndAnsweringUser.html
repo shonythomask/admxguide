@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Disable local content safety to and from the Image Question and Answering scenario for the user. | ADMX Guide</title>
+
+<meta name="description" content="Disable local content safety to and from the Image Question and Answering scenario for the user. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Disable local content safety to and from the Image Question and Answering scenario for the user.</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > AI > Content Safety > Specific > Image Question and Answering</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\ai\contentsafety\specific\imagequestionandanswering</p>
+
+<h3>Description</h3>
+
+<p>
+This policy setting disables local content safety of the Image Question and Answering scenario for the user.
+
+For local content safety policy, scenario-specific settings are prioritized over general settings and computer settings are prioritized over user settings.
+
+If a higher priority policy setting is not configured, then:
+- If this policy setting is enabled, local content safety for the Image Question and Answering scenario is disabled for the user.
+- If this policy setting is disabled, local content safety for the Image Question and Answering scenario is enabled for the user.
+- If this policy setting is not configured, local content safety for the Image Question and Answering scenario is determined by lower priority policy settings.
+- If this policy setting is not configured and lower priority policy settings are also not configured, local content safety for the Image Question and Answering scenario is enabled for the user.
+
+For this policy setting, the order of priority is:
+1. Disable local content safety to and from the Image Question and Answering scenario for the computer.
+2. Disable local content safety in general for the computer.
+3. Disable local content safety to and from the Image Question and Answering scenario for the user.
+4. Disable local content safety in general for the user.</p>
+
+</div>
+
+</body>
+</html>

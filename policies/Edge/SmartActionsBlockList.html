@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Block smart actions for a list of services | ADMX Guide</title>
+
+<meta name="description" content="Block smart actions for a list of services ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Block smart actions for a list of services</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>List specific services, such as PDFs, and websites that don't show smart actions. (Smart actions are actions like "define" which are available in full and mini context menus in Microsoft Edge.)
+
+If you enable the policy:
+   - The smart action in the mini and full context menu will be disabled for all profiles for services that match the given list.
+   - Users will not see the smart action in the mini and full context menu on text selection for services that match the given list.
+   - In Microsoft Edge settings, the smart action in the mini and full context menu will be disabled for services that match the given list.
+
+If you disable or don't configure this policy:
+   - The smart action in the mini and full context menu will be enabled for all profiles.
+   - Users will see the smart action in the mini and full context menu on text selection.
+   - In Microsoft Edge settings, the smart action in the mini and full context menu will be enabled.
+
+Policy options mapping:
+
+* smart_actions (smart_actions) = Smart actions in pdfs and on websites
+
+* smart_actions_website (smart_actions_website) = Smart actions on websites
+
+* smart_actions_pdf (smart_actions_pdf) = Smart actions in PDF
+
+Use the preceding information when configuring this policy.
+
+Example value:
+
+smart_actions
+smart_actions_website
+smart_actions_pdf</p>
+
+</div>
+
+</body>
+</html>

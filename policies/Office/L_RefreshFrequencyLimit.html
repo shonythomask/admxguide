@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Set refresh frequency limit | ADMX Guide</title>
+
+<meta name="description" content="Set refresh frequency limit ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Set refresh frequency limit</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Business Data > Synchronization</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\business data\synchronization</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to enforce a lower limit in minutes for the refresh interval.  Refreshing subscriptions too frequently can overload the LOB systems or the network with too many requests.
+
+If you enable this policy setting, you may specify the number of minutes for the refresh interval.  This limit prevents cache subscriptions from being refreshed more frequently, reducing the number of requests issued against the line-of-business (LOB) system.
+
+If you disable or do not configure this policy setting, a default limit of 10 minutes will be used.</p>
+
+</div>
+
+</body>
+</html>

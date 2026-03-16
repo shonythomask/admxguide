@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge | ADMX Guide</title>
+
+<meta name="description" content="Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This setting allows you to configure the View in File Explorer capability for file management in SharePoint Online while using Microsoft Edge.
+
+You will need to list the specific domains where this is allowed and list cookies needed for SharePoint authentication (rtFa and FedAuth).
+
+Behind the scenes, the policy allows URLs with the viewinfileexplorer: scheme to open WebDAV URLs in Windows File Explorer on pages matching the list of domains and uses the cookies you specified for WebDAV authentication.
+
+If you enable this policy, you can use the "View in File Explorer" feature on the SharePoint document libraries you list. You will need to specify the SharePoint domain and authentication cookies. See example value below.
+
+If you disable or don't configure this policy, you cannot use the "View in File Explorer" feature on SharePoint document libraries.
+
+Note that while this is an available option through Microsoft Edge, rather than use the View in File Explorer option, the recommended approach to managing files and folders outside of SharePoint is to sync your SharePoint files or move or copy files in SharePoint.
+Sync your SharePoint files: https://go.microsoft.com/fwlink/p/?linkid=2166983
+Move or copy files in SharePoint: https://go.microsoft.com/fwlink/p/?linkid=2167123
+
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, or Windows 10 Pro or Enterprise instances enrolled for device management.
+
+Example value:
+
+[
+  {
+    "cookies": [
+      "rtFa",
+      "FedAuth"
+    ],
+    "domain": "contoso.sharepoint.com"
+  },
+  {
+    "cookies": [
+      "rtFa",
+      "FedAuth"
+    ],
+    "domain": "contoso2.sharepoint.com"
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

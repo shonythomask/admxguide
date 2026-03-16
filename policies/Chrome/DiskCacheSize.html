@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Set disk cache size in bytes | ADMX Guide</title>
+
+<meta name="description" content="Set disk cache size in bytes ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Set disk cache size in bytes</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy to None has Google Chrome use the default cache size for storing cached files on the disk. Users can't change it.
+
+If you set the policy, Google Chrome uses the cache size you provide—whether or not users specify the --disk-cache-size flag. (Values below a few megabytes are rounded up.)
+
+If not set, Google Chrome uses the default size. Users can change that setting using the --disk-cache-size flag.
+
+Note: The value specified in this policy is used as a hint to various cache subsystems in the browser. Therefore the actual total disk consumption of all caches will be higher but within the same order of magnitude as the value specified.</p>
+
+</div>
+
+</body>
+</html>

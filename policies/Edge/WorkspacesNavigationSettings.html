@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure navigation settings per groups of URLs in Microsoft Edge Workspaces | ADMX Guide</title>
+
+<meta name="description" content="Configure navigation settings per groups of URLs in Microsoft Edge Workspaces ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure navigation settings per groups of URLs in Microsoft Edge Workspaces</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Edge Workspaces settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This setting lets you to define groups of URLs, and apply specific Microsoft Edge Workspaces navigation settings to each group.
+
+If this policy is configured, Microsoft Edge Workspaces will use the configured settings when deciding whether and how to share navigations among collaborators in a Microsoft Edge Workspace.
+
+If this policy is not configured, Microsoft Edge Workspaces will use only default and internally configured navigation settings.
+
+For more information about configuration options, see https://go.microsoft.com/fwlink/?linkid=2218655
+
+Note, format url_patterns according to https://go.microsoft.com/fwlink/?linkid=2095322. You can configure the url_regex_patterns in this policy to match multiple URLs using a Perl style regular expression for the pattern. Note that pattern matches are case sensitive. For more information about the regular expression rules that are used, refer to https://go.microsoft.com/fwlink/p/?linkid=2133903.
+
+Example value:
+
+[
+  {
+    "navigation_options": {
+      "do_not_send_to": true,
+      "remove_all_query_parameters": true
+    },
+    "url_patterns": [
+      "https://contoso.com",
+      "https://www.fabrikam.com",
+      ".exact.hostname.com"
+    ]
+  },
+  {
+    "navigation_options": {
+      "query_parameters_to_remove": [
+        "username",
+        "login_hint"
+      ]
+    },
+    "url_patterns": [
+      "https://adatum.com"
+    ]
+  },
+  {
+    "navigation_options": {
+      "do_not_send_from": true,
+      "prefer_initial_url": true
+    },
+    "url_regex_patterns": [
+      "\\Ahttps://.*?tafe\\..*?trs.*?\\.fabrikam.com/Sts"
+    ]
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

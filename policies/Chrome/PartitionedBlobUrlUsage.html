@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Choose whether Blob URLs are partitioned during fetching and navigations | ADMX Guide</title>
+
+<meta name="description" content="Choose whether Blob URLs are partitioned during fetching and navigations ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Choose whether Blob URLs are partitioned during fetching and navigations</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy controls whether Blob URLs are partitioned during fetching and navigation.
+If this policy is set to Enabled or not set, Blob URLs will be partitioned.
+If this policy is set to Disabled, Blob URLs won't be partitioned.
+
+If storage partitioning is disabled for a given top-level origin by either
+ThirdPartyStoragePartitioningBlockedForOrigins
+or DefaultThirdPartyStoragePartitioningSetting,
+then Blob URLs will also not be partitioned.
+
+If you must use the policy, please file a bug at
+Google Chrome
+explaining your use case. The policy is scheduled to be offered through
+Google Chrome version 146, after which
+the old implementation will be removed.
+
+NOTE: Only newly-started renderer processes will reflect changes to this
+policy while the browser is running.
+
+For detailed information on third-party storage partitioning, please see
+https://developers.google.com/privacy-sandbox/cookies/storage-partitioning.</p>
+
+</div>
+
+</body>
+</html>

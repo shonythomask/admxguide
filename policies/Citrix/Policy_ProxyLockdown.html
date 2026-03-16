@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure client proxy settings | ADMX Guide</title>
+
+<meta name="description" content="Configure client proxy settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure client proxy settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Citrix Components > Citrix Workspace > Network routing > Proxy</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Citrix\ICA Client\Engine\Lockdown Profiles\All Regions\Lockdown\Network\Proxy</p>
+
+<h3>Description</h3>
+
+<p>Enable this policy to configure the primary network proxies that the client can use to connect to remote application or desktop.
+From the Proxy Type drop-down menu, select:
+- Auto: To enable the client to use the local machine settings to determine the proxy server.
+- None: To enable the client to connect to the server directly without using a proxy server. 
+- Script: To enable the client to retrieve a Java based .pac file from the URL  specified in the proxy script URLs. The .pac file is executed to identify the proxy server used for connection. 
+- Secure: When "Secure" is selected, the client will contact the proxy identified by the "Proxy host names" and "Proxy ports" settings. The negotiation protocol will use a "HTTP CONNECT" header request specifying the desired destination address. This proxy protocol is commonly used for HTTP based traffic, and supports GSSAPI proxy authentication.
+- SOCKS/SOCKS V4/SOCKS V5: When a "SOCKS" proxy is selected, the client will perform a SOCKS V4 or SOCKS V5 handshake to the proxy identified by the "Proxy hostnames" and "Proxy ports" settings. The "SOCKS" option will detect and use the correct version of Socks.
+
+To enable proxy server bypass, select Bypass Server list. 
+
+Troubleshooting:
+Some client platforms do not support the "Auto" proxy type due to operating system limitations.  See the appropriate Administrator's Guide for details.  For these platforms, the proxy settings should be manually set on the client device.  
+
+When configuring the Web Interface server, an appropriate proxy server can be indicated for the particular location of the client.  When configuring proxies via Group Policy, it is important to avoid overriding these settings.  Where multiple proxies can be chosen, simply use a comma-separated list of options with the first being the default.  
+
+Most Intranet client deployments should use the "None" option for the proxy type, otherwise the client may attempt to connect over the Internet.  For more advanced deployments the "Bypass server list" option can be used, alternatively ".pac" scripts or Trusted Server Configuration are available to suit the network topology.  
+
+Some proxy servers will automatically disconnect connections that are idle for a certain length of time.  This can cause client sessions to be disconnected when not in use.  A server-side option "ICA Keep-Alive" is available to send extra data packets during periods of inactivity that can be used prevent proxies closing connections.</p>
+
+</div>
+
+</body>
+</html>

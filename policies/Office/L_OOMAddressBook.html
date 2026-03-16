@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure Outlook object model prompt when accessing an address book | ADMX Guide</title>
+
+<meta name="description" content="Configure Outlook object model prompt when accessing an address book ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure Outlook object model prompt when accessing an address book</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Outlook 2016 > Security > Security Form Settings > Programmatic Security</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\outlook\security</p>
+
+<h3>Description</h3>
+
+<p>This policy setting controls what happens when an untrusted program attempts to gain access to an Address Book using the Outlook object model. This includes COM add-ins, from 3rd parties and Microsoft, one example is Azure Information Protection which can access the Address Book programmatically.
+
+        If you enable this policy setting, you can choose from four different options when an untrusted program attempts to programmatically access an Address Book using the Outlook object model:
+
+        - Prompt user - Users are prompted to approve every access attempt.
+        - Automatically approve - Outlook will automatically grant programmatic access requests from any program. This option can create a significant vulnerability, and is not recommended.
+        - Automatically deny - Outlook will automatically deny programmatic access requests from any program.
+        - Prompt user based on computer security - Outlook will rely on the setting in the ''Programmatic Access'' section of the Trust Center. This is the default behavior.
+
+        If you disable or do not configure this policy setting, when an untrusted application attempts to access the address book programmatically, Outlook relies on the setting configured in the ''Programmatic Access'' section of the Trust Center.
+      </p>
+
+</div>
+
+</body>
+</html>

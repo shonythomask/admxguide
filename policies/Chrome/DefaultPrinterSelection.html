@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Default printer selection rules | ADMX Guide</title>
+
+<meta name="description" content="Default printer selection rules ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Default printer selection rules</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Printing</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy sets the rules for selecting the default printer in Google Chrome, overriding the default rules. Printer selection occurs the first time users try to print, when Google Chrome seeks a printer matching the specified attributes. In case of a less than perfect match, Google Chrome can be set to select any matching printer, depending on the order printers are discovered.
+
+Leaving the policy unset or set to attributes for which there's no match means the built-in PDF printer is the default. If there's no PDF printer, Google Chrome defaults to none.
+
+Currently, all printers are classified as "local". Printers connected to Google Cloud Print are considered "cloud", but Google Cloud Print is no longer supported.
+
+Note: Omitting a field means all values match for that particular field. For example, not specifying idPattern means Print Preview accepts all printer IDs. Regular expression patterns must follow the JavaScript RegExp syntax, and matches are case sensistive.
+See https://cloud.google.com/docs/chrome-enterprise/policies/?policy=DefaultPrinterSelection for more information about schema and formatting.
+
+
+Example value: { "kind": "local", "idPattern": ".*public", "namePattern": ".*Color" }</p>
+
+</div>
+
+</body>
+</html>

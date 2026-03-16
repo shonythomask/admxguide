@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Block pop-up windows on specific sites | ADMX Guide</title>
+
+<meta name="description" content="Block pop-up windows on specific sites ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Block pop-up windows on specific sites</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Define a list of sites, based on URL patterns, that are blocked from opening pop-up windows. Wildcards (*) are allowed.
+
+If you don't configure this policy, the global default value from the 'DefaultPopupsSetting' (Default pop-up window setting) policy (if set) or the user's personal configuration is used for all sites.
+
+Example value:
+
+https://www.contoso.com
+[*.]contoso.edu</p>
+
+</div>
+
+</body>
+</html>

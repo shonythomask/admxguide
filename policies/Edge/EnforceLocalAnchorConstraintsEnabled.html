@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (obsolete) | ADMX Guide</title>
+
+<meta name="description" content="Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (obsolete) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (obsolete)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 127.
+
+X.509 certificates may encode constraints, such as Name Constraints, in extensions in the certificate. RFC 5280 specifies that enforcing such constraints on trust anchor certificates is optional.
+
+Starting in Microsoft Edge 112, such constraints in certificates loaded from the platform certificate store will now be enforced.
+
+This policy exists as a temporary opt-out in case an enterprise encounters issues with the constraints encoded in their private roots. In that case this policy may be used to temporarily disable enforcement of the constraints while correcting the certificate issues.
+
+If you enable this policy or don't configure it, Microsoft Edge will enforce constraints encoded into trust anchors loaded from the platform trust store.
+
+If you disable this policy, Microsoft Edge will not enforce constraints encoded into trust anchors loaded from the platform trust store.
+
+This policy has no effect if the 'MicrosoftRootStoreEnabled' (Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates) policy is disabled.
+
+This policy was removed in Microsoft Edge version 128. Starting with that version, constraints in trust anchors are always enforced.</p>
+
+</div>
+
+</body>
+</html>

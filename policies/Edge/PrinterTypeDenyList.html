@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Disable printer types on the deny list | ADMX Guide</title>
+
+<meta name="description" content="Disable printer types on the deny list ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Disable printer types on the deny list</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Printing</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>The printer types on the deny list won't be discovered or have their capabilities fetched.
+
+Placing all printer types on the deny list effectively disables printing, because there's no print destination for documents.
+
+If you don't configure this policy, or the printer list is empty, all printer types are discoverable.
+
+Printer destinations include extension printers and local printers. Extension printers are also known as print provider destinations, and include any destination that belongs to a Microsoft Edge extension.
+Local printers are also known as native printing destinations, and include destinations available to the local machine and shared network printers.
+
+In Microsoft version 93 or later, if you set this policy to 'pdf' it also disables the 'save as Pdf' option from the right click context menu.
+
+In Microsoft version 103 or later, if you set this policy to 'onedrive' it also disables the 'save as Pdf (OneDrive)' option from print preview.
+
+Policy options mapping:
+
+* privet (privet) = Zeroconf-based (mDNS + DNS-SD) protocol destinations
+
+* extension (extension) = Extension-based destinations
+
+* pdf (pdf) = The 'Save as PDF' destination. (93 or later, also disables from context menu)
+
+* local (local) = Local printer destinations
+
+* onedrive (onedrive) = Save as PDF (OneDrive) printer destinations. (103 or later)
+
+Use the preceding information when configuring this policy.
+
+Example value:
+
+local
+privet</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Save As Open XML in Compatibility Mode | ADMX Guide</title>
+
+<meta name="description" content="Save As Open XML in Compatibility Mode ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Save As Open XML in Compatibility Mode</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Word 2016 > Word Options > Save</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\word\options</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to hide the "Maintain compatibility with previous versions of Word" checkbox.  For any file format that is in Compatibility Mode, there will be a "Maintain compatibility with previous versions of Word" checkbox in the Save As dialog when saving to any of the Open XML file formats. This checkbox allows users to preserve the fidelity of documents that open in compatibility mode when saving those documents to any of the Open XML file formats.  Checking this box will prevent conversion to the version of Word that is saving the file.
+
+Conversion maximizes fidelity with the version of Word that is saving the file, and it is recommended for users who want their Word documents to be compatible with this version of Word. However, conversion may impact the fidelity and compatibility of some features when the file is opened by a previous version of Word.
+
+If you enable this policy setting, the "Maintain compatibility with previous versions of Word" checkbox will be hidden.  The Save As behavior for any of the Open XML file formats will always maintain compatibility with previous versions of Word. The file that is in compatibility mode will be prevented from being converted to the version of Word saving this file. 
+
+If you disable or do not configure this policy setting, the "Maintain compatibility with previous versions of Word" checkbox in the Save As dialog will be shown.  Unless checked by the user, an Open XML file will be converted when the document is saved. Users will still, by default, be shown a final dialog when saving to confirm that the user wants to save the file without "Maintain compatibility with previous versions of Word" checked.</p>
+
+</div>
+
+</body>
+</html>

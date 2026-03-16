@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rollback to Target version | ADMX Guide</title>
+
+<meta name="description" content="Rollback to Target version ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Rollback to Target version</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge Update > Applications > Microsoft Edge Beta</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\EdgeUpdate</p>
+
+<h3>Description</h3>
+
+<p>Specifies that Microsoft Edge Update should rollback installations of Microsoft Edge to the version indicated in 'Target version override'.
+
+This policy has no effect unless 'Target version override' is set and 'Update policy override' is set to one of the ON states (Always allow updates, Automatic silent updates only, Manual updates only).
+
+If you disable (0) this policy or don't configure it, installs that have a version higher than that specified by 'Target version override' will be left as-is.
+
+If you enable (1) this policy, installs that have a current version higher than specified by the 'Target version override' will be downgraded to the target version.
+
+We recommend that users install the latest version of the Microsoft Edge browser to ensure protection by the latest security updates. Rollback to an earlier version risks exposure to known security issues. This policy is meant to be used as a temporary fix to address issues in a Microsoft Edge browser update.
+
+Before temporarily rolling back your browser version, we recommend that you turn on Sync (https://go.microsoft.com/fwlink/?linkid=2133032) for all users in your organization. If you don't turn on Sync, there is a risk of permanent browsing data loss. Use this policy at your own risk.
+
+Note: All versions available for rollback can be viewed here https://aka.ms/EdgeEnterprise.
+
+This policy applies to Microsoft Edge version 86 or later.
+
+See https://go.microsoft.com/fwlink/?linkid=2133918 for more information.
+
+This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.</p>
+
+</div>
+
+</body>
+</html>

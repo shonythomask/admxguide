@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Disable connection fallback between protocols | ADMX Guide</title>
+
+<meta name="description" content="Disable connection fallback between protocols ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Disable connection fallback between protocols</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Outlook 2016 > Account Settings > Exchange</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\outlook\rpc</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to control the connection transport fallback behavior in Outlook when it attempts to connect to a Microsoft Exchange Server.
+ 
+This policy setting applies if you are using Outlook Anywhere (RPC over HTTP) to connect to a Microsoft Exchange Server. There are two Outlook profile settings on the Microsoft Exchange Proxy Settings dialog box (accessed through the Control Panel or Account Settings), that configure the default connection transport fallback behavior.
+ 
+- On fast networks, connect using HTTP first, then connect using TCP/IP
+- On slow networks, connect using HTTP first, then connect using TCP/IP
+ 
+For example, if you are on a fast network and you enable the “On fast networks, connect using HTTP first, then connect using TCP/IP” setting in the Microsoft Exchange Proxy Settings dialog box, Outlook first attempts to connect to the Exchange Server using HTTP. If Outlook is unable to connect using HTTP, then it attempts to connect using TCP/IP.
+ 
+If you enable this policy setting, if Outlook connection attempts with Microsoft Exchange Server fail, Outlook does not fallback to the TCP/IP protocol, regardless of what is specified in the Microsoft Exchange Proxy Settings dialog box. 
+
+If you disable or do not configure this policy setting, Outlook connection attempts with Microsoft Exchange Server can fallback from either TCP/IP to HTTP, or HTTP to TCP/IP, depending on the settings specified in the Microsoft Exchange Proxy Settings dialog box.
+</p>
+
+</div>
+
+</body>
+</html>

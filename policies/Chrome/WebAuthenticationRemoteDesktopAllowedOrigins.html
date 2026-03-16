@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allowed Origins for Proxied WebAuthn Requests from Remote Desktop Applications. | ADMX Guide</title>
+
+<meta name="description" content="Allowed Origins for Proxied WebAuthn Requests from Remote Desktop Applications. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allowed Origins for Proxied WebAuthn Requests from Remote Desktop Applications.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>A list of origins of remote desktop client apps that may execute WebAuthn API
+requests that originate from a browsing session on a remote host.
+
+Any origin configured in this policy can make WebAuthn requests for Relying
+Party IDs (RP IDs) that it would normally not allowed to be able to claim.
+
+Only valid HTTPS origins are allowed. Wildcards are not supported.
+Any invalid entries are ignored.
+
+Example value:
+
+https://remotedesktop.google.com
+https://vdi.corp.example
+https://server:8080/</p>
+
+</div>
+
+</body>
+</html>

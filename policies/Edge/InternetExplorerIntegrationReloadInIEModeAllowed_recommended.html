@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow unconfigured sites to be reloaded in Internet Explorer mode | ADMX Guide</title>
+
+<meta name="description" content="Allow unconfigured sites to be reloaded in Internet Explorer mode ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow unconfigured sites to be reloaded in Internet Explorer mode</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge - Default Settings (users can override)</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge\Recommended</p>
+
+<h3>Description</h3>
+
+<p>This policy allows users to reload unconfigured sites (that are not configured in the Enterprise Mode Site List) in Internet Explorer mode when browsing in Microsoft Edge and a site requires Internet Explorer for compatibility.
+
+After a site has been reloaded in Internet Explorer mode, "in-page" navigations will stay in Internet Explorer mode (for example, a link, script, or form on the page, or a server-side redirect from another "in-page" navigation). Users can choose to exit from Internet Explorer mode, or Microsoft Edge will automatically exit from Internet Explorer mode when a navigation that isn't "in-page" occurs (for example, using the address bar, the back button, or a favorite link).
+
+Users can also optionally tell Microsoft Edge to use Internet Explorer mode for the site in the future. This choice will be remembered for a length of time managed by the 'InternetExplorerIntegrationLocalSiteListExpirationDays' (Specify the number of days that a site remains on the local IE mode site list) policy.
+
+If the 'InternetExplorerIntegrationLevel' (Configure Internet Explorer integration) policy is set to 'IEMode', then sites explicitly configured by the 'InternetExplorerIntegrationSiteList' (Configure the Enterprise Mode Site List) policy's site list to use Microsoft Edge can't be reloaded in Internet Explorer mode, and sites configured by the site list or by the 'SendIntranetToInternetExplorer' (Send all intranet sites to Internet Explorer) policy to use Internet Explorer mode can't exit from Internet Explorer mode.
+
+If you enable this policy, users are allowed to reload unconfigured sites in Internet Explorer mode.
+
+If you disable this policy, users aren't allowed to reload unconfigured sites in Internet Explorer mode.
+
+Note that if you enable this policy, it takes precedence over how you configured the 'InternetExplorerIntegrationTestingAllowed' (Allow Internet Explorer mode testing) policy, and that policy will be disabled.
+
+To learn more about Internet Explorer mode, see https://go.microsoft.com/fwlink/?linkid=2094210</p>
+
+</div>
+
+</body>
+</html>

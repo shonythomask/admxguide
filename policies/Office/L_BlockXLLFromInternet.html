@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Block Excel XLL Add-ins that come from an untrusted source | ADMX Guide</title>
+
+<meta name="description" content="Block Excel XLL Add-ins that come from an untrusted source ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Block Excel XLL Add-ins that come from an untrusted source</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Excel 2016 > Excel Options > Security > Trust Center</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\excel\security</p>
+
+<h3>Description</h3>
+
+<p>
+        This policy setting allows you to block Excel XLL Add-ins that come from an untrusted source.
+
+        If you enable this policy setting, you can set one of these options:
+        - Block: XLL add-ins from untrusted sources are blocked. Users will receive a notification that the add-in was blocked.
+        - Show Additional Warning: Show an additional warning prompt after the user chooses to enable an XLL add-in from an untrusted source.
+        - Allow: XLL add-ins from an untrusted source are allowed.
+
+        The exceptions when Excel XLL Add-ins will be allowed to run are:
+        - The XLL is stored in a Trusted Location.
+        - The XLL is digitally signed and the matching Trusted Publisher certificate is installed on the device.
+
+        If you disable this policy setting, the settings configured in the Macro and Add-in Settings sections of the Trust Center determine whether Excel XLL Add-ins that come from an untrusted source will be allowed.
+
+        If you disable or do not configure this policy setting, users will be able to override default behavior by modifying the registry.
+
+        For more information, see https://support.microsoft.com/topic/1e3752e2-1177-4444-a807-7b700266a6fb.
+      </p>
+
+</div>
+
+</body>
+</html>

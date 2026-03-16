@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register protocol handlers | ADMX Guide</title>
+
+<meta name="description" content="Register protocol handlers ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Register protocol handlers</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge - Default Settings (users can override) > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge\Recommended</p>
+
+<h3>Description</h3>
+
+<p>Set this policy (recommended only) to register a list of protocol handlers. This list is merged with ones registered by the user and both are available to use.
+
+To register a protocol handler:
+
+- Set the protocol property to the scheme (for example, "mailto")
+- Set the URL property to the URL property of the application that handlers the scheme specified in the "protocol" field. The pattern can include a "%s" placeholder, which the handled URL replaces.
+
+Users can't remove a protocol handler registered by this policy. However, they can install a new default protocol handler to override the existing protocol handlers.
+
+Example value:
+
+[
+  {
+    "default": true,
+    "protocol": "mailto",
+    "url": "https://mail.contoso.com/mail/?extsrc=mailto&url=%s"
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

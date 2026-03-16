@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Set user data directory | ADMX Guide</title>
+
+<meta name="description" content="Set user data directory ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Set user data directory</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Configures the directory that Google Chrome will use for storing user data.
+
+If you set this policy, Google Chrome will use the provided directory regardless whether the user has specified the '--user-data-dir' flag or not. To avoid data loss or other unexpected errors this policy should not be set to a directory used for other purposes, because Google Chrome manages its contents.
+
+See https://support.google.com/chrome/a?p=Supported_directory_variables for a list of variables that can be used.
+
+If this policy is left not set the default profile path will be used and the user will be able to override it with the '--user-data-dir' command line flag.
+
+Example value: ${users}/${user_name}/Chrome</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure the new tab page URL | ADMX Guide</title>
+
+<meta name="description" content="Configure the new tab page URL ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure the new tab page URL</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge - Default Settings (users can override) > Startup, home page and new tab page</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge\Recommended</p>
+
+<h3>Description</h3>
+
+<p>Configures the default URL for the new tab page.
+
+The recommended version of this policy doesn't currently work and functions exactly like the mandatory version.
+
+This policy determines the page that's opened when new tabs are created (including when new windows are opened). It also affects the startup page if that's set to open to the new tab page.
+
+This policy doesn't determine which page opens on startup; that's controlled by the 'RestoreOnStartup' (Action to take on Microsoft Edge startup) policy. It also doesn't affect the home page if that's set to open to the new tab page.
+
+If you don't configure this policy, the default new tab page is used.
+
+If you configure this policy *and* the 'NewTabPageSetFeedType' (Configure the Microsoft Edge new tab page experience) policy, this policy has precedence.
+
+If a blank tab is preferred, "about:blank" is the correct URL to use, not "about://blank".
+
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, joined to Microsoft Azure Active Directory, or instances that enrolled for device management. On macOS, this policy is available only on instances that are managed via MDM or joined to a domain via MCX.
+
+Example value: https://www.fabrikam.com</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enable post-quantum key agreement for WebRTC | ADMX Guide</title>
+
+<meta name="description" content="Enable post-quantum key agreement for WebRTC ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enable post-quantum key agreement for WebRTC</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > WebRtc settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy controls the use of post-quantum key agreement for WebRTC in Microsoft Edge.
+
+If you enable this policy, Microsoft Edge will offer post-quantum key agreement for WebRTC.
+
+If you disable this policy, post-quantum key agreement will not be offered for WebRTC.
+
+If you don't configure this policy, post-quantum key agreement will not be offered for WebRTC. A future version of Microsoft Edge may enable this feature by default.
+
+Offering a post-quantum key agreement is backwards compatible. Existing datagram transport layer security (DTLS) peers and networking middleware are expected to ignore the new option and continue using previous options.
+
+However, devices that don't correctly implement DTLS may malfunction when offered the new option. For example, they may disconnect in response to unrecognized options or larger message sizes. Such devices aren’t post-quantum-ready and may interfere with an organization's post-quantum transition. If this issue occurs, administrators should contact the device vendor for a fix.
+
+This policy is temporary and will be removed in a future release.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enable Battery Saver Mode | ADMX Guide</title>
+
+<meta name="description" content="Enable Battery Saver Mode ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Enable Battery Saver Mode</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome - Default Settings (users can override)</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome\Recommended</p>
+
+<h3>Description</h3>
+
+<p>This policy enables or disables the Battery Saver Mode setting.
+On Chrome, this setting makes it so that frame rate is throttled to lower power consumption. If this policy is unset, the end user can control this setting in chrome://settings/performance.
+On ChromeOS, this setting makes it so that frame rate and CPU frequency are throttled, backlights are dimmed, and Android is put in Battery Saver Mode. On devices with multiple CPUs, some CPUs will be turned off.
+The different levels are:
+Disabled (0): Battery Saver Mode will be disabled.
+EnabledBelowThreshold (1): Battery Saver Mode will be enabled when the device is on battery power and battery level is low.
+EnabledOnBattery (2): This value is deprecated as of M121. From M121 onwards, values will be      treated as EnabledBelowThreshold.
+</p>
+
+</div>
+
+</body>
+</html>

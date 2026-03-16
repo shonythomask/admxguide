@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trusted Domain List | ADMX Guide</title>
+
+<meta name="description" content="Trusted Domain List ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Trusted Domain List</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Skype for Business 2016 > Microsoft Lync Feature Policies</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\lync</p>
+
+<h3>Description</h3>
+
+<p>
+When Lync connects to an unknown domain, it needs explicit user consent.  A dialog is shown asking the user for confirmation on whether it should continue.
+
+This policy gives administrators the ability to provide trusted domain names.  If a domain name is added to this list, Lync will trust that domain and will not show the dialog requesting permission.  Multiple domain addresses as comma separated values can be provided.
+
+By setting this policy, Lync will not explicitly trust the default domains specified below.  It will exclusively trust the domain specified by the policy.
+
+Supported values:
+  Not Configured (Default)/Disabled:  By default the following domains will be trusted:  "lync.com, outlook.com, lync.glbdns.microsoft.com, and microsoftonline.com."
+  Enabled:  The list of domains to be trusted.  For example: "contoso.com, contoso.co.in"
+      </p>
+
+</div>
+
+</body>
+</html>

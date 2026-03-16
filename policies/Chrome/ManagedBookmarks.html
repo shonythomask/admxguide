@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Managed Bookmarks | ADMX Guide</title>
+
+<meta name="description" content="Managed Bookmarks ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Managed Bookmarks</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy sets up a list of bookmarks where each one is a dictionary with the keys "name" and "url". These keys hold the bookmark's name and target. Admins can set up a subfolder by defining a bookmark without a "url" key, but with an additional "children" key. This key also has a list of bookmarks, some of which can also be folders. Chrome amends incomplete URLs as if they were submitted through the address bar. For example, "google.com" becomes "https://google.com/".
+
+Users can't change the folders the bookmarks are placed in (though they can hide it from the bookmark bar). The default folder name for managed bookmarks is "Managed bookmarks" but it can be changed by adding a new sub-dictionary to the policy with a single key named "toplevel_name" with the desired folder name as its value. Managed bookmarks are not synced to the user account and extensions can't modify them.
+See https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ManagedBookmarks for more information about schema and formatting.
+
+
+Example value:
+
+[
+  {
+    "toplevel_name": "My managed bookmarks folder"
+  },
+  {
+    "name": "Google",
+    "url": "google.com"
+  },
+  {
+    "name": "Youtube",
+    "url": "youtube.com"
+  },
+  {
+    "children": [
+      {
+        "name": "Chromium",
+        "url": "chromium.org"
+      },
+      {
+        "name": "Chromium Developers",
+        "url": "dev.chromium.org"
+      }
+    ],
+    "name": "Chrome links"
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

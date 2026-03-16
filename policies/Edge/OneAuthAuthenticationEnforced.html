@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OneAuth Authentication Flow Enforced for signin | ADMX Guide</title>
+
+<meta name="description" content="OneAuth Authentication Flow Enforced for signin ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>OneAuth Authentication Flow Enforced for signin</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Identity and sign-in</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy allows users to decide whether to use the OneAuth library for sign-in and token fetch in Microsoft Edge on Windows 10 RS3 and above.
+
+If you disable or don't configure this policy, signin process will use Windows Account Manager. Microsoft Edge would be able to use accounts you logged in to Windows, Microsoft Office, or other Microsoft applications for login, without the needing of password. Or you can provide valid account and password to sign in, which will be stored in Windows Account Manager for future usage. You will be able to investigate all accounts stored in Windows Account Manager through Windows Settings -> Accounts -> Email and accounts page.
+
+If you enable this policy, OneAuth authentication flow will be used for account signin. The OneAuth authentication flow has fewer dependencies and can work without Windows shell. The account you use would not be stored in the Email and accounts page.
+
+This policy will only take effect on Windows 10 RS3 and above. On Windows 10 below RS3, OneAuth is used for authentication in Microsoft Edge by default.</p>
+
+</div>
+
+</body>
+</html>

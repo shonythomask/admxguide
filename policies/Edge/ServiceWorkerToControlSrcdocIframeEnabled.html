@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow ServiceWorker to control srcdoc iframes | ADMX Guide</title>
+
+<meta name="description" content="Allow ServiceWorker to control srcdoc iframes ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow ServiceWorker to control srcdoc iframes</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>https://github.com/w3c/ServiceWorker/issues/765 asks srcdoc iframe with the "allow-same-origin" sandbox attribute to be under ServiceWorker control.
+
+By default (if left unset) or when set to Enabled, Microsoft Edge makes srcdoc iframes with "allow-same-origin" sandbox attributes to be under ServiceWorker control.
+
+Setting the policy to Disabled prevents ServiceWorker control over srcdoc iframes.
+
+This policy is temporary and planned for deprecation in 2026.</p>
+
+</div>
+
+</body>
+</html>

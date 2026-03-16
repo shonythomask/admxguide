@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Use out-of-process iframe PDF Viewer | ADMX Guide</title>
+
+<meta name="description" content="Use out-of-process iframe PDF Viewer ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Use out-of-process iframe PDF Viewer</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Controls whether the PDF viewer in Google Chrome uses an out-of-process iframe (OOPIF). This will be the new PDF viewer architecture in the future, as it is simpler and makes adding new features easier. The existing GuestView PDF viewer is an outdated, complex architecture that is being deprecated.
+
+When this policy is set to Enabled or not set, Google Chrome will be able to use the OOPIF PDF viewer architecture. Once Enabled or not set, the default behavior will be decided by Google Chrome.
+
+When this policy is set to Disabled, Google Chrome will strictly use the existing GuestView PDF viewer. It embeds a web page with a separate frame tree into another web page.
+
+This policy will be removed in the future, after the OOPIF PDF viewer feature has fully rolled out.</p>
+
+</div>
+
+</body>
+</html>

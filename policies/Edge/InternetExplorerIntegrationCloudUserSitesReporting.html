@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure reporting of IE Mode user list entries to the M365 Admin Center Site Lists app | ADMX Guide</title>
+
+<meta name="description" content="Configure reporting of IE Mode user list entries to the M365 Admin Center Site Lists app ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure reporting of IE Mode user list entries to the M365 Admin Center Site Lists app</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This setting lets you enable reporting of sites that Microsoft Edge users add to their local IE Mode site list. The user must be signed into Microsoft Edge with a valid work or school account for reports to be sent, and the user's account tenant must match the tenant specified by the policy.
+
+If you configure this policy, Microsoft Edge will send a report to the M365 Admin Center Site Lists app when a user adds a site to their local IE mode site list. The report will show the URL of the site the user added, minus any query string or fragment. The user's identity isn't reported.
+
+For this reporting to work correctly, you must have successfully visited the Microsoft Edge Site Lists app in the M365 Admin Center at least once. This activates a per-tenant storage account used to store these reports. Microsoft Edge will still attempt to send reports if this step hasn't been completed. However, the reports will not be stored in the Site Lists app.
+
+When enabling this policy, you must specify your O365 tenant ID. To learn more about finding your O365 tenant ID, see https://go.microsoft.com/fwlink/?linkid=2185668
+
+If you disable or don't configure this policy, Microsoft Edge will never send reports about URLs added to a user's local site list to the Site Lists app.
+
+To learn more about Internet Explorer mode, see https://go.microsoft.com/fwlink/?linkid=2165707
+
+Example value: aba95e58-070f-4784-8dcd-e5fd46c2c6d6</p>
+
+</div>
+
+</body>
+</html>

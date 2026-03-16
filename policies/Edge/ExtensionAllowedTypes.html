@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure allowed extension types | ADMX Guide</title>
+
+<meta name="description" content="Configure allowed extension types ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure allowed extension types</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Extensions</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy controls which apps and extensions may be installed in Microsoft Edge, which hosts they can interact with, and limits runtime access.
+
+If you don't set this policy, there aren't any restrictions on acceptable extension and app types.
+
+Extensions and apps which have a type that's not on the list won't be installed. Each value should be one of these strings:
+
+* "extension"
+
+* "theme"
+
+* "user_script"
+
+* "hosted_app"
+
+See the Microsoft Edge extensions documentation for more information about these types.
+
+Note: This policy also affects extensions and apps to be force-installed using 'ExtensionInstallForcelist' (Control which extensions are installed silently).
+
+Policy options mapping:
+
+* extension (extension) = Extension
+
+* theme (theme) = Theme
+
+* user_script (user_script) = User script
+
+* hosted_app (hosted_app) = Hosted app
+
+* legacy_packaged_app (legacy_packaged_app) = Legacy packaged app
+
+* platform_app (platform_app) = Platform app
+
+Use the preceding information when configuring this policy.
+
+Example value:
+
+hosted_app</p>
+
+</div>
+
+</body>
+</html>

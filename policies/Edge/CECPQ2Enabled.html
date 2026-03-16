@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CECPQ2 post-quantum key-agreement enabled for TLS (obsolete) | ADMX Guide</title>
+
+<meta name="description" content="CECPQ2 post-quantum key-agreement enabled for TLS (obsolete) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>CECPQ2 post-quantum key-agreement enabled for TLS (obsolete)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 113.
+
+This policy was removed in Microsoft Edge 114 and is ignored if set. It served to disable CECPQ2, but CECPQ2 has been disabled by default. A separate policy will be introduced to control the rollout of the replacement of CECPQ2. That replacement will be a combination of the standard key-agreement X25519 with NIST's chosen post-quantum KEM, called "Kyber".
+
+If this policy is not configured, or is set to enabled, then Microsoft Edge will follow the default rollout process for CECPQ2, a post-quantum key-agreement algorithm in TLS.
+
+CECPQ2 results in larger TLS messages which, in very rare cases, can trigger bugs in some networking hardware. This policy can be set to False to disable CECPQ2 while networking issues are resolved.
+
+This policy is a temporary measure and will be removed in future versions of Microsoft Edge.</p>
+
+</div>
+
+</body>
+</html>

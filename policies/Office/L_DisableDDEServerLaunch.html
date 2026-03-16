@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Don’t allow Dynamic Data Exchange (DDE) server launch in Excel | ADMX Guide</title>
+
+<meta name="description" content="Don’t allow Dynamic Data Exchange (DDE) server launch in Excel ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Don’t allow Dynamic Data Exchange (DDE) server launch in Excel</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Excel 2016 > Excel Options > Security > Trust Center > External Content</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\excel\security\external content</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to control whether Dynamic Data Exchange (DDE) server launch is allowed.
+
+By default, DDE server launch is turned off, but users can turn on DDE server launch by going to File > Options > Trust Center > Trust Center Settings > External Content.
+
+For security reasons, turning on DDE server launch is not recommended.
+
+Note: For DDE server launch to work, Dynamic Data Exchange (DDE) server lookup must be turned on. Be sure that the “Don’t allow Dynamic Data Exchange (DDE) server lookup” policy setting isn’t enabled, because enabling that policy setting turns off DDE server lookup.
+
+If you enable this policy setting, DDE server launch isn’t allowed, and users can’t turn on DDE server launch in the Trust Center.
+
+If you disable this policy setting, DDE server launch is allowed, and users cannot turn off DDE server launch in the Trust Center. For security reasons, this is not recommended.
+
+If you don’t configure this policy setting, DDE server launch is turned off, but users can turn on DDE server launch in the Trust Center.
+
+Note: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise.</p>
+
+</div>
+
+</body>
+</html>

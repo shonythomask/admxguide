@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prevent Office from being updated to a specific version | ADMX Guide</title>
+
+<meta name="description" content="Prevent Office from being updated to a specific version ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Prevent Office from being updated to a specific version</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Office 2016 (Machine) > Updates</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\software\policies\microsoft\office\16.0\common\officeupdate</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to prevent Office from being updated to a specific version, and instead have Office be updated to a different version that you specify.
+
+If you enable this policy setting, you need to specify both the version to block and the version to update Office to. You list the version to block first and separate the two versions with a colon. You can specify more than one version to block by separating the entries with a vertical bar.
+
+For example, if you want to block versions 16.0.10326.10000 and 16.0.10326.20000 and have Office updated to version 16.0.10328.10000 instead, you would enter 16.0.10326.10000:16.0.10328.10000|16.0.10326.20000:16.0.10328.10000.
+
+If the blocked version is already installed, Office will be updated to the other version you've specified.
+
+Note: if you make a mistake entering the versions, the update won't be blocked. Also, be sure that the installation files for the version that you want to update Office to are available on the update location.
+
+If you disable or don't configure this policy setting, Office will be updated to whichever more current version is available in the location where Office is configured to get updates from, unless youve specified a version to block by using the Office Deployment Tool.
+
+Note: This policy setting only applies to Office products that are installed by using Click-to-Run. It doesn't apply to Office products that use Windows Installer (MSI).</p>
+
+</div>
+
+</body>
+</html>

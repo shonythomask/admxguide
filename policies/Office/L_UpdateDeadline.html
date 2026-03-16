@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Update Deadline | ADMX Guide</title>
+
+<meta name="description" content="Update Deadline ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Update Deadline</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Office 2016 (Machine) > Updates</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\software\policies\microsoft\office\16.0\common\officeupdate</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to set a deadline by when updates to Office must be applied.
+
+You can set a deadline in one of two ways:
+
+    Specify a date and time
+
+    Specify a certain number of days after the update has been downloaded
+
+Prior to the deadline, users will receive multiple reminders to install the updates. If Office isn't updated by the deadline, the updates are applied automatically. If any Office programs are open, they'll be closed, which might result in data loss.
+
+If you're specifying a date and time, we recommend that you set the deadline at least a week in the future to allow users time to install the updates.
+
+If you enable this policy setting, you need to either specify a date and time or specify a certain number of days.
+
+Note: This policy setting only applies to Office products that are installed by using Click-to-Run. It doesn't apply to Office products that use Windows Installer (MSI).</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure address or URL of proxy server (deprecated) | ADMX Guide</title>
+
+<meta name="description" content="Configure address or URL of proxy server (deprecated) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure address or URL of proxy server (deprecated)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Proxy server</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+
+This policy is deprecated, use 'ProxySettings' (Proxy settings) instead. It won't work in Microsoft Edge version 91.
+
+Specifies the URL of the proxy server.
+
+This policy is applied only if the 'ProxySettings' policy isn't specified and you have selected fixed_servers in the 'ProxyMode' (Configure proxy server settings) policy. If you selected any other mode for configuring proxy policies, don't enable or configure this policy.
+
+If you enable this policy, the proxy server configured by this policy will be used for all URLs.
+
+If you disable or don't configure this policy, users can choose their own proxy settings while in this proxy mode. Leave this policy unconfigured if you've specified any other method for setting proxy policies.
+
+For more options and detailed examples, see https://go.microsoft.com/fwlink/?linkid=2094936.
+
+Example value: 123.123.123.123:8080</p>
+
+</div>
+
+</body>
+</html>

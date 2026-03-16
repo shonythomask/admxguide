@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Restrict CPU core sharing for renderer process | ADMX Guide</title>
+
+<meta name="description" content="Restrict CPU core sharing for renderer process ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Restrict CPU core sharing for renderer process</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy mitigates side-channel cross process memory attacks by isolating the renderer process on the CPU core and preventing other processes from sharing the same core. The mitigation is supported on Microsoft® Windows® 11 24H2 and above. If the OS does not have the required scheduling support, this policy will have no effect. This policy may slow down performance in some demanding scenarios similar to disabling hyperthreading. For more information refer https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-process_mitigation_side_channel_isolation_policy
+If this policy is enabled, all other processes will not be scheduled on the same CPU core when the renderer process is running.
+If this policy is disabled, all other processes can be scheduled on the same CPU core if a renderer process is running on it.
+If this policy is not set, all other processes can be scheduled on the same CPU core if a renderer process is running on the core. This may vary depending on Google Chrome release, currently running field trials, and platform.</p>
+
+</div>
+
+</body>
+</html>

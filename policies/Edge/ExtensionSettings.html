@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure extension management settings | ADMX Guide</title>
+
+<meta name="description" content="Configure extension management settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure extension management settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Extensions</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Setting this policy controls extension management settings for Microsoft Edge, including any controlled by existing extension-related policies. This policy supersedes any legacy policies that might be set.
+
+This policy maps an extension ID or an update URL to its specific setting only. A default configuration can be set for the special ID "*", which applies to all extensions without a custom configuration in this policy. With an update URL, configuration applies to extensions with the exact update URL stated in the extension manifest. If the 'override_update_url' flag is set to true, the extension is installed and updated using the update URL specified in the 'ExtensionInstallForcelist' (Control which extensions are installed silently) policy or in 'update_url' field in this policy. The flag 'override_update_url' is ignored if the 'update_url' is the Edge Add-ons website update URL. For more details, check out the detailed guide to ExtensionSettings policy available at https://go.microsoft.com/fwlink/?linkid=2161555.
+
+To block extensions from a particular third party store, you only need to block the update_url for that store. For example, if you want to block extensions from Chrome Web Store, you can use the following JSON.
+
+{"update_url:https://clients2.google.com/service/update2/crx":{"installation_mode":"blocked"}}
+
+Note that you can still use 'ExtensionInstallForcelist' and 'ExtensionInstallAllowlist' (Allow specific extensions to be installed) to allow / force install specific extensions even if the store is blocked using the JSON in the previous example.
+
+If the 'sidebar_auto_open_blocked' flag is set to true in an extension's configuration, the hub-app (sidebar app) corresponding to the specified extension will be prevented from automatically opening.
+
+On Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain or joined to Microsoft Azure Active Directory®`.
+
+On macOS instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be force installed if the instance is managed via MDM, joined to a domain via MCX.
+
+Example value:
+
+{
+  "*": {
+    "allowed_types": [
+      "hosted_app"
+    ],
+    "blocked_install_message": "Custom error message.",
+    "blocked_permissions": [
+      "downloads",
+      "bookmarks"
+    ],
+    "install_sources": [
+      "https://company-intranet/apps"
+    ],
+    "installation_mode": "blocked",
+    "runtime_allowed_hosts": [
+      "*://good.contoso.com"
+    ],
+    "runtime_blocked_hosts": [
+      "*://*.contoso.com"
+    ]
+  },
+  "abcdefghijklmnopabcdefghijklmnop": {
+    "blocked_permissions": [
+      "history"
+    ],
+    "installation_mode": "allowed",
+    "minimum_version_required": "1.0.1",
+    "file_url_navigation_allowed": true
+  },
+  "bcdefghijklmnopabcdefghijklmnopa": {
+    "allowed_permissions": [
+      "downloads"
+    ],
+    "installation_mode": "force_installed",
+    "override_update_url": true,
+    "sidebar_auto_open_blocked": true,
+    "runtime_allowed_hosts": [
+      "*://good.contoso.com"
+    ],
+    "runtime_blocked_hosts": [
+      "*://*.contoso.com"
+    ],
+    "toolbar_state": "force_shown",
+    "update_url": "https://contoso.com/update_url"
+  },
+  "cdefghijklmnopabcdefghijklmnopab": {
+    "blocked_install_message": "Custom error message.",
+    "installation_mode": "blocked"
+  },
+  "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {
+    "blocked_install_message": "Custom error message.",
+    "installation_mode": "blocked"
+  },
+  "fghijklmnopabcdefghijklmnopabcde": {
+    "blocked_install_message": "Custom removal message.",
+    "installation_mode": "removed"
+  },
+  "update_url:https://www.contoso.com/update.xml": {
+    "allowed_permissions": [
+      "downloads"
+    ],
+    "blocked_permissions": [
+      "wallpaper"
+    ],
+    "installation_mode": "allowed"
+  }
+}
+
+
+Compact example value:
+
+{"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1", "file_url_navigation_allowed": true}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "sidebar_auto_open_blocked": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "toolbar_state": "force_shown", "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}</p>
+
+</div>
+
+</body>
+</html>

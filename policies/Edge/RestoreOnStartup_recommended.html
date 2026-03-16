@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Action to take on Microsoft Edge startup | ADMX Guide</title>
+
+<meta name="description" content="Action to take on Microsoft Edge startup ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Action to take on Microsoft Edge startup</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge - Default Settings (users can override) > Startup, home page and new tab page</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge\Recommended</p>
+
+<h3>Description</h3>
+
+<p>Specify how Microsoft Edge behaves when it starts.
+
+If you want a new tab to always open on startup, choose 'RestoreOnStartupIsNewTabPage'.
+
+If you want to reopen URLs that were open the last time Microsoft Edge closed, choose 'RestoreOnStartupIsLastSession'. The browsing session will be restored as it was. Note that this option disables some settings that rely on sessions or that perform actions on exit (such as Clear browsing data on exit or session-only cookies).
+
+If you want to open a specific set of URLs, choose 'RestoreOnStartupIsURLs'.
+
+Starting in Microsoft Edge version 125, if you want to reopen URLs that were open the last time Microsoft Edge closed and open a specific set of URLs, choose 'RestoreOnStartupIsLastSessionAndURLs'.
+
+Disabling this setting is the same as leaving it not configured. Users will be able to change it in Microsoft Edge.
+
+This policy is only available on Windows instances that are joined to a Microsoft Active Directory domain, joined to Microsoft Azure Active Directory, or instances that enrolled for device management. On macOS, this policy is only available on instances that are managed via MDM or joined to a domain via MCX.
+
+Policy options mapping:
+
+* RestoreOnStartupIsNewTabPage (5) = Open a new tab
+
+* RestoreOnStartupIsLastSession (1) = Restore the last session
+
+* RestoreOnStartupIsURLs (4) = Open a list of URLs
+
+* RestoreOnStartupIsLastSessionAndURLs (6) = Open a list of URLs and restore the last session
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

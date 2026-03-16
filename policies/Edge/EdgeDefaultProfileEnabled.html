@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Default Profile Setting Enabled | ADMX Guide</title>
+
+<meta name="description" content="Default Profile Setting Enabled ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Default Profile Setting Enabled</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Identity and sign-in</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Configuring this policy will let you set a default profile in Microsoft Edge to be used when opening the browser rather than the last profile used. This policy won't affect when "--profile-directory" parameter has been specified. Set the value to "Default" to refer to the default profile. The value is case sensitive.
+The value of the policy is the name of the profile (case sensitive) and can be configured with string that is the name of a specific profile.
+The value "Edge Kids Mode" and "Guest Profile" are considered not useful values because they not supposed to be a default profile.
+This policy won't impact the following scenarios:
+  1) Settings specified in "Profile preferences for sites" in "Profile preferences"
+  2) Links opening from Outlook and Teams.
+
+The following statements are under the condition of not specify the "--profile-directory" and configured value is not "Edge Kids Mode" or "Guest Profile":
+If you enable this policy and configure it with a specific profile name and the specified profile can be found, Microsoft Edge will use the specified profile when launching and the setting of "Default profile for external link" is changed to the specified profile name and greyed out.
+If you enable this policy and configure it with a specific profile name but it can't be found, the policy will behave like it's never been set before.
+If you enable this policy, but don't configure or disable it, the policy will behave like it's never been set before.
+
+Example value: Default</p>
+
+</div>
+
+</body>
+</html>

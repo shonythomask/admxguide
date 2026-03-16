@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Choose whether the Privacy Sandbox IP Protection feature should be enabled. | ADMX Guide</title>
+
+<meta name="description" content="Choose whether the Privacy Sandbox IP Protection feature should be enabled. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Choose whether the Privacy Sandbox IP Protection feature should be enabled.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Privacy Sandbox policies</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>A policy to control whether the Privacy Sandbox IP Protection feature should be enabled.
+
+IP Protection is a feature that limits availability of a user's original IP address for certain third-party network requests made while browsing in Incognito mode, enhancing protections against cross-site tracking during Incognito browsing sessions.
+
+If the policy is set to Disabled, then IP Protection will be disabled and users won't be able to enable the feature via UI settings.
+If the policy is set to Enabled, then IP Protection will be enabled and users won't be able to disable the feature via UI settings.
+If the policy is not set, IP Protection will be enabled by default and users will be able to control the feature on their device via UI settings.
+
+Some considerations regarding whether enterprises should disable IP Protection include:
+
+- DNS lookups won't be performed for requests that are proxied, which may impact DNS-based monitoring or filtering.
+
+- Enterprise applications may experience breakage when used in Incognito mode if they rely on requests to domains (or subdomains of those domains) on the Masked Domain List (Google Chrome) and require those requests to come from specific IP address ranges.
+
+- Traffic might not be proxied in Incognito mode under certain conditions, for example when users launch Incognito mode from a Chrome profile they aren't signed in to. In general the feature requires the user to have been signed in to Chrome with a personal Google account when launching Incognito mode.
+
+- The list of domains on the Masked Domain List may change over time, with new versions being pushed to users automatically. For more information on the Masked Domain List, see: Google Chrome.
+
+For more information on IP Protection, see: Google Chrome.
+
+IP Protection will be launched no sooner than M139.</p>
+
+</div>
+
+</body>
+</html>

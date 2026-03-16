@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prevent MAPI services from being added | ADMX Guide</title>
+
+<meta name="description" content="Prevent MAPI services from being added ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Prevent MAPI services from being added</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Outlook 2016 > Miscellaneous</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\outlook\options</p>
+
+<h3>Description</h3>
+
+<p>By default, any MAPI service can be added to a user profile as an Outlook account. This setting allows you to prevent users from adding a specific MAPI services on the list of services. To prevent adding a MAPI service, append the name of the service to the list of services stored in this setting, separated by from a previous name by a semi-colon (;). For example, if you wanted to prevent adding the Outlook Mobile Service and Live Meeting Transport, you would configure this setting "MSOMS;LiveMeeting".</p>
+
+</div>
+
+</body>
+</html>

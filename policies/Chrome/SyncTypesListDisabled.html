@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>List of types that should be excluded from synchronization | ADMX Guide</title>
+
+<meta name="description" content="List of types that should be excluded from synchronization ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>List of types that should be excluded from synchronization</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>If this policy is set all specified data types will be excluded from synchronization both for Chrome Sync as well as for roaming profile synchronization. This can be beneficial to reduce the size of the roaming profile or limit the type of data uploaded to the Chrome Sync Servers.
+
+The current data types for this policy are: "apps", "autofill", "bookmarks", "extensions", "preferences", "passwords", "payments", "productComparison", "readingList", "savedTabGroups", "tabs", "themes", "typedUrls", "wifiConfigurations". Those names are case sensitive!
+
+Notes: Dynamic Policy Refresh is supported only in Google Chrome version 123 and later. Disabling "autofill" also disables "payments". "typedUrls" refers to all browsing history.
+
+Example value:
+
+bookmarks</p>
+
+</div>
+
+</body>
+</html>

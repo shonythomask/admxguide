@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Actions to run when the computer is idle | ADMX Guide</title>
+
+<meta name="description" content="Actions to run when the computer is idle ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Actions to run when the computer is idle</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Idle Browser Actions</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>When the timeout from the IdleTimeout policy is reached, the browser runs the actions configured in this policy.
+
+If you don't configure the IdleTimeout policy, this policy has no effect.
+
+If you don't configure this policy or no actions are selected, the IdleTimeout policy has no effect.
+
+Supported actions are:
+
+'close_browsers': close all browser windows and PWAs for this profile.
+
+'reload_pages': reload all webpages. For some pages, the user might be prompted for confirmation first.
+
+'sign_out': sign out of browser. (This action only applies to iOS.)
+
+'close_tabs': close all open tabs and create an NTP (New Tab Page). Supported in Android and iOS.
+
+'clear_browsing_history', 'clear_download_history', 'clear_cookies_and_other_site_data', 'clear_cached_images_and_files', 'clear_password_signing', 'clear_autofill', 'clear_site_settings': clear the corresponding browsing data. Deleting cookies using this policy doesn't sign the user out of their profile, the user stays signed in.
+
+Setting 'clear_browsing_history', 'clear_password_signing', 'clear_autofill', and 'clear_site_settings' disables sync for the respective data types if sync isn't already disabled by setting either the SyncDisabled policy or BrowserSignin to disabled.
+
+Policy options mapping:
+
+* close_browsers (close_browsers) = Close Browsers
+
+* clear_browsing_history (clear_browsing_history) = Clear Browsing History
+
+* clear_download_history (clear_download_history) = Clear Download History
+
+* clear_cookies_and_other_site_data (clear_cookies_and_other_site_data) = Clear Cookies and Other Site Data
+
+* clear_cached_images_and_files (clear_cached_images_and_files) = Clear Cached Images and Files
+
+* clear_password_signin (clear_password_signin) = Clear Password sign in
+
+* clear_autofill (clear_autofill) = Clear Autofill
+
+* clear_site_settings (clear_site_settings) = Clear Site Settings
+
+* reload_pages (reload_pages) = Reload Pages
+
+* sign_out (sign_out) = Sign Out
+
+* close_tabs (close_tabs) = Close Tabs
+
+Use the preceding information when configuring this policy.
+
+Example value:
+
+close_browsers</p>
+
+</div>
+
+</body>
+</html>

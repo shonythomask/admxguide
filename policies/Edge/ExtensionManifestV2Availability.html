@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Control Manifest v2 extension availability | ADMX Guide</title>
+
+<meta name="description" content="Control Manifest v2 extension availability ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Control Manifest v2 extension availability</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Extensions</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Control if Manifest v2 extensions can be used by browser.
+
+Manifest v2 extensions support will be deprecated and all extensions need to be migrated to v3 in the future. More information about, and the timeline of the migration has not been established.
+
+If the policy is set to Default or not set, v2 extension loading is decided by browser. This will follow the preceding timeline when it's established.
+
+If the policy is set to Disable, v2 extensions installation are blocked, and existing ones are disabled. This option is going to be treated the same as if the policy is unset after v2 support is turned off by default.
+
+If the policy is set to Enable, v2 extensions are allowed. The option is going to be treated the same as if the policy isn't set before v2 support is turned off by default.
+
+If the policy is set to EnableForForcedExtensions, force installed v2 extensions are allowed. This includes extensions that are listed by 'ExtensionInstallForcelist' (Control which extensions are installed silently) or 'ExtensionSettings' (Configure extension management settings) with installation_mode "force_installed" or "normal_installed". All other v2 extensions are disabled. The option is always available regardless of the manifest migration state.
+
+Extensions availabilities are still controlled by other policies.
+
+Policy options mapping:
+
+* Default (0) = Default browser behavior
+
+* Disable (1) = Manifest v2 is disabled
+
+* Enable (2) = Manifest v2 is enabled
+
+* EnableForForcedExtensions (3) = Manifest v2 is enabled for forced extensions only
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

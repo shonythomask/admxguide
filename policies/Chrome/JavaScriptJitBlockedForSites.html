@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Block JavaScript from using JIT on these sites | ADMX Guide</title>
+
+<meta name="description" content="Block JavaScript from using JIT on these sites ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Block JavaScript from using JIT on these sites</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Allows you to set a list of site url patterns that specify sites which are not allowed to run JavaScript JIT (Just In Time) compiler enabled.
+
+Disabling the JavaScript JIT will mean that Google Chrome may render web content more slowly, and may also disable parts of JavaScript including WebAssembly. Disabling the JavaScript JIT may allow Google Chrome to render web content in a more secure configuration.
+
+For detailed information on valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns. Wildcards, *, are allowed.
+
+JavaScript JIT policy exceptions will only be enforced at a site granularity (eTLD+1). A policy set for only subdomain.site.com will not correctly apply to site.com or subdomain.site.com since they both resolve to the same eTLD+1 (site.com) for which there is no policy. In this case, policy must be set on site.com to apply correctly for both site.com and subdomain.site.com.
+
+This policy applies on a frame-by-frame basis and not based on top level origin url alone, so e.g. if site-one.com is listed in the JavaScriptJitBlockedForSites policy but site-one.com loads a frame containing site-two.com then site-one.com will have JavaScript JIT disabled, but site-two.com will use the policy from DefaultJavaScriptJitSetting, if set, or default to JavaScript JIT enabled.
+
+If this policy is not set for a site then the policy from DefaultJavaScriptJitSetting applies to the site, if set, otherwise JavaScript JIT is enabled for the site.
+
+Example value:
+
+[*.]example.edu</p>
+
+</div>
+
+</body>
+</html>

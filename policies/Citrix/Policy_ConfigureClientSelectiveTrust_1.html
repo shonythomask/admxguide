@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure trusted server configuration | ADMX Guide</title>
+
+<meta name="description" content="Configure trusted server configuration ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure trusted server configuration</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Citrix Components > Citrix Workspace > Network routing</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\Software\Policies\Citrix\ICA Client\Engine\Lockdown Profiles\All Regions\Lockdown\Network\ClientSelectiveTrust</p>
+
+<h3>Description</h3>
+
+<p>Use this policy to control how the client identifies the published application or desktop it is connecting to.  The client will determine a trust level, called a ""trust region"" with a connection.  The trust region will then determine how the client is configured for the connection.  
+
+When this policy is enabled, the client can be forced to perform region identification using the "Enforce trusted server configuration" option.  
+
+By default, region identification is based on the address of the server the client is connecting to.  To be a member of the trusted region, the server must be a member of the Windows Trusted Sites zone.  You can configure this using the "Windows Internet zone" setting.  
+
+Alternatively, for compatibility with non-Windows clients, the server address can be specifically trusted using the "Address" setting.  This is a comma-separated list of servers supporting the use of wildcards, for example, cps*.citrix.com.  
+
+
+Troubleshooting:
+In the default configuration, when trusted server configuration prevents the client from connecting, the following error message is displayed:
+
+    "<Server> ERROR:  Cannot connect to the Citrix XenApp server.  The server (xxx) is not trusted for ICA connections.  Connections to the (Untrusted Region) Region are not allowed by lockdown settings.  Please contact your administrator."
+
+The server identified in the "xxx" must be added to the Windows Trusted Sites zone (as either http:// or https:// for SSL connections) for the connection to succeed.  
+
+Note that for SSL connections, the certificate common name must be trusted.  For non-SSL connections all servers that are contacted must be individually trusted.  This means that when using application browsing, both the XML service and the server this redirects to must be trusted.
+</p>
+
+</div>
+
+</body>
+</html>

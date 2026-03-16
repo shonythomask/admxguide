@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure ShadowStack crash rollback behavior (obsolete) | ADMX Guide</title>
+
+<meta name="description" content="Configure ShadowStack crash rollback behavior (obsolete) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure ShadowStack crash rollback behavior (obsolete)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 109.
+
+This policy is deprecated because it's intended to serve only as a short-term mechanism to give enterprises more time to update their environments and report issues if they are found to be incompatible with Hardware-enforced Stack Protection. It won't work in Microsoft Edge as soon as version 109.
+
+Microsoft Edge includes a Hardware-enforced Stack Protection security feature. This feature may result in the browser crashing unexpectedly in cases that do not represent an attempt to compromise the browser's security.
+
+Using this policy, you may control the behavior of the Hardware-enforced Stack Protection feature after a crash triggered by this feature is encountered.
+
+Set this policy to 'Disable' to disable the feature.
+
+Set this policy to 'DisableUntilUpdate' to disable the feature until Microsoft Edge updates next time.
+
+Set this policy to 'Enable' to keep the feature enabled.
+
+Policy options mapping:
+
+* Disable (0) = Disable Hardware-enforced Stack Protection
+
+* DisableUntilUpdate (1) = Disable Hardware-enforced Stack Protection until the next Microsoft Edge update
+
+* Enable (2) = Enable Hardware-enforced Stack Protection
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

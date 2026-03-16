@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Show an "Always open" checkbox in external protocol dialog | ADMX Guide</title>
+
+<meta name="description" content="Show an "Always open" checkbox in external protocol dialog ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Show an "Always open" checkbox in external protocol dialog</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy controls whether the "Always allow this site to open links of this type" checkbox is shown on external protocol launch confirmation prompts. This policy only applies to https:// links.
+
+If you enable this policy, when an external protocol confirmation prompt is shown, the user can select "Always allow" to skip all future confirmation prompts for the protocol on this site.
+
+If you disable this policy, the "Always allow" checkbox isn't displayed. The user will be prompted for confirmation every time an external protocol is invoked.
+
+Prior to Microsoft Edge 83, if you don't configure this policy, the "Always allow" checkbox isn't displayed. The user will be prompted for confirmation every time an external protocol is invoked.
+
+On Microsoft Edge 83, if you don't configure this policy, the checkbox visibility is controlled by the "Enable remembering protocol launch prompting preferences" flag in edge://flags
+
+As of Microsoft Edge 84, if you don't configure this policy, when an external protocol confirmation prompt is shown, the user can select "Always allow" to skip all future confirmation prompts for the protocol on this site.</p>
+
+</div>
+
+</body>
+</html>

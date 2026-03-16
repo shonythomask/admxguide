@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Show the Update Channel option to allow users to select an update channel | ADMX Guide</title>
+
+<meta name="description" content="Show the Update Channel option to allow users to select an update channel ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Show the Update Channel option to allow users to select an update channel</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Miscellaneous</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common</p>
+
+<h3>Description</h3>
+
+<p>This policy setting controls whether the Update Channel option is shown under File > Account in an app, such as Word. This option allows users to select which update channel they want to receive updates from.
+
+For more information about update channels, see https://go.microsoft.com/fwlink/p/?linkid=846105.
+
+If you enable this policy setting, the Update Channel option is shown under File > Account. You need to select which update channels will be shown as options to the user.
+
+Important:
+- Users must be a local administrator on the device to change to a different update channel.
+- Beta Channel is not a supported update channel. It should only be used in test environments and by a small group of select users, such as IT staff or application developers.
+
+If you disable or don’t configure this policy setting, the Update Channel option is not shown under File > Account.
+
+Notes:
+- This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for enterprise, and to subscription versions of Project and Visio.
+- This policy setting takes precedence over the “Show the option for Microsoft 365 Insider” policy setting in cases where both policy settings are enabled.
+- If you enable this policy setting, you shouldn’t enable and configure the “Target Version”, “Update Channel”, or “Update Path” policy settings under Computer Configuration\Policies\Administrative Templates\Microsoft Office 2016 (Machine)\Updates. If you do, those policy settings will take precedence. The Update Channel option will still appear under File > Account, but it will be disabled and the user won’t be able to select an update channel.</p>
+
+</div>
+
+</body>
+</html>

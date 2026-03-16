@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow collection of WebRTC event logs from Google services | ADMX Guide</title>
+
+<meta name="description" content="Allow collection of WebRTC event logs from Google services ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow collection of WebRTC event logs from Google services</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy to Enabled means Google Chrome can collect WebRTC event logs from Google services such as Hangouts Meet and upload them to Google. These logs have diagnostic information for debugging issues with audio or video meetings in Google Chrome, such as the time and size of RTP packets, feedback about congestion on the network, and metadata about time and quality of audio and video frames. These logs have no audio or video content from the meeting. To make debugging easier, Google might associate these logs, by means of a session ID, with other logs collected by the Google service itself.
+
+Setting the policy to Disabled results in no collection or uploading of such logs.
+
+Leaving the policy unset on versions up to and including M76 means Google Chrome defaults to not being able to collect and upload these logs. Starting at M77, Google Chrome defaults to being able to collect and upload these logs from most profiles affected by cloud-based, user-level enterprise policies. From M77 up to and including M80, Google Chrome can also collect and upload these logs by default from profiles affected by Google Chrome on-premise management.</p>
+
+</div>
+
+</body>
+</html>

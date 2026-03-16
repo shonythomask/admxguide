@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Define a list of allowed URLs | ADMX Guide</title>
+
+<meta name="description" content="Define a list of allowed URLs ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Define a list of allowed URLs</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy provides access to the listed URLs, as exceptions to 'URLBlocklist' (Block access to a list of URLs).
+
+Format the URL pattern according to https://go.microsoft.com/fwlink/?linkid=2095322.
+
+You can use this policy to open exceptions to restrictive block lists. For example, you can include '*' in the block list to block all requests, and then use this policy to allow access to a limited list of URLs. You can use this policy to open exceptions to certain schemes, subdomains of other domains, ports, or specific paths.
+
+The most specific filter determines if a URL is blocked or allowed. The allowed list takes precedence over the block list.
+
+This policy is limited to 1000 entries; subsequent entries are ignored.
+
+This policy also allows the browser to automatically invoke external applications registered as protocol handlers for protocols like "tel:" or "ssh:".
+
+If you don't configure this policy, there are no exceptions to the block list in the 'URLBlocklist' policy.
+
+This policy does not work as expected with file://* wildcards.
+
+Example value:
+
+contoso.com
+https://ssl.server.com
+hosting.com/good_path
+https://server:8080/path
+.exact.hostname.com</p>
+
+</div>
+
+</body>
+</html>

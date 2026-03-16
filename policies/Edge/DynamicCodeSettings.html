@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dynamic Code Settings | ADMX Guide</title>
+
+<meta name="description" content="Dynamic Code Settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Dynamic Code Settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy controls the dynamic code settings for Microsoft Edge.
+
+Disabling dynamic code improves the security of Microsoft Edge by preventing potentially hostile dynamic code and third-party code from making changes to Microsoft Edge's behavior. However this might cause compatibility issues with third-party software (e.g. certain printer drivers) that must run in the browser process.
+
+If you set this policy to 0 (the default) or leave unset, then Microsoft Edge will use the default settings.
+
+If you set this policy to 1 – (EnabledForBrowser) then the Microsoft Edge browser process is prevented from creating dynamic code.
+
+Policy options mapping:
+
+* Default (0) = Default dynamic code settings
+
+* EnabledForBrowser (1) = Prevent the browser process from creating dynamic code
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

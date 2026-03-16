@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Force support for Unicode surrogates in Excel 2021 and Excel 2024 | ADMX Guide</title>
+
+<meta name="description" content="Force support for Unicode surrogates in Excel 2021 and Excel 2024 ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Force support for Unicode surrogates in Excel 2021 and Excel 2024</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Excel 2016 > Excel Options > Advanced</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\excel\options</p>
+
+<h3>Description</h3>
+
+<p>Warning: this setting alters how your app calculates LEN, MID, SEARCH, FIND and REPLACE and forces files to Compatibility Version 2. When these workbooks are shared, users may see different calculation results. This setting only applies to non-subscription Excel 2021 and Excel 2024.
+ 
+If you enable this policy setting, when any workbook is opened in non-subscription Excel 2021 or Excel 2024, it will automatically be set to Compatibility Version 2. This will cause LEN, MID, SEARCH, FIND and REPLACE functions to calculate differently in those workbooks.
+ 
+If you disable or do not configure this policy setting, the Compatibility Version will not be automatically set when a file is opened in any version of non-subscription Excel 2021 and Excel 2024 (this setting never affects other versions).</p>
+
+</div>
+
+</body>
+</html>

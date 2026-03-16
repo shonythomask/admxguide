@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow local MHTML files to open automatically in Internet Explorer mode | ADMX Guide</title>
+
+<meta name="description" content="Allow local MHTML files to open automatically in Internet Explorer mode ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow local MHTML files to open automatically in Internet Explorer mode</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy controls whether local mht or mhtml files launched from the command line can open automatically in Internet Explorer mode based on the file content without specifying the --ie-mode-file-url command line.
+
+This setting works in conjunction with:
+'InternetExplorerIntegrationLevel' (Configure Internet Explorer integration) is set to 'IEMode'
+and
+'InternetExplorerIntegrationLocalFileAllowed' (Allow launching of local files in Internet Explorer mode) is enabled or not configured.
+
+If you enable or don't configure this policy, local mht or mhtml files can launch in Microsoft Edge or Internet Explorer mode to best view the file.
+
+If you disable this policy, local mht or mhtml files will launch in Microsoft Edge.
+
+Note that if you use the --ie-mode-file-url command line argument for launching local mht or mhtml files, it takes precedence over how you configured this policy.
+
+To learn more about Internet Explorer mode, see https://go.microsoft.com/fwlink/?linkid=2094210</p>
+
+</div>
+
+</body>
+</html>

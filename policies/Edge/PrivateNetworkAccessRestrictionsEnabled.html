@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Specifies whether to apply restrictions to requests to more private network endpoints (obsolete) | ADMX Guide</title>
+
+<meta name="description" content="Specifies whether to apply restrictions to requests to more private network endpoints (obsolete) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Specifies whether to apply restrictions to requests to more private network endpoints (obsolete)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Private Network Request Settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 137.
+
+Specifies whether to apply restrictions to requests to more private
+network endpoints
+
+When this policy is Enabled, anytime when a warning is supposed to be displayed in the DevTools due to Private Network Access checks failing, the request is blocked.
+
+When this policy is Disabled or unset, all Private Network Access warnings aren't enforced and the requests aren't blocked.
+
+See https://wicg.github.io/private-network-access/ for Private Network Access restrictions.
+
+Note: A network endpoint is more private than another if:
+1) Its IP address is localhost and the other isn't.
+2) Its IP address is private and the other is public.
+
+This policy is obsolete. The earlier blanket override has been replaced by the permission-based Local Network Access model, which blocks cross-space requests until users give explicit consent.</p>
+
+</div>
+
+</body>
+</html>

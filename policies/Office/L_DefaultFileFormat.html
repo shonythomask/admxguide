@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Default file format | ADMX Guide</title>
+
+<meta name="description" content="Default file format ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Default file format</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Access 2016 > Miscellaneous</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\access\settings</p>
+
+<h3>Description</h3>
+
+<p>This policy setting controls whether new database files are created in the new Access format or in a format used by earlier versions of Access.
+      
+If you enable this policy setting, you can specify whether new database files are created in Access 2016 format by default or in Access 2002--2003 format. Users can still override the default and select a specific format when they save the files, but cannot set the default by themselves from the Access Options dialog. 
+      
+If you disable or do not configure this policy setting, when users create new database files, Access saves them in the new Access 2016 format; however, users can change this functionality by selecting a file format from the Default file format drop down list under Access Options | Popular | Creating databases. Note: If you disable this policy setting, users can choose from three default file formats: Access 2000, Access 2002--2003, and Access 2016. You can use this policy setting to specify either the Access 2002--2003 or Access 2016 format as the default, but not the Access 2000 format.</p>
+
+</div>
+
+</body>
+</html>

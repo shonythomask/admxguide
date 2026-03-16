@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Client display settings | ADMX Guide</title>
+
+<meta name="description" content="Client display settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Client display settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Citrix Components > Citrix Workspace > User experience</p>
+
+<h3>Scope</h3>
+
+<p>Machine</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Citrix\ICA Client\Engine\Lockdown Profiles\All Regions\Lockdown\Virtual Channels\Thinwire Graphics</p>
+
+<h3>Description</h3>
+
+<p>This option controls how the client displays remote application and desktop to the end user. 
+From the Seamless Window drop down menu, select True to enable the client to request for seamless windows. Select False to enable the client to disable the seamless window display. 
+
+NOTE: The server may reject the client request even when the setting is set to True. 
+From the Window width, select the preferred values. The available options are 1024 and 800. 
+
+NOTE: This feature will not take effect if the option Seamless Window is enabled. 
+From the Window height, select the preferred values. The available options are 600 and 734.
+
+NOTE: This feature will not take effect if the option Seamless Window is enabled. 
+From the Window percent drop-down menu, select the preferred values. The available options are 50%, 75% and Other. This is a manual method of setting the windows height and width. 
+
+NOTE: The selected value is applicable to entire screen. 
+From the Shrink work area, select the preferred range. The recommended values are between 3 - 5. 
+
+Enable Full screen to display the client in a full screen mode. </p>
+
+</div>
+
+</body>
+</html>

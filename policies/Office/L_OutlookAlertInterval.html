@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Specify alert interval for web extensions | ADMX Guide</title>
+
+<meta name="description" content="Specify alert interval for web extensions ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Specify alert interval for web extensions</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Outlook 2016 > Security > Trust Center</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\wef\outlook</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to specify the alert interval Outlook uses before disabling a web extension during initialization. The alert interval controls how often Office checks on memory and CPU usage for a running web extension. 
+
+If you enable this policy setting, you can specify the alert interval for web extensions. If the web extension requires more than the specified memory alert threshold when the memory or CPU check occurs, Outlook disables the web extension. 
+
+If you disable or do not configure this policy setting, Outlook uses the default alert interval of 5 seconds. This alert interval overrides the WEF alert interval. The maximum alert interval is 600 seconds, and the minimum alert interval is 5 seconds.</p>
+
+</div>
+
+</body>
+</html>

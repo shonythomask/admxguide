@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Default search provider name | ADMX Guide</title>
+
+<meta name="description" content="Default search provider name ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Default search provider name</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge - Default Settings (users can override) > Default search provider</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge\Recommended</p>
+
+<h3>Description</h3>
+
+<p>Specifies the name of the default search provider.
+
+If you enable this policy, you set the name of the default search provider.
+
+If you don't enable this policy or if you leave it empty, the host name specified by the search URL is used.
+
+'DefaultSearchProviderName' should be set to an organization-approved encrypted search provider that corresponds to the encrypted search provider set in DTBC-0008. This policy is applied only if you enable the 'DefaultSearchProviderEnabled' (Enable the default search provider) and 'DefaultSearchProviderSearchURL' (Default search provider search URL) policies.
+
+Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the 'ManagedSearchEngines' (Manage Search Engines) policy.
+
+Example value: My Intranet Search</p>
+
+</div>
+
+</body>
+</html>

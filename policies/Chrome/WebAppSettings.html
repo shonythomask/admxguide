@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Web App management settings | ADMX Guide</title>
+
+<meta name="description" content="Web App management settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Web App management settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy allows an admin to specify settings for installed web apps. This policy maps a Web App ID to its specific setting. A default configuration can be set using the special ID *, which applies to all web apps without a custom configuration in this policy.
+
+The manifest_id field is the Manifest ID for the Web App. See https://developer.chrome.com/blog/pwa-manifest-id/ for instructions on how to determine the Manifest ID for an installed web app.
+The run_on_os_login field specifies if a web app can be run during OS login. If this field is set to blocked, the web app will not run during OS login and the user will not be able to enable this later. If this field is set to run_windowed, the web app will run during OS login and the user will not be able to disable this later. If this field is set to allowed, the user will be able to configure the web app to run at OS login. The default configuration only allows the allowed and blocked values.
+(Since version 117) The prevent_close_after_run_on_os_login field specifies if a web app shall be prevented from closing in any way (e.g. by the user, task manager, web APIs). This behavior can only be enabled if run_on_os_login is set to run_windowed. If the app were already running, this property will only come into effect after the app is restarted. If this field is not defined, apps will be closable by users.
+(Since version 118) The force_unregister_os_integration field specifies if all OS integration for a web app, i.e. shortcuts, file handlers, protocol handlers etc will be removed or not. If an app is already running, this property will come into effect after the app has restarted. This should be used with caution, since this can override any OS integration that is set automatically during the startup of the web applications system. Currently only works on Windows, Mac and Linux platforms.
+See https://cloud.google.com/docs/chrome-enterprise/policies/?policy=WebAppSettings for more information about schema and formatting.
+
+
+Example value:
+
+[
+  {
+    "manifest_id": "https://foo.example/index.html",
+    "run_on_os_login": "allowed"
+  },
+  {
+    "manifest_id": "https://bar.example/index.html",
+    "run_on_os_login": "allowed"
+  },
+  {
+    "manifest_id": "https://foobar.example/index.html",
+    "run_on_os_login": "run_windowed",
+    "prevent_close_after_run_on_os_login": true
+  },
+  {
+    "manifest_id": "*",
+    "run_on_os_login": "blocked"
+  },
+  {
+    "manifest_id": "https://foo.example/index.html",
+    "force_unregister_os_integration": true
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

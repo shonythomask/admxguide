@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure Get Diagnostics feature's visibility in the Help Ribbon in Office applications and control the feature's mode of operation. | ADMX Guide</title>
+
+<meta name="description" content="Configure Get Diagnostics feature's visibility in the Help Ribbon in Office applications and control the feature's mode of operation. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure Get Diagnostics feature's visibility in the Help Ribbon in Office applications and control the feature's mode of operation.</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > Diagnostics</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\office\16.0\common\diagnostics</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to enable or disable Get Diagnostics in Office applications and specifies the mode in which the feature operates.
+
+If you enable this policy setting, you must choose one of the following options:
+Disabled
+Enable upload of diagnostics logs to Microsoft
+Enable the collection of diagnostic logs in an archive
+
+If you select "Disabled", Office applications will not display a visible Get Diagnostics button in the Help Ribbon.
+
+If you select "Enable upload of diagnostics logs to Microsoft", Office applications will have a visible Get Diagnostics button in the Help Ribbon. Clicking this button will upload the application’s diagnostic logs to Microsoft for support purposes.
+
+If you select "Enable the collection of diagnostic logs in an archive", Office applications will have a visible Get Diagnostics button in the Help Ribbon. Clicking this button will capture the application’s diagnostic logs in a file archive on the device where the application is currently running. These logs will not be uploaded to Microsoft.
+
+Please note that the option “Enable the collection of diagnostic logs in an archive” may not be applicable in certain Office applications. When the application does not support local log collection, setting the policy to this option will completely disable the feature, removing the "Get Diagnostics" button.
+
+If you don’t set this policy, the feature will operate in the default mode, which is “Enable upload of diagnostics logs to Microsoft.”
+      </p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Restrict CPU core sharing for renderer process | ADMX Guide</title>
+
+<meta name="description" content="Restrict CPU core sharing for renderer process ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Restrict CPU core sharing for renderer process</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy helps mitigate side-channel cross-process memory attacks by isolating the renderer process to a dedicated CPU core, preventing other processes from being scheduled on the same core. This mitigation is supported on Microsoft® Windows® 11 24H2 and later. If the operating system does not support the necessary scheduling features, this policy has no effect. Enabling this policy may reduce performance in demanding workloads, similar to the impact of disabling hyperthreading. For more information refer https://learn.microsoft.com/windows/win32/api/winnt/ns-winnt-process_mitigation_side_channel_isolation_policy
+If you enable this policy, other processes can not be scheduled on the same CPU core as a renderer process.
+If you disable this policy, other processes can be scheduled on the same CPU core as a renderer process.
+If you don't configure this policy, other processes may be scheduled on the same core as the renderer process. Behavior may vary depending on Microsoft Edge version and platform.</p>
+
+</div>
+
+</body>
+</html>

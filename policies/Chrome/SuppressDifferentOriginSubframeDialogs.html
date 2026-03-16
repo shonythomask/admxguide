@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Suppress JavaScript Dialogs triggered from different origin subframes | ADMX Guide</title>
+
+<meta name="description" content="Suppress JavaScript Dialogs triggered from different origin subframes ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Suppress JavaScript Dialogs triggered from different origin subframes</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>As described in https://www.chromestatus.com/feature/5148698084376576 , JavaScript modal dialogs, triggered by window.alert, window.confirm, and window.prompt, will be blocked in Google Chrome if triggered from a subframe whose origin is different from the main frame origin.
+
+This policy allows overriding that change.
+If the policy is set to enabled or unset, JavaScript dialogs triggered from a different origin subframe will be blocked.
+If the policy is set to disabled, JavaScript dialogs triggered from a different origin subframe will not be blocked.
+
+This policy will be removed from Google Chrome in the future.</p>
+
+</div>
+
+</body>
+</html>

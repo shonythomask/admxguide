@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register protocol handlers | ADMX Guide</title>
+
+<meta name="description" content="Register protocol handlers ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Register protocol handlers</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome - Default Settings (users can override) > Content settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome\Recommended</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy (as recommended only) lets you register a list of protocol handlers, which merge with the ones that the user registers, putting both sets in use. Set the property "protocol" to the scheme, such as "mailto", and set the property "URL" to the URL pattern of the application that handles the scheme specified in the "protocol" field. The pattern can include a "%s" placeholder, which the handled URL replaces.
+
+Users can't remove a protocol handler registered by policy. However, by installing a new default handler, they can change the protocol handlers installed by policy.
+See https://cloud.google.com/docs/chrome-enterprise/policies/?policy=RegisteredProtocolHandlers for more information about schema and formatting.
+
+
+Example value:
+
+[
+  {
+    "default": true,
+    "protocol": "mailto",
+    "url": "https://mail.google.com/mail/?extsrc=mailto&url=%s"
+  }
+]</p>
+
+</div>
+
+</body>
+</html>

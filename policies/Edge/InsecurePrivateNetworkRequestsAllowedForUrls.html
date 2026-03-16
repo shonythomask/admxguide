@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow the listed sites to make requests to more-private network endpoints from in an insecure manner (obsolete) | ADMX Guide</title>
+
+<meta name="description" content="Allow the listed sites to make requests to more-private network endpoints from in an insecure manner (obsolete) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow the listed sites to make requests to more-private network endpoints from in an insecure manner (obsolete)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Private Network Request Settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 137.
+
+List of URL patterns. Requests initiated from websites served by matching origins aren't subject to Private Network Access checks.
+
+If this policy isn't set, this policy behaves as if set to the empty list.
+
+For origins not covered by the patterns specified here, the global default value is used either from the 'InsecurePrivateNetworkRequestsAllowed' (Specifies whether to allow websites to make requests to any network endpoint in an insecure manner.) policy, if it's set, or the user's personal configuration otherwise.
+
+For detailed information on valid URL patterns, see [Filter format for URL list-based policies](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+
+This policy is obsolete. The previous blanket override has been replaced by the permission-based Local Network Access model, which blocks cross-space requests until users grant explicit consent.
+
+Example value:
+
+http://www.example.com:8080
+[*.]example.edu</p>
+
+</div>
+
+</body>
+</html>

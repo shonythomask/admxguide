@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allows origin-keyed agent clustering by default. | ADMX Guide</title>
+
+<meta name="description" content="Allows origin-keyed agent clustering by default. ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allows origin-keyed agent clustering by default.</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>This policy allows origin-keyed agent clustering by default.
+
+The Origin-Agent-Cluster HTTP header controls whether a document is
+isolated in an origin-keyed agent cluster, or in a site-keyed agent
+cluster. This has security implications since an origin-keyed agent
+cluster allows isolating documents by origin. The developer-visible
+consequence of this is that the document.domain accessor can no longer
+be set.
+
+The default behaviour - when no Origin-Agent-Cluster header has been set -
+changes in M111 from site-keyed to origin-keyed.
+
+If this policy is enabled or not set, the browser will follow this
+new default from that version on.
+
+If this policy is disabled this change is reversed and
+documents without Origin-Agent-Cluster headers will be assigned to
+site-keyed agent clusters. As a consequence, the document.domain accessor
+remains settable by default. This matches the legacy behaviour.
+
+See https://developer.chrome.com/blog/immutable-document-domain/ for
+additional details.</p>
+
+</div>
+
+</body>
+</html>

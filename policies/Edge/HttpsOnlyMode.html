@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow HTTPS-Only Mode to be enabled | ADMX Guide</title>
+
+<meta name="description" content="Allow HTTPS-Only Mode to be enabled ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow HTTPS-Only Mode to be enabled</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy controls whether users can enable HTTPS-Only Mode (Always Use Secure Connections) in Settings. HTTPS-Only Mode attempts to upgrade all navigations to HTTPS.
+
+If this setting isn't set or is set to allowed, users are able to enable HTTPS-Only Mode.
+If this setting is set to `disallowed`, users can't enable HTTPS-Only Mode.
+If this setting is set to force_enabled, HTTPS-Only Mode is enabled in Strict mode and users can't disable it.
+If this setting is set to force_balanced_enabled, HTTPS-Only Mode is enabled in Balanced mode and users can't disable it.
+
+If you set this policy to a value that isn't supported by the version of Microsoft Edge that receives the policy, Microsoft Edge defaults to the allowed setting.
+
+The separate HttpAllowlist policy can be used to exempt specific hostnames or hostname patterns from being upgraded to HTTPS by this feature.
+
+Policy options mapping:
+
+* allowed (allowed) = Don't restrict users' HTTPS-Only Mode setting
+
+* disallowed (disallowed) = Don't allow users to enable any HTTPS-Only Mode
+
+* force_enabled (force_enabled) = Force enable HTTPS-Only Mode in Strict mode
+
+* force_balanced_enabled (force_balanced_enabled) = Force enable HTTPS-Only Mode in Balanced Mode
+
+Use the preceding information when configuring this policy.
+
+Example value: disallowed</p>
+
+</div>
+
+</body>
+</html>

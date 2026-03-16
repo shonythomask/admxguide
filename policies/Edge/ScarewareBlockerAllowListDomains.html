@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure the list of domains where Microsoft Edge Scareware blockers don't run | ADMX Guide</title>
+
+<meta name="description" content="Configure the list of domains where Microsoft Edge Scareware blockers don't run ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure the list of domains where Microsoft Edge Scareware blockers don't run</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Scareware Blocker settings</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy configures the list of trusted domains for Microsoft Edge Scareware blocker. When a website's source URL matches any domain in this list, Microsoft Edge Scareware blocker doesn't analyze that site.
+
+This policy takes effect only if the ScarewareBlockerProtectionEnabled policy is enabled.
+
+If you enable this policy, Microsoft Edge Scareware blocker trusts the specified domains.
+
+If you disable or don't configure this policy, Microsoft Edge Scareware blocker analyzes all sites.
+
+Example value:
+
+mydomain.com
+myuniversity.edu</p>
+
+</div>
+
+</body>
+</html>

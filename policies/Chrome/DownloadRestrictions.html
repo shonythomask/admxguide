@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow download restrictions | ADMX Guide</title>
+
+<meta name="description" content="Allow download restrictions ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow download restrictions</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy means users can't bypass download security decisions.
+
+There are many types of download warnings within Chrome, which roughly break down into these categories (learn more about Safe Browsing verdicts https://support.google.com/chrome/?p=ib_download_blocked):
+
+* Malicious, as flagged by the Safe Browsing server
+* Uncommon or unwanted, as flagged by the Safe Browsing server
+* A dangerous file type (e.g. all SWF downloads and many EXE downloads)
+
+Setting the policy blocks different subsets of these, depending on it's value:
+
+0: No special restrictions. Default.
+
+1: Blocks malicious files flagged by the Safe Browsing server AND Blocks all dangerous file types. Only recommended for OUs/browsers/users that have a high tolerance for False Positives.
+
+2: Blocks malicious files flagged by the Safe Browsing server AND Blocks uncommon or unwanted files flagged by the Safe Browsing server AND Blocks all dangerous file types. Only recommended for OUs/browsers/users that have a high tolerance for False Positives.
+
+3: Blocks all downloads. Not recommended, except for special use cases.
+
+4: Blocks malicious files flagged by the Safe Browsing server, does not block dangerous file types. Recommended.
+
+Note: These restrictions apply to downloads triggered from webpage content, as well as the Download link… menu option. They don't apply to the download of the currently displayed page or to saving as PDF from the printing options. Read more about Safe Browsing ( https://developers.google.com/safe-browsing ).</p>
+
+</div>
+
+</body>
+</html>

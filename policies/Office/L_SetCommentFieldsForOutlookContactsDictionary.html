@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Set comment fields for Outlook Contacts Dictionary | ADMX Guide</title>
+
+<meta name="description" content="Set comment fields for Outlook Contacts Dictionary ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Set comment fields for Outlook Contacts Dictionary</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Microsoft Office 2016 > IME (Japanese)</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\software\policies\microsoft\imejp\16.0\wswordcomment\plugins\mapi</p>
+
+<h3>Description</h3>
+
+<p>This policy setting allows you to specify the fields to display in the comments in the Outlook Contacts Dictionary. This policy setting applies to Japanese Microsoft IME only.
+
+If you enable this policy setting, you can specify the fields to display by setting strings, which are represented by the following identification letter IDs. You must also use any IDs/strings in the following sequence.
+
+ID for each field is as follows:
+a = Full Name
+c = Phonetic Name
+e = Company Name
+f = Department Name
+g = Title
+h = Office Location
+j = Email Address
+k = Business Telephone Number
+l = Business Address
+
+For example, if you want to display Full Name, Phonetic Name and Company Name, specify 'ace'.
+
+If you do not configure this policy setting, Full Name, Phonetic Name, Company Name, Department Name, and Job Title are displayed in the comments in this order.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allow Internet Explorer mode testing (obsolete) | ADMX Guide</title>
+
+<meta name="description" content="Allow Internet Explorer mode testing (obsolete) ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Allow Internet Explorer mode testing (obsolete)</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 94.
+
+This policy is obsolete because it has been superseded by an improved feature. It doesn't work in Microsoft Edge after version 94. To allow users to open applications in Internet Explorer mode, use the 'InternetExplorerIntegrationReloadInIEModeAllowed' (Allow unconfigured sites to be reloaded in Internet Explorer mode) policy instead. Alternatively, users can still use the --ie-mode-test flag.
+
+This policy allows users to test applications in Internet Explorer mode by opening an Internet Explorer mode tab in Microsoft Edge.
+
+Users can do so from within the "More tools" menu by selecting 'Open sites in Internet Explorer mode'.
+
+Additionally, users can test their applications in a modern browser without removing applications from the site list using the option 'Open sites in Edge mode'.
+
+This setting works in conjunction with:
+'InternetExplorerIntegrationLevel' (Configure Internet Explorer integration) is set to 'IEMode'.
+
+If you enable this policy, the option to 'Open sites in Internet Explorer mode' will be visible under "More tools". Users can view their sites in Internet Explorer mode on this tab. Another option to 'Open sites in Edge mode' will also be visible under "More tools" to help testing sites in a modern browser without removing them from the site list. Note that if the 'InternetExplorerIntegrationReloadInIEModeAllowed' policy is enabled, it takes precedence and these options will not be visible under "More tools".
+
+If you disable or don't configure this policy, users can't see the options 'Open in Internet Explorer mode' and 'Open in Edge mode' under "More tools" menu. However, users can configure these options with the --ie-mode-test flag.</p>
+
+</div>
+
+</body>
+</html>

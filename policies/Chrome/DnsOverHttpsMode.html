@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Controls the mode of DNS-over-HTTPS | ADMX Guide</title>
+
+<meta name="description" content="Controls the mode of DNS-over-HTTPS ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Controls the mode of DNS-over-HTTPS</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Controls the mode of the DNS-over-HTTPS resolver. Please note that this
+policy will only set the default mode for each query. The mode may be
+overridden for special types of queries such as requests to resolve a
+DNS-over-HTTPS server hostname.
+
+The "off" mode will disable
+DNS-over-HTTPS.
+
+The "automatic" mode will send
+DNS-over-HTTPS queries first if a DNS-over-HTTPS server is available and
+may fallback to sending insecure queries on error.
+
+The "secure" mode will only send
+DNS-over-HTTPS queries and will fail to resolve on error.
+
+On Android Pie and above, if DNS-over-TLS
+is active, Google Chrome will not
+send insecure DNS requests.
+
+If this policy is unset, for managed devices DNS-over-HTTPS queries will not
+be sent. Otherwise, the browser may send DNS-over-HTTPS requests to a
+resolver associated with the user's configured system resolver.
+
+Example value: off</p>
+
+</div>
+
+</body>
+</html>

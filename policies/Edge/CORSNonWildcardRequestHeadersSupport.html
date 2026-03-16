@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CORS non-wildcard request header support enabled | ADMX Guide</title>
+
+<meta name="description" content="CORS non-wildcard request header support enabled ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>CORS non-wildcard request header support enabled</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>This policy lets you configure support of CORS non-wildcard request headers.
+
+Microsoft Edge version 97 introduces support for CORS non-wildcard request headers. When a script makes a cross-origin network request via fetch() and XMLHttpRequest with a script-added Authorization header, the header must be explicitly allowed by the Access-Control-Allow-Headers header in the CORS preflight response. "Explicitly" here means that the wild card symbol "*" doesn't cover the Authorization header. See https://go.microsoft.com/fwlink/?linkid=2180022 for more detail.
+
+If you enable or don't configure the policy, Microsoft Edge will support the CORS non-wildcard request headers and behave as previously described.
+
+If you disable this policy, Microsoft Edge will allow the wildcard symbol ("*") in the Access-Control-Allow-Headers header in the CORS preflight response to cover the Authorization header.
+
+This policy is a temporary workaround for the new CORS non-wildcard request header feature. It's intended to be removed in the future.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Print preview sticky settings | ADMX Guide</title>
+
+<meta name="description" content="Print preview sticky settings ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Print preview sticky settings</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Printing</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Specifies whether print preview should apply last used settings for Microsoft Edge PDF and webpages.
+
+If you set this policy to 'EnableAll' or don't configure it, Microsoft Edge applies the last used print preview settings for both PDF and webpages.
+
+If you set this policy to 'DisableAll', Microsoft Edge doesn't apply the last used print preview settings for both PDF and webpages.
+
+If you set this policy to 'DisablePdf', Microsoft Edge doesn't apply the last used print preview settings for PDF printing and retains it for webpages.
+
+If you set this policy to 'DisableWebpage', Microsoft Edge doesn't apply the last used print preview settings for webpage printing and retain it for PDF.
+
+This policy is only available if you enable or don't configure the 'PrintingEnabled' (Enable printing) policy.
+
+Policy options mapping:
+
+* EnableAll (0) = Enable sticky settings for PDF and Webpages
+
+* DisableAll (1) = Disable sticky settings for PDF and Webpages
+
+* DisablePdf (2) = Disable sticky settings for PDF
+
+* DisableWebpage (3) = Disable sticky settings for Webpages
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configure the Enterprise Mode Cloud Site List | ADMX Guide</title>
+
+<meta name="description" content="Configure the Enterprise Mode Cloud Site List ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Configure the Enterprise Mode Cloud Site List</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>The Microsoft Edge Site Lists setting in the M365 Admin Center allows you to host your site list(s) in a compliant cloud location and manage the contents of your site list(s) through the built-in experience. This setting allows you to specify which site list within the M365 Admin Center to deploy to your users. The user must be signed into Microsoft Edge with a valid work or school account. Otherwise, Microsoft Edge will not download the site list from the cloud location.
+
+This setting is applicable only when the 'InternetExplorerIntegrationLevel' (Configure Internet Explorer integration) setting is configured.
+
+If you configure this policy, Microsoft Edge will use the specified site list. When enabled, you can enter the identifier of the site list that you created and published to the cloud in M365 Admin Center.
+
+This setting takes precedence over Microsoft Edge's 'InternetExplorerIntegrationSiteList' (Configure the Enterprise Mode Site List) policy as well as Internet Explorer's site list setting (Use the Enterprise mode IE website list). If you disable or don't configure this policy, Microsoft Edge will use the 'InternetExplorerIntegrationSiteList' policy instead.
+
+To learn more about Internet Explorer mode, see https://go.microsoft.com/fwlink/?linkid=2165707
+
+Example value: aba95e58-070f-4784-8dcd-e5fd46c2c6d6</p>
+
+</div>
+
+</body>
+</html>

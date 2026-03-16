@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WAM for authentication below Windows 10 RS3 enabled | ADMX Guide</title>
+
+<meta name="description" content="WAM for authentication below Windows 10 RS3 enabled ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>WAM for authentication below Windows 10 RS3 enabled</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Identity and sign-in</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Configure this policy to decide whether WAM is used for authentication in Microsoft Edge on Windows 10 RS1 and RS2.
+
+If you enable this setting, WAM will be used in the authentication flow on Windows 10 RS1 and RS2.
+
+If you disable or don't configure this setting, OneAuth libraries will be used instead of WAM on Windows 10 RS1 and RS2.
+
+Note that if this policy is enabled, then previous sign-in sessions (which used OneAuth by default) cannot be used. Please sign out of those profiles.
+
+This policy will only take effect on Windows 10 RS1 and RS2. On Windows 10 RS3 and above, WAM is used for authentication in Microsoft Edge by default.</p>
+
+</div>
+
+</body>
+</html>

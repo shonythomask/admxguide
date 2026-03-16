@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart card authentication | ADMX Guide</title>
+
+<meta name="description" content="Smart card authentication ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Smart card authentication</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Citrix Components > Citrix Workspace > User authentication</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\Software\Policies\Citrix\ICA Client\Engine\Lockdown Profiles\All Regions\Lockdown\Virtual Channels\Smartcard</p>
+
+<h3>Description</h3>
+
+<p>Use this policy to control how the client uses smart cards attached to the client device.  
+
+When enabled, this policy allows the remote server to access smart cards attached to the client device for authentication and other purposes.  
+
+When disabled, the server cannot access smart cards attached to the client device.  
+
+
+Troubleshooting:
+When using smart cards in a Citrix environment, the smart card device driver must be installed on the server.  When using a different operating system on the client machine, it may be necessary to ensure that the smart card device drivers in use interoperate correctly.</p>
+
+</div>
+
+</body>
+</html>

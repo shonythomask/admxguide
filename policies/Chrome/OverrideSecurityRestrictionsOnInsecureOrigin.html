@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Origins or hostname patterns for which restrictions on insecure origins should not apply | ADMX Guide</title>
+
+<meta name="description" content="Origins or hostname patterns for which restrictions on insecure origins should not apply ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Origins or hostname patterns for which restrictions on insecure origins should not apply</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Google Chrome</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Google\Chrome</p>
+
+<h3>Description</h3>
+
+<p>Setting the policy specifies a list of origins (URLs) or hostname patterns (such as *.example.com) for which security restrictions on insecure origins won't apply. Patterns are only accepted for hostnames; URLs/origins with schemes must be exact strings. Organizations can specify origins for legacy applications that can't deploy TLS or set up a staging server for internal web development, so developers can test out features requiring secure contexts without having to deploy TLS on the staging server. This policy also prevents the origin from being labeled "Not Secure" in the address bar.
+
+Setting a list of URLs in this policy amounts to setting the command-line flag --unsafely-treat-insecure-origin-as-secure to a comma-separated list of the same URLs. The policy overrides the command-line flag and UnsafelyTreatInsecureOriginAsSecure, if present.
+
+For more information on secure contexts, see Secure Contexts ( https://www.w3.org/TR/secure-contexts ).
+
+Example value:
+
+http://testserver.example.com/
+*.example.org</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kerberos authentication | ADMX Guide</title>
+
+<meta name="description" content="Kerberos authentication ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Kerberos authentication</h1>
+
+<h3>Category</h3>
+
+<p>User Configuration > Administrative Templates > Citrix Components > Citrix Workspace > User authentication</p>
+
+<h3>Scope</h3>
+
+<p>User</p>
+
+<h3>Registry Key</h3>
+
+<p>HKCU\Software\Policies\Citrix\ICA Client\Engine\Lockdown Profiles\All Regions\Lockdown\Logon\Kerberos</p>
+
+<h3>Description</h3>
+
+<p>Use this policy to control how the client uses Kerberos to authenticate the user to the remote application or desktop.
+
+When enabled, this policy allows the client to authenticate the user using the Kerberos protocol.  Kerberos is a Domain Controller authorised authentication transaction that avoids the need to transmit the real user credential data to the server.  
+
+When disabled, the client will not attempt Kerberos authentication.  
+
+
+Troubleshooting:
+The machine running the client and the server running the remote application must be in domains that have a trust relationship.  The Domain Controller must be aware that the Citrix XenApp server will be performing a full user logon (interactive logon) using Kerberos.  This is configured using the "Trust for Delegated Authentication" settings on the Domain Controller.
+
+When connecting using the Web Interface, the Web Interface server must be aware that the client will connect using Kerberos authentication.  This is necessary because by default the Web Interface server will use an IP address for the destination server whereas Kerberos authentication requires a Fully Qualified Domain Name.
+
+Both client and server machines must have correctly registered DNS entries.  This is necessary because endpoints will authenticate each other during connection.</p>
+
+</div>
+
+</body>
+</html>

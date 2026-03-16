@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Print PostScript Mode | ADMX Guide</title>
+
+<meta name="description" content="Print PostScript Mode ADMX policy reference including registry key, values, and configuration details.">
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+<h1>ADMX Guide</h1>
+</header>
+
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h1>Print PostScript Mode</h1>
+
+<h3>Category</h3>
+
+<p>Computer Configuration > Administrative Templates > Microsoft Edge > Printing</p>
+
+<h3>Scope</h3>
+
+<p>Both</p>
+
+<h3>Registry Key</h3>
+
+<p>HKLM\Software\Policies\Microsoft\Edge</p>
+
+<h3>Description</h3>
+
+<p>Controls how Microsoft Edge prints on Microsoft Windows.
+
+Printing to a PostScript printer on Microsoft Windows different PostScript generation methods can affect printing performance.
+
+If you set this policy to Default, Microsoft Edge will use a set of default options when generating PostScript. For text in particular, text will always be rendered using Type 3 fonts.
+
+If you set this policy to Type42, Microsoft Edge will render text using Type 42 fonts if possible. This should increase printing speed for some PostScript printers.
+
+If you don't configure this policy, Microsoft Edge will be in Default mode.
+
+Policy options mapping:
+
+* Default (0) = Default
+
+* Type42 (1) = Type42
+
+Use the preceding information when configuring this policy.</p>
+
+</div>
+
+</body>
+</html>
